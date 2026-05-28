@@ -1,0 +1,9 @@
+services:
+  web:
+    stdin_open: true
+    tty: true
+
+    volumes:
+      - ..:/app
+
+    command: sleep infinity
