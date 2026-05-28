@@ -70,3 +70,9 @@ Then update the database with the populate_cnae_mcc management command
 ```bash
 docker compose exec web python manage.py populate_cnae_mcc
 ```
+
+## Flushing blacklisted tokens
+
+```bash
+python manage.py flushexpiredtokens
+```
