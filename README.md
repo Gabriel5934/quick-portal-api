@@ -17,10 +17,10 @@ docker compose exec web python manage.py createsuperuser
 
 ## Endpoints
 
-| URL | Description |
-|-----|-------------|
+| URL                             | Description                       |
+| ------------------------------- | --------------------------------- |
 | `http://localhost:8000/health/` | Health check → `{"status": "ok"}` |
-| `http://localhost:8000/admin/` | Django admin |
+| `http://localhost:8000/admin/`  | Django admin                      |
 
 ## Project layout
 
@@ -44,14 +44,14 @@ docker compose exec web python manage.py createsuperuser
 
 ## Environment variables
 
-| Variable | Default | Description |
-|---|---|---|
-| `DEBUG` | `1` | Set to `0` in production |
-| `DJANGO_SECRET_KEY` | insecure default | **Change in production** |
-| `ALLOWED_HOSTS` | `localhost 127.0.0.1` | Space-separated list |
-| `POSTGRES_DB` | `app` | Database name |
-| `POSTGRES_USER` | `app` | Database user |
-| `POSTGRES_PASSWORD` | `app` | **Change in production** |
+| Variable            | Default               | Description              |
+| ------------------- | --------------------- | ------------------------ |
+| `DEBUG`             | `1`                   | Set to `0` in production |
+| `DJANGO_SECRET_KEY` | insecure default      | **Change in production** |
+| `ALLOWED_HOSTS`     | `localhost 127.0.0.1` | Space-separated list     |
+| `POSTGRES_DB`       | `app`                 | Database name            |
+| `POSTGRES_USER`     | `app`                 | Database user            |
+| `POSTGRES_PASSWORD` | `app`                 | **Change in production** |
 
 ## Adding a new app
 
@@ -60,3 +60,13 @@ docker compose exec web python manage.py startapp myapp
 ```
 
 Then add `'myapp'` to `INSTALLED_APPS` in `config/settings.py`.
+
+## MCC Codes
+
+Using cURL or any other tool fetch the list of MCC codes from the OWN api (agilli/parceiro/v2/consultarAtividades)
+Save the raw output in a json file called "cnaemcc.json" inside /app
+Then update the database with the populate_cnae_mcc management command
+
+```bash
+docker compose exec web python manage.py populate_cnae_mcc
+```
