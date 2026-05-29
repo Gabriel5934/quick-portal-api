@@ -3,16 +3,17 @@ import logging
 from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
+from django.db import transaction
 
 from quickportal.models import CnaeMccMapping
 
 logger = logging.getLogger(__name__)
 
-JSON_FILE = Path(__file__).resolve().parents[3] / "cnaemcc.json"
+JSON_FILE = Path(__file__).resolve().parents[3] / "load_cnaemcc.json"
 
 
 class Command(BaseCommand):
-    help = "Populate cnae_mcc_mapping table from cnaemcc.json (replaces all existing data)"
+    help = "Populate cnae_mcc_mapping table from load_cnaemcc.json (replaces all existing data)"
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -51,8 +52,9 @@ class Command(BaseCommand):
                 )
             )
 
-        CnaeMccMapping.objects.all().delete()
-        CnaeMccMapping.objects.bulk_create(mappings)
+        with transaction.atomic():
+            CnaeMccMapping.objects.all().delete()
+            CnaeMccMapping.objects.bulk_create(mappings)
 
         self.stdout.write(
             self.style.SUCCESS(f"Populated {len(mappings)} CNAE/MCC records.")

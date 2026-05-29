@@ -4,10 +4,12 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from quickportal.models import CnaeMccMapping
+from quickportal.models import Acquirer, CnaeMccMapping, PosModel
 from quickportal.serializers import (
+    AcquirerSerializer,
     CnaeMccMappingSerializer,
     EmailTokenObtainPairSerializer,
+    PosModelSerializer,
     UserCreateSerializer,
 )
 from quickportal.services.own_auth import get_own_token, OwnAuthError
@@ -79,6 +81,24 @@ class MerchantRegistrationView(APIView):
             )
 
         return Response(result, status=status.HTTP_200_OK)
+
+
+class AcquirerListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        acquirers = Acquirer.objects.all()
+        serializer = AcquirerSerializer(acquirers, many=True)
+        return Response(serializer.data)
+
+
+class PosModelListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        pos_models = PosModel.objects.select_related("acquirer").all()
+        serializer = PosModelSerializer(pos_models, many=True)
+        return Response(serializer.data)
 
 
 class CnaeMccMappingListView(APIView):

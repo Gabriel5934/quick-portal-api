@@ -1,10 +1,12 @@
 from django.urls import path
 
 from quickportal.views import (
+    AcquirerListView,
     CnaeMccMappingListView,
     EmailTokenObtainPairView,
     MerchantRegistrationView,
     OwnAuthTokenView,
+    PosModelListView,
     UserRegistrationView,
 )
 
@@ -18,4 +20,6 @@ urlpatterns = [
         name="own_merchant_register",
     ),
     path("api/cnae-mcc/", CnaeMccMappingListView.as_view(), name="cnae_mcc_list"),
+    path("api/acquirers/", AcquirerListView.as_view(), name="acquirer_list"),
+    path("api/pos-models/", PosModelListView.as_view(), name="pos_model_list"),
 ]

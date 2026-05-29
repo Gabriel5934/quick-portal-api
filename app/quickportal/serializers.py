@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from quickportal.models import CnaeMccMapping
+from quickportal.models import Acquirer, CnaeMccMapping, PosModel
 
 
 class UserCreateSerializer(serializers.ModelSerializer):
@@ -70,6 +70,20 @@ class EmailTokenObtainPairSerializer(TokenObtainPairSerializer):
         data["refresh"] = str(refresh)
         data["access"] = str(refresh.access_token)
         return data
+
+
+class AcquirerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Acquirer
+        fields = ["id", "name"]
+
+
+class PosModelSerializer(serializers.ModelSerializer):
+    acquirer = AcquirerSerializer(read_only=True)
+
+    class Meta:
+        model = PosModel
+        fields = ["id", "model", "acquirer"]
 
 
 class CnaeMccMappingSerializer(serializers.ModelSerializer):

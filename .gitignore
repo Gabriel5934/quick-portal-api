@@ -143,4 +143,4 @@ yarn-error.log*
 uv.lock
 
 # Data dump files
-cnaemcc.json
+load_*.json
