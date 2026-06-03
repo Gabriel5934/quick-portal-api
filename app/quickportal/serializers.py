@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from quickportal.models import Acquirer, CnaeMccMapping, PosModel
+from quickportal.models import Acquirer, Business, CnaeMccMapping, PosModel
 
 
 class UserCreateSerializer(serializers.ModelSerializer):
@@ -90,3 +90,39 @@ class CnaeMccMappingSerializer(serializers.ModelSerializer):
     class Meta:
         model = CnaeMccMapping
         fields = ["id", "cod_cnae", "desc_cnae", "cod_mcc"]
+
+
+class BusinessWriteSerializer(serializers.ModelSerializer):
+    cod_mcc = serializers.IntegerField(write_only=True)
+
+    class Meta:
+        model = Business
+        fields = ["document_type", "document", "legal_name", "trade_name", "cod_mcc", "email", "phone_number"]
+
+    def _resolve_mcc(self, cod_mcc):
+        mapping = CnaeMccMapping.objects.filter(cod_mcc=cod_mcc).first()
+        if mapping is None:
+            raise serializers.ValidationError({"cod_mcc": f"No MCC mapping found for MCC code '{cod_mcc}'."})
+        return mapping
+
+    def create(self, validated_data):
+        cod_mcc = validated_data.pop("cod_mcc")
+        validated_data["mcc"] = self._resolve_mcc(cod_mcc)
+        return Business.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        cod_mcc = validated_data.pop("cod_mcc", None)
+        if cod_mcc is not None:
+            validated_data["mcc"] = self._resolve_mcc(cod_mcc)
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+        return instance
+
+
+class BusinessReadSerializer(serializers.ModelSerializer):
+    mcc = CnaeMccMappingSerializer(read_only=True)
+
+    class Meta:
+        model = Business
+        fields = ["id", "document_type", "document", "legal_name", "trade_name", "mcc", "email", "phone_number", "own_status"]
