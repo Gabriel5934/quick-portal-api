@@ -45,6 +45,55 @@ class CnaeMccMapping(models.Model):
         return f"{self.cod_cnae} → MCC {self.cod_mcc}"
 
 
+def _fee_decimal():
+    return models.DecimalField(max_digits=20, decimal_places=16, null=True, blank=True)
+
+
+class Fee(models.Model):
+    pixPix = _fee_decimal()
+
+    mastercardDebit = _fee_decimal()
+    visaDebit = _fee_decimal()
+    eloDebit = _fee_decimal()
+
+    mastercardCredit = _fee_decimal()
+    visaCredit = _fee_decimal()
+    eloCredit = _fee_decimal()
+
+    mastercardInstallmentsA = _fee_decimal()
+    visaInstallmentsA = _fee_decimal()
+    eloInstallmentsA = _fee_decimal()
+
+    mastercardInstallmentsB = _fee_decimal()
+    visaInstallmentsB = _fee_decimal()
+    eloInstallmentsB = _fee_decimal()
+
+    mastercardInstallmentsC = _fee_decimal()
+    visaInstallmentsC = _fee_decimal()
+    eloInstallmentsC = _fee_decimal()
+
+    mastercardInstallmentsD = _fee_decimal()
+    visaInstallmentsD = _fee_decimal()
+    eloInstallmentsD = _fee_decimal()
+
+    class Meta:
+        db_table = "fee"
+
+    def __str__(self):
+        return f"Fee #{self.pk}"
+
+
+class MccFee(models.Model):
+    mcc = models.CharField(max_length=200, unique=True)
+    fee = models.ForeignKey(Fee, on_delete=models.CASCADE, related_name="mccs")
+
+    class Meta:
+        db_table = "mcc_fee"
+
+    def __str__(self):
+        return f"{self.mcc} → Fee #{self.fee_id}"
+
+
 class Business(models.Model):
     document_type = models.CharField(max_length=4, choices=DocumentType.choices)
     document = models.CharField(max_length=20)

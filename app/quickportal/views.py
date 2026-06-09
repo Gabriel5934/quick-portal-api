@@ -6,13 +6,15 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from quickportal.models import Acquirer, Business, CnaeMccMapping, PosModel
+from quickportal.models import Acquirer, Business, CnaeMccMapping, MccFee, PosModel
 from quickportal.serializers import (
     AcquirerSerializer,
     BusinessReadSerializer,
     BusinessWriteSerializer,
     CnaeMccMappingSerializer,
     EmailTokenObtainPairSerializer,
+    MccFeeSerializer,
+    MccListSerializer,
     PosModelSerializer,
     UserCreateSerializer,
 )
@@ -112,6 +114,25 @@ class CnaeMccMappingListView(APIView):
         mappings = CnaeMccMapping.objects.all()
         serializer = CnaeMccMappingSerializer(mappings, many=True)
         return Response(serializer.data)
+
+
+class MccListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        mccs = MccFee.objects.order_by("mcc")
+        return Response(MccListSerializer(mccs, many=True).data)
+
+
+class MccFeeDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        try:
+            mcc_fee = MccFee.objects.select_related("fee").get(pk=pk)
+        except MccFee.DoesNotExist:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        return Response(MccFeeSerializer(mcc_fee).data)
 
 
 class BusinessPagination(PageNumberPagination):

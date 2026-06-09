@@ -4,7 +4,15 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from quickportal.models import Acquirer, Business, CnaeMccMapping, PosModel
+from quickportal.models import Acquirer, Business, CnaeMccMapping, Fee, MccFee, PosModel
+
+
+FEE_NETWORK_METHODS = {
+    "mastercard": ["debit", "credit", "installmentsA", "installmentsB", "installmentsC", "installmentsD"],
+    "visa": ["debit", "credit", "installmentsA", "installmentsB", "installmentsC", "installmentsD"],
+    "elo": ["debit", "credit", "installmentsA", "installmentsB", "installmentsC", "installmentsD"],
+    "pix": ["pix"],
+}
 
 
 class UserCreateSerializer(serializers.ModelSerializer):
@@ -118,6 +126,31 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
             setattr(instance, attr, value)
         instance.save()
         return instance
+
+
+class FeeSerializer(serializers.Serializer):
+    def to_representation(self, instance: Fee):
+        return {
+            network: {
+                method: getattr(instance, f"{network}{method[0].upper()}{method[1:]}")
+                for method in methods
+            }
+            for network, methods in FEE_NETWORK_METHODS.items()
+        }
+
+
+class MccListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MccFee
+        fields = ["id", "mcc"]
+
+
+class MccFeeSerializer(serializers.ModelSerializer):
+    fee = FeeSerializer(read_only=True)
+
+    class Meta:
+        model = MccFee
+        fields = ["id", "mcc", "fee"]
 
 
 class BusinessReadSerializer(serializers.ModelSerializer):
