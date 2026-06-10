@@ -10,6 +10,8 @@ from quickportal.views import (
     MccListView,
     MerchantRegistrationView,
     OwnAuthTokenView,
+    PlanDetailView,
+    PlanListCreateView,
     PosModelListView,
     UserRegistrationView,
 )
@@ -28,6 +30,8 @@ urlpatterns = [
     path("api/pos-models/", PosModelListView.as_view(), name="pos_model_list"),
     path("api/mccs/", MccListView.as_view(), name="mcc_list"),
     path("api/mccs/<int:pk>/fees/", MccFeeDetailView.as_view(), name="mcc_fee_detail"),
+    path("api/plans/", PlanListCreateView.as_view(), name="plan_list_create"),
+    path("api/plans/<int:pk>/", PlanDetailView.as_view(), name="plan_detail"),
     path("api/businesses/", BusinessListCreateView.as_view(), name="business_list_create"),
     path("api/businesses/<int:pk>/", BusinessDetailView.as_view(), name="business_detail"),
 ]

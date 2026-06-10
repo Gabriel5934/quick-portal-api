@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from quickportal.models import Acquirer, Business, CnaeMccMapping, Fee, MccFee, PosModel
+from quickportal.models import Acquirer, Business, CnaeMccMapping, Fee, MccFee, Plan, PlanFee, PosModel
 
 
 FEE_NETWORK_METHODS = {
@@ -151,6 +151,67 @@ class MccFeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = MccFee
         fields = ["id", "mcc", "fee"]
+
+
+class PlanFeeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PlanFee
+        fields = ["network", "payment_type", "commission", "anticipation_fee"]
+
+
+class PlanReadSerializer(serializers.ModelSerializer):
+    mcc = MccListSerializer(read_only=True)
+    fees = PlanFeeSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Plan
+        fields = [
+            "id",
+            "name",
+            "description",
+            "split",
+            "anticipation",
+            "mcc",
+            "fees",
+            "created_at",
+        ]
+
+
+class PlanWriteSerializer(serializers.ModelSerializer):
+    mcc_id = serializers.PrimaryKeyRelatedField(
+        source="mcc", queryset=MccFee.objects.all(), write_only=True
+    )
+    fees = PlanFeeSerializer(many=True)
+
+    class Meta:
+        model = Plan
+        fields = [
+            "name",
+            "description",
+            "split",
+            "anticipation",
+            "mcc_id",
+            "fees",
+        ]
+
+    def validate_fees(self, value):
+        seen = set()
+        for fee in value:
+            key = (fee["network"], fee["payment_type"])
+            if key in seen:
+                raise serializers.ValidationError(
+                    f"Duplicate fee for {fee['network']} / {fee['payment_type']}."
+                )
+            seen.add(key)
+        return value
+
+    def create(self, validated_data):
+        fees_data = validated_data.pop("fees")
+        plan = Plan.objects.create(**validated_data)
+        PlanFee.objects.bulk_create(
+            [PlanFee(plan=plan, **fee) for fee in fees_data]
+        )
+        return plan
 
 
 class BusinessReadSerializer(serializers.ModelSerializer):

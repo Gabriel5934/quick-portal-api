@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from quickportal.models import Acquirer, Business, CnaeMccMapping, MccFee, PosModel
+from quickportal.models import Acquirer, Business, CnaeMccMapping, MccFee, Plan, PosModel
 from quickportal.serializers import (
     AcquirerSerializer,
     BusinessReadSerializer,
@@ -15,6 +15,8 @@ from quickportal.serializers import (
     EmailTokenObtainPairSerializer,
     MccFeeSerializer,
     MccListSerializer,
+    PlanReadSerializer,
+    PlanWriteSerializer,
     PosModelSerializer,
     UserCreateSerializer,
 )
@@ -133,6 +135,33 @@ class MccFeeDetailView(APIView):
         except MccFee.DoesNotExist:
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
         return Response(MccFeeSerializer(mcc_fee).data)
+
+
+class PlanListCreateView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        plans = Plan.objects.select_related("mcc").prefetch_related("fees").all()
+        return Response(PlanReadSerializer(plans, many=True).data)
+
+    def post(self, request):
+        serializer = PlanWriteSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        plan = serializer.save()
+        return Response(PlanReadSerializer(plan).data, status=status.HTTP_201_CREATED)
+
+
+class PlanDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        try:
+            plan = (
+                Plan.objects.select_related("mcc").prefetch_related("fees").get(pk=pk)
+            )
+        except Plan.DoesNotExist:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        return Response(PlanReadSerializer(plan).data)
 
 
 class BusinessPagination(PageNumberPagination):

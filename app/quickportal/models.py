@@ -94,6 +94,45 @@ class MccFee(models.Model):
         return f"{self.mcc} → Fee #{self.fee_id}"
 
 
+class Plan(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    split = models.BooleanField(default=False)
+    anticipation = models.BooleanField(default=False)
+    mcc = models.ForeignKey(MccFee, on_delete=models.PROTECT, related_name="plans")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "plan"
+        ordering = ["-created_at"]
+
+    def __str__(self):
+        return self.name
+
+
+class PlanFee(models.Model):
+    class Network(models.TextChoices):
+        MASTERCARD = "mastercard"
+        VISA = "visa"
+        ELO = "elo"
+        PIX = "pix"
+
+    plan = models.ForeignKey(Plan, on_delete=models.CASCADE, related_name="fees")
+    network = models.CharField(max_length=20, choices=Network.choices)
+    payment_type = models.CharField(max_length=10)
+    commission = models.DecimalField(max_digits=10, decimal_places=6)
+    anticipation_fee = models.DecimalField(
+        max_digits=10, decimal_places=6, null=True, blank=True
+    )
+
+    class Meta:
+        db_table = "plan_fee"
+        unique_together = [("plan", "network", "payment_type")]
+
+    def __str__(self):
+        return f"{self.plan_id} / {self.network} / {self.payment_type}"
+
+
 class Business(models.Model):
     document_type = models.CharField(max_length=4, choices=DocumentType.choices)
     document = models.CharField(max_length=20)
