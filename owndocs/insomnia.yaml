@@ -1,0 +1,1099 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Requests
+meta:
+  id: wrk_59098ba0cbd74bc0836e803c48fc3faa
+  created: 1779989934514
+  modified: 1779989944226
+  description: ""
+collection:
+  - name: BrasilAPI
+    meta:
+      id: fld_4a5f138f887443b2a77d5d61384adde2
+      created: 1780411084571
+      modified: 1780411084571
+      sortKey: -1780411084571
+      description: ""
+    children:
+      - url: https://brasilapi.com.br/api/cep/v1/:cep
+        name: /cep
+        meta:
+          id: req_d19716f4adc441639d280a41c30230e1
+          created: 1779996931741
+          modified: 1780411088197
+          isPrivate: false
+          description: ""
+          sortKey: -1780411088158
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: cep
+            value: "12244867"
+  - name: Quick
+    meta:
+      id: fld_0394024de9584286a1a4b73033dc7787
+      created: 1780411094562
+      modified: 1781063325586
+      sortKey: -1780411094562
+      description: ""
+    children:
+      - url: "{{ _.url }}/token/"
+        name: /token
+        meta:
+          id: req_5b354f10b2d7499e977a4271f2e2945f
+          created: 1779989934519
+          modified: 1781040933670
+          isPrivate: false
+          description: ""
+          sortKey: -1780411105424
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "root@email.com",
+            	"password": "JustTesting593!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        scripts:
+          afterResponse: |-
+            const body = insomnia.response.json();
+
+            if (body.access) {
+              insomnia.environment.set("access", body.access);
+            }
+
+            if (body.refresh) {
+              insomnia.environment.set("refresh", body.refresh);
+            }
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/token/blacklist/"
+        name: /token/blacklist
+        meta:
+          id: req_9de85734df7846c1a1b869067b64c79f
+          created: 1779990682325
+          modified: 1780411112283
+          isPrivate: false
+          description: ""
+          sortKey: -1780411105524
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"refresh":
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc4MDA3NjUyOCwiaWF0IjoxNzc5OTkwMTI4LCJqdGkiOiI0ZTRiNGFlNjViYWM0ZGEwOWQ4ODg0MWQ4MGIwY2QyOSIsInVzZXJfaWQiOiIxIn0.cMYskm911NhF6gUJ8Kb-iubmGaYY_4XoRjLikkTfE9I"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/acquirers"
+        name: /acquirers
+        meta:
+          id: req_f280c9f3c07f416f85bcb6a419cdef23
+          created: 1780068269893
+          modified: 1780411114020
+          isPrivate: false
+          description: ""
+          sortKey: -1780411105324
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/pos-models"
+        name: /pos-models
+        meta:
+          id: req_51e54f27c8f5425aa68a99481a0c56f4
+          created: 1780068298030
+          modified: 1780411118629
+          isPrivate: false
+          description: ""
+          sortKey: -1780411105374
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/cnae-mcc"
+        name: /cnae-mcc
+        meta:
+          id: req_2a9849723459431fa74075552568f45e
+          created: 1780414846351
+          modified: 1780417450906
+          isPrivate: false
+          description: ""
+          sortKey: -1780411096741
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/businesses"
+        name: /businesses
+        meta:
+          id: req_dde29585836e414ba132c09dfe26ae20
+          created: 1780417455131
+          modified: 1780417478922
+          isPrivate: false
+          description: ""
+          sortKey: -1780411092449.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/businesses/"
+        name: /businesses
+        meta:
+          id: req_5fb3fdcaaa4344228491bd1999615ced
+          created: 1780417482613
+          modified: 1780420005271
+          isPrivate: false
+          description: ""
+          sortKey: -1780411090303.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {	
+            	"document_type": "CPF",
+            	"document": "528.097.868-01",
+            	"legal_name": "gabriel ltda.",
+            	"trade_name": "gabriel",
+            	"cod_mcc": 4814,
+            	"email": "gabriel.andrade@outlook.com.br",
+            	"phone_number": "987074510"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/mccs"
+        name: /mccs
+        meta:
+          id: req_8b8179de85684c2ebf9eb625a6b890b6
+          created: 1781040912876
+          modified: 1781040918823
+          isPrivate: false
+          description: ""
+          sortKey: -1780411094595.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/mccs/:mcc/fees"
+        name: /mccs/<int:pk>/fees
+        meta:
+          id: req_b52cb0c54b1045c29b02cdb8d06d5553
+          created: 1781040972067
+          modified: 1781041171051
+          isPrivate: false
+          description: ""
+          sortKey: -1780411093522.375
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: mcc
+            value: "1"
+      - url: "{{ _.url }}/plans"
+        name: /plans
+        meta:
+          id: req_786afd31bad04062b78cda587c0d1fc0
+          created: 1781063318342
+          modified: 1781063321027
+          isPrivate: false
+          description: ""
+          sortKey: -1780411094058.8125
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/plans/:id"
+        name: /plans/<int:pk>
+        meta:
+          id: req_c38aa95ab58e4d4a90c90b8fc92ed5f5
+          created: 1781063393685
+          modified: 1781063404525
+          isPrivate: false
+          description: ""
+          sortKey: -1780411093790.5938
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: id
+            value: "1"
+      - url: "{{ _.url }}/plans/"
+        name: /plans
+        meta:
+          id: req_9ec1d6b018cb4639a394b8422b250c23
+          created: 1781063415872
+          modified: 1781063455599
+          isPrivate: false
+          description: ""
+          sortKey: -1780411093924.7031
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Teste 2",
+            	"description": "Desc do test 2",
+            	"split": true,
+            	"anticipation": true,
+            	"mcc_id": 2,
+            	"fees": [
+            		{
+            			"network": "mastercard",
+            			"payment_type": "debit",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "credit",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "2x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "3x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "4x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "5x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "6x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "7x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "8x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "9x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "10x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "11x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "12x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "13x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "14x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "15x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "16x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "17x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "18x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "19x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "20x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "mastercard",
+            			"payment_type": "21x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "debit",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "credit",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "2x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "3x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "4x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "5x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "6x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "7x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "8x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "9x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "10x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "11x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "12x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "13x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "14x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "15x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "16x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "17x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "18x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "19x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "20x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "visa",
+            			"payment_type": "21x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "debit",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "credit",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "2x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "3x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "4x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "5x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "6x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "7x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "8x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "9x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "10x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "11x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "12x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "13x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "14x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "15x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "16x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "17x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "18x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "19x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "20x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "elo",
+            			"payment_type": "21x",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		},
+            		{
+            			"network": "pix",
+            			"payment_type": "pix",
+            			"commission": "0.010000",
+            			"anticipation_fee": "0.010000"
+            		}
+            	],
+            	"created_at": "2026-06-10T00:14:48.860089Z"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: OWN
+    meta:
+      id: fld_a22990b630314673a4581cc2bf1510b8
+      created: 1780411100118
+      modified: 1780949131766
+      sortKey: -1780411100118
+      description: ""
+    children:
+      - url: https://acquirer-qa.own.financial/agilli/v2/auth
+        name: /auth
+        meta:
+          id: req_daa64b034e3a4f53bb13f5835e420733
+          created: 1780411229382
+          modified: 1780412280957
+          isPrivate: false
+          description: ""
+          sortKey: -1780411229382
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"client_id": "37924499000133-api-acquirer.wl",
+            	"client_secret": "9vYK8XGNxHtFsX2Xjxp0OhbfFy05Gllm",
+            	"scope": "wl.api_acquirer.api",
+            	"grant_type": "client_credentials"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        scripts:
+          afterResponse: |-
+            const body = insomnia.response.json();
+
+            if (body.access_token) {
+              insomnia.environment.set("access_own", body.access_token);
+            }
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.ownUrl }}/cadastrarConveniada"
+        name: /cadastrarConveniada
+        meta:
+          id: req_2d1828efbd4d447391d8ecf78623652e
+          created: 1780411412463
+          modified: 1780411885785
+          isPrivate: false
+          description: ""
+          sortKey: -1780411412463
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"cnpj": "11111111111111",
+            	//"cnpjCanalWL": "22222222222222",
+            	//"cnpjOrigem": "",
+            	"identificadorCliente": "51802678468",
+            	//"urlCallback": "https://www.google.com",
+            	"razaoSocial": "EMPRESA TESTE LTDA",
+            	"nomeFantasia": "EMPRESA TESTE",
+            	"cnae": "4679-6/01",
+            	"ramoAtividade": "LANCHONETES, CASAS DE CHA, DE SUCOS E SIMILARES",
+            	"faturamentoPrevisto": 10000,
+            	"email": "empresateste@gmail.com",
+            	"dddComercial": "83",
+            	"telefoneComercial": "999114785",
+            	"cep": "58690000",
+            	"logradouro": "Rua Rita Pereira De Almeida",
+            	"numeroEndereco": 173,
+            	//"complemento": "Em Cima Do Mercadinho Popular",
+            	"bairro": "Centro",
+            	"municipio": "Livramento",
+            	"uf": "PB",
+            	"dddCel": "83",
+            	"telefoneCelular": "83",
+            	"responsavelAssinatura": "Responsavel Legal",
+            	"quantidadePos": 1,
+            	"faturamentoContratado": 10000,
+            	"antecipacaoAutomatica": "S",
+            	"taxaAntecipacao": 0,
+            	"tipoAntecipacao": "ROTATIVO",
+            	"mcc": "5814",
+            	"tipoContrato": "W",
+            	"codConfiguracao": "",
+            	"cnpjParceiro": "11111111111111",
+            	"idCesta": 834,
+            	"tarifacao": [
+            		{
+            			"id": 118687,
+            			"valor": 0
+            		},
+            		{
+            			"id": 118730,
+            			"valor": 3.82
+            		},
+            		{
+            			"id": 118688,
+            			"valor": 3.22
+            		},
+            		{
+            			"id": 118709,
+            			"valor": 3.22
+            		},
+            		{
+            			"id": 118731,
+            			"valor": 4.59
+            		}
+            	],
+            	"codBanco": "001",
+            	"agencia": "906",
+            	"digAgencia": "09",
+            	"numConta": "785985",
+            	"digConta": "9",
+            	"protocoloCore": " ",
+            	"hashAceite": "X",
+            	"terminais": [],
+            	"documentosSocios": [
+            		{
+            			"identificacao": "51802678468",
+            			"anexos": [
+            				{
+            					"nomeArquivo": "semAnexo.jpg",
+            					"conteudo": "EM BRANCO",
+            					"tipo": "BRANCO"
+            				}
+            			]
+            		}
+            	],
+            	"anexos": [
+            		{
+            			"nomeArquivo": "semAnexo.jpg",
+            			"conteudo": "EM BRANCO",
+            			"tipo": "BRANCO"
+            		}
+            	],
+            	//"outrosMeiosCaptura": [
+            	//	{
+            	//		"meioCaptura": "ECOMMERCE"
+            	//	}
+            	//]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access_own }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.ownUrl }}/consultarCesta"
+        name: /consultarCesta
+        meta:
+          id: req_8441030e57f240009de8276a08134cf8
+          created: 1780412179233
+          modified: 1780937938263
+          isPrivate: false
+          description: ""
+          sortKey: -1780412179233
+        method: GET
+        parameters:
+          - name: nomeCesta
+            value: CESTA DE SERVICO - POR PARCELA
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access_own }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.ownUrl }}/consultarAtividades"
+        name: /consultarAtividades
+        meta:
+          id: req_e65eb056f5144d58ba2bbdac16389481
+          created: 1780414306533
+          modified: 1780414311358
+          isPrivate: false
+          description: ""
+          sortKey: -1780411795848
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer {{ _.access_own }}
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0625f88b18d34f54575bd3c78e9510b1616a2ee1
+    created: 1779989934516
+    modified: 1781063325584
+  cookies:
+    - id: 1a5fca56-dbd2-41d7-bf71-1460117ea6ea
+      key: route
+      value: 2d3bbc53bda26e67
+      domain: acquirer-qa.own.financial
+      path: /
+      secure: false
+      httpOnly: false
+      hostOnly: true
+    - id: f8c20340-6471-4313-af5a-fea5f7b7e1a7
+      key: route
+      value: f2c357d60a7dc1d0
+      domain: acquirer.own.financial
+      path: /
+      secure: false
+      httpOnly: false
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_0625f88b18d34f54575bd3c78e9510b1616a2ee1
+    created: 1779989934516
+    modified: 1781063325585
+    isPrivate: false
+  data:
+    url: http://localhost:8000/api
+    refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc4MTE0OTcyNSwiaWF0IjoxNzgxMDYzMzI1LCJqdGkiOiJkYWZhNDAzZGI2MGQ0MGU2OTA0NjAzZmYxNWVlMDc3NyIsInVzZXJfaWQiOiIxIn0.duucjl5DScF7AaKWikPbAXK8vFSuK_l3jF39RUI9BKo
+    access: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxMDYzNjI1LCJpYXQiOjE3ODEwNjMzMjUsImp0aSI6IjZiOWYzOGVlNTY0MTQ3NDZhMjNkNjY2YTQ3NmFjMWU4IiwidXNlcl9pZCI6IjEifQ.8sp81s72Qy7dQKyxHWcP6Ux2YFHTaayCMlbbxcZ7kt8
+    brasilUrl: https://brasilapi.com.br/api
+    ownUrl: https://acquirer-qa.own.financial/agilli/parceiro/v2
+    access_own: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJsdXlMSkZfbjN5UEdJVS1hUV9sdjRLdWx2NnU5ODktQVBhQlRkNmUzalY4In0.eyJleHAiOjE3ODA5NDk0MzEsImlhdCI6MTc4MDk0OTEzMSwianRpIjoiZDdhYmViMGYtMTZhZC00ODFhLWIxMjAtZGIzOWU5MzVhYTViIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay1xYS52YWxlY2FyZC5jb20uYnIvcmVhbG1zL293biIsInN1YiI6Ijc2ZDMyNDFjLTdhODAtNGY4Yi1iZTYzLTNhZGVlZTYxMmM3NiIsInR5cCI6IkJlYXJlciIsImF6cCI6IjM3OTI0NDk5MDAwMTMzLWFwaS1hY3F1aXJlci53bCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUk9MRV9DT05TVUxUQV9MSVFVSURBQ09FU19BUElfV0wiLCJST0xFX0JVU0NBX1RSQU5TQUNPRVNfR0VSQUlTX0FQSV9XTCIsIlJPTEVfQlVTQ0FfUFJPVE9DT0xPU19WMl9BUElfV0wiLCJST0xFX0xJU1RBX0xJTktfUEdUT19DVVNUT00iLCJST0xFX1VQREFURV9DQU5BTF9BUElfV0wiLCJST0xFX1JFR0lTVFJBX0FESVRJVk9fQVBJX1dMIiwiUk9MRV9CVVNDQV9ERURVQ09FU19QQUdBTUVOVE9fQVBJX1dMIiwiUk9MRV9CWV9OT01FX0NBTkFMX0FQSV9XTCIsIlJPTEVfUkVHSVNUUkFfQURJVElWT19DQURBU1RSQUlTX0FQSV9XTCIsIlJPTEVfQ0FEQVNUUk9fRUNPTU1FUkNFX1BBUkFfUEFSQ0VJUk9TX1dMIiwiUk9MRV9DT05TVUxUQV9SRUdJU1RST19TUExJVF9BUElfV0wiLCJST0xFX0lOVEVHUkFDQU9fUFJPVE9DT0xPX0FQSV9XTCIsIlJPTEVfQlVTQ0FfUEFSQ0VMQVNfQVBJX1dMIiwiUk9MRV9DT05TVUxUQV9BVElWSURBREVfQVBJX1dMIiwiUk9MRV9SRUdJU1RSQV9TUExJVF9UUkFOU0FDVElPTl9BUElfV0wiLCJST0xFX0RFU0FUSVZBX1NQTElUX1RSQU5TQUNUSU9OX0FQSV9XTCIsIlJPTEVfSElTVE9SSUNPX05VTUVST19TRVJJRV9BUElfV0wiLCJST0xFX0JVU0NBX0RFVEFMSEVTX0xJTktfVjMiLCJST0xFX0FDRVNTT1NfQUNJX1BBUkFfUEFSQ0VJUk9TIiwiUk9MRV9DT05TVUxUQV9MSVFVSURBQ09FU19WM19BUElfV0wiLCJST0xFX0NBTkNFTEFfTElOS19QR1RPX0NVU1RPTSIsIlJPTEVfV0VCSE9PS19BQ0VJVEVfQVBJX1dMIiwiUk9MRV9DT05TVUxUQV9EQURPU19DT01FUkNJQUlTIiwiUk9MRV9CVVNDQV9MSVFVSURBQ09FU19BUElfV0wiLCJST0xFX1BST0NFU1NBX0NSRURFTkNJQU1FTlRPX1NBTEVTX0ZPUkNFIiwiUk9MRV9DQU5DRUxBX1NPTElDSVRBQ0FPX1BBR0FNRU5UTyIsIlJPTEVfSU5ESUNBRE9SRVNfQ0FEQVNUUkFJU19BUElfV0wiLCJST0xFX0JVU0NBX1BST1RPQ09MT1NfQVBJX1dMIiwiUk9MRV9CWV9DTlBKX0NBTkFMX0FQSV9XTCIsIlJPTEVfQ09OU1VMVEEiLCJST0xFX1JFR0lTVFJBX1NQTElUX0FQSV9XTCIsIlJPTEVfQ09ORklHVVJBX0VRVUlQQU1FTlRPX0FQSV9XTCIsIlJPTEVfQlVTQ0FfVFJBTlNBQ09FU19HRVJBSVNfVjNfQVBJX1dMIiwiUk9MRV9DUkVERU5DSUFNRU5UT19XTCIsIlJPTEVfQ0FOQ0VMQV9SRUdJU1RST19TUExJVF9BUElfV0wiLCJST0xFX1NBVkVfQ0FOQUxfQVBJX1dMIiwiUk9MRV9DUklBX0xJTktfUEFHQU1FTlRPX1YzIiwiUk9MRV9DUklBX1NPTElDSVRBQ0FPX1BBR0FNRU5UTyIsIlJPTEVfQ09OU1VMVEFfVEVTVEUiLCJST0xFX0JZX0NPTlZFTklBREFJRF9MT0dBREFfQVBJX1dMIiwiUk9MRV9SRUxBVE9SSU9fRVNUT1JOT19BUElfV0wiLCJST0xFX1ZFTkRBU19DT05TT0xJREFEQVNfQVBJX1dMIiwiUk9MRV9CWV9DT05TVUxUQV9DRVNUQV9BUElfV0wiXX0sInNjb3BlIjoiZW1haWwgd2wuYXBpX2FjcXVpcmVyLmFwaSBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTAuMi4xMC4xMjQiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtMzc5MjQ0OTkwMDAxMzMtYXBpLWFjcXVpcmVyLndsIiwiY2xpZW50QWRkcmVzcyI6IjEwLjIuMTAuMTI0IiwiY2xpZW50X2lkIjoiMzc5MjQ0OTkwMDAxMzMtYXBpLWFjcXVpcmVyLndsIn0.R1MY3zlt3XrSgC4iDDdnTa8QuMf3QGXvtmOujYl4Neh8luJ7EhaPMAnrAw_8_tMvM-qN2as5BgsgrlVsSrjpZ0TnF06iKiic-LrmJjU6wASHfL0nDZEQH4oO-lC54DW3AV5WKnanbWiqaPuCEDBQFJ1KGetiUXeNmql6SCBjXucCuvKUEwt5mlt78jsystXqvPcGX5t2QSjVXSUmFih-7_Yh9p0TJvbn31hQ8yLmXjQ3aJ6jVvUjM5lUTrascgt6IZ5uVe3taD6cZXvFqbMQ8S49yM1F_q-Pt77N8UFotoHpS0AQykzJl8Bi9g5fW1N7-IiIu8O3tEYnD0cB2ZMicg
