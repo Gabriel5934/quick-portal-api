@@ -156,7 +156,7 @@ class MccFeeSerializer(serializers.ModelSerializer):
 class PlanFeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PlanFee
-        fields = ["network", "payment_type", "commission", "anticipation_fee"]
+        fields = ["network", "payment_type", "commission"]
 
 
 class PlanReadSerializer(serializers.ModelSerializer):
@@ -171,6 +171,7 @@ class PlanReadSerializer(serializers.ModelSerializer):
             "description",
             "split",
             "anticipation",
+            "anticipation_fee",
             "mcc",
             "fees",
             "created_at",
@@ -190,6 +191,7 @@ class PlanWriteSerializer(serializers.ModelSerializer):
             "description",
             "split",
             "anticipation",
+            "anticipation_fee",
             "mcc_id",
             "fees",
         ]

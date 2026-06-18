@@ -99,6 +99,9 @@ class Plan(models.Model):
     description = models.TextField(blank=True)
     split = models.BooleanField(default=False)
     anticipation = models.BooleanField(default=False)
+    anticipation_fee = models.DecimalField(
+        max_digits=10, decimal_places=6, null=True, blank=True
+    )
     mcc = models.ForeignKey(MccFee, on_delete=models.PROTECT, related_name="plans")
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -121,9 +124,6 @@ class PlanFee(models.Model):
     network = models.CharField(max_length=20, choices=Network.choices)
     payment_type = models.CharField(max_length=10)
     commission = models.DecimalField(max_digits=10, decimal_places=6)
-    anticipation_fee = models.DecimalField(
-        max_digits=10, decimal_places=6, null=True, blank=True
-    )
 
     class Meta:
         db_table = "plan_fee"
