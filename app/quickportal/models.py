@@ -7,7 +7,7 @@ class DocumentType(models.TextChoices):
     CNPJ = "CNPJ"
 
 
-class OwnStatus(models.TextChoices):
+class Status(models.TextChoices):
     NOT_STARTED = "NOT_STARTED"
 
 
@@ -136,15 +136,16 @@ class PlanFee(models.Model):
 class Business(models.Model):
     document_type = models.CharField(max_length=4, choices=DocumentType.choices)
     document = models.CharField(max_length=20)
-    legal_name = models.CharField(max_length=200)
-    trade_name = models.CharField(max_length=200)
-    mcc = models.ForeignKey(CnaeMccMapping, on_delete=models.PROTECT, related_name="businesses")
+    name = models.CharField(max_length=200)
+    trade_name = models.CharField(max_length=200, blank=True)
+    cod_cnae = models.CharField(max_length=20, blank=True)
     email = models.EmailField()
-    phone_number = models.CharField(max_length=20)
-    own_status = models.CharField(max_length=20, choices=OwnStatus.choices, default=OwnStatus.NOT_STARTED)
+    phone = models.CharField(max_length=20)
+    landline = models.CharField(max_length=20, blank=True)
+    status = models.CharField(max_length=20, choices=Status.choices, default=Status.NOT_STARTED)
 
     class Meta:
         db_table = "business"
 
     def __str__(self):
-        return self.legal_name
+        return self.name

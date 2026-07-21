@@ -20,8 +20,21 @@ from quickportal.serializers import (
     PosModelSerializer,
     UserCreateSerializer,
 )
+from quickportal.services.brasil_api import BrasilApiError
 from quickportal.services.own_auth import get_own_token, OwnAuthError
 from quickportal.services.own_merchant import register_merchant, MerchantRegistrationError
+
+
+def _brasil_api_error_response(exc: BrasilApiError) -> Response:
+    if exc.status_code and 400 <= exc.status_code < 500:
+        return Response(
+            {"error": "invalid_cnpj", "detail": str(exc)},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+    return Response(
+        {"error": "brasil_api_failed", "detail": str(exc)},
+        status=status.HTTP_502_BAD_GATEWAY,
+    )
 
 
 class UserRegistrationView(APIView):
@@ -174,16 +187,14 @@ class BusinessListCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        businesses = Business.objects.select_related("mcc").all()
+        businesses = Business.objects.all()
         if document := request.query_params.get("document"):
             businesses = businesses.filter(document=document)
-        if legal_name := request.query_params.get("legal_name"):
-            businesses = businesses.filter(legal_name__icontains=legal_name)
-        if trade_name := request.query_params.get("trade_name"):
-            businesses = businesses.filter(trade_name__icontains=trade_name)
+        if name := request.query_params.get("name"):
+            businesses = businesses.filter(name__icontains=name)
         status_counts = {
-            item["own_status"]: item["total"]
-            for item in businesses.values("own_status").annotate(total=Count("id"))
+            item["status"]: item["total"]
+            for item in businesses.values("status").annotate(total=Count("id"))
         }
         paginator = BusinessPagination()
         page = paginator.paginate_queryset(businesses, request)
@@ -198,8 +209,11 @@ class BusinessListCreateView(APIView):
 
     def post(self, request):
         serializer = BusinessWriteSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        business = serializer.save()
+        try:
+            serializer.is_valid(raise_exception=True)
+            business = serializer.save()
+        except BrasilApiError as exc:
+            return _brasil_api_error_response(exc)
         return Response(BusinessReadSerializer(business).data, status=status.HTTP_201_CREATED)
 
 
@@ -208,7 +222,7 @@ class BusinessDetailView(APIView):
 
     def _get_object(self, pk):
         try:
-            return Business.objects.select_related("mcc").get(pk=pk)
+            return Business.objects.get(pk=pk)
         except Business.DoesNotExist:
             return None
 
@@ -223,8 +237,11 @@ class BusinessDetailView(APIView):
         if business is None:
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
         serializer = BusinessWriteSerializer(business, data=request.data)
-        serializer.is_valid(raise_exception=True)
-        business = serializer.save()
+        try:
+            serializer.is_valid(raise_exception=True)
+            business = serializer.save()
+        except BrasilApiError as exc:
+            return _brasil_api_error_response(exc)
         return Response(BusinessReadSerializer(business).data)
 
     def patch(self, request, pk):
@@ -232,8 +249,11 @@ class BusinessDetailView(APIView):
         if business is None:
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
         serializer = BusinessWriteSerializer(business, data=request.data, partial=True)
-        serializer.is_valid(raise_exception=True)
-        business = serializer.save()
+        try:
+            serializer.is_valid(raise_exception=True)
+            business = serializer.save()
+        except BrasilApiError as exc:
+            return _brasil_api_error_response(exc)
         return Response(BusinessReadSerializer(business).data)
 
     def delete(self, request, pk):

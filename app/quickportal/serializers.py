@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from quickportal.models import Acquirer, Business, CnaeMccMapping, Fee, MccFee, Plan, PlanFee, PosModel
+from quickportal.models import Acquirer, Business, CnaeMccMapping, DocumentType, Fee, MccFee, Plan, PlanFee, PosModel
+from quickportal.services.brasil_api import fetch_cnpj_info
 
 
 FEE_NETWORK_METHODS = {
@@ -101,31 +102,69 @@ class CnaeMccMappingSerializer(serializers.ModelSerializer):
 
 
 class BusinessWriteSerializer(serializers.ModelSerializer):
-    cod_mcc = serializers.IntegerField(write_only=True)
+    name = serializers.CharField(required=False, allow_blank=False)
+    cod_cnae = serializers.CharField(required=False, allow_blank=False)
+    trade_name = serializers.CharField(required=False, allow_blank=True, default="")
+    landline = serializers.CharField(required=False, allow_blank=True, default="")
 
     class Meta:
         model = Business
-        fields = ["document_type", "document", "legal_name", "trade_name", "cod_mcc", "email", "phone_number"]
+        fields = ["document_type", "document", "name", "trade_name", "cod_cnae", "email", "phone", "landline"]
 
-    def _resolve_mcc(self, cod_mcc):
-        mapping = CnaeMccMapping.objects.filter(cod_mcc=cod_mcc).first()
-        if mapping is None:
-            raise serializers.ValidationError({"cod_mcc": f"No MCC mapping found for MCC code '{cod_mcc}'."})
-        return mapping
+    @staticmethod
+    def _validate_digits(value, field_name):
+        if value and not value.isdigit():
+            raise serializers.ValidationError(f"{field_name} must contain only digits.")
+        return value
 
-    def create(self, validated_data):
-        cod_mcc = validated_data.pop("cod_mcc")
-        validated_data["mcc"] = self._resolve_mcc(cod_mcc)
-        return Business.objects.create(**validated_data)
+    def validate_document(self, value):
+        return self._validate_digits(value, "document")
 
-    def update(self, instance, validated_data):
-        cod_mcc = validated_data.pop("cod_mcc", None)
-        if cod_mcc is not None:
-            validated_data["mcc"] = self._resolve_mcc(cod_mcc)
-        for attr, value in validated_data.items():
-            setattr(instance, attr, value)
-        instance.save()
-        return instance
+    def validate_cod_cnae(self, value):
+        return self._validate_digits(value, "cod_cnae")
+
+    def validate_phone(self, value):
+        return self._validate_digits(value, "phone")
+
+    def validate_landline(self, value):
+        return self._validate_digits(value, "landline")
+
+    def validate(self, attrs):
+        if self.instance is not None:
+            immutable_errors = {}
+            for field in ("document", "document_type"):
+                if field in self.initial_data and self.initial_data[field] != getattr(self.instance, field):
+                    immutable_errors[field] = "This field cannot be changed after creation."
+            if immutable_errors:
+                raise serializers.ValidationError(immutable_errors)
+
+        document_type = attrs.get("document_type") or getattr(self.instance, "document_type", None)
+        cod_cnae = attrs.get("cod_cnae")
+
+        if document_type == DocumentType.CPF:
+            errors = {}
+            if not attrs.get("name") and not getattr(self.instance, "name", None):
+                errors["name"] = "This field is required when document_type is CPF."
+            if not cod_cnae and not getattr(self.instance, "cod_cnae", None):
+                errors["cod_cnae"] = "This field is required when document_type is CPF."
+            if errors:
+                raise serializers.ValidationError(errors)
+        elif document_type == DocumentType.CNPJ:
+            managed_fields = ("name", "trade_name", "cod_cnae")
+            conflicting = [f for f in managed_fields if f in self.initial_data]
+            if conflicting:
+                raise serializers.ValidationError({
+                    f: "This field is auto-populated for CNPJ and must not be provided."
+                    for f in conflicting
+                })
+            document = attrs.get("document") or getattr(self.instance, "document", None)
+            if document and self.instance is None:
+                info = fetch_cnpj_info(document)
+                attrs["cod_cnae"] = info["cod_cnae"]
+                attrs["trade_name"] = info["trade_name"]
+                attrs["name"] = info["name"]
+
+        return attrs
 
 
 class FeeSerializer(serializers.Serializer):
@@ -217,8 +256,6 @@ class PlanWriteSerializer(serializers.ModelSerializer):
 
 
 class BusinessReadSerializer(serializers.ModelSerializer):
-    mcc = CnaeMccMappingSerializer(read_only=True)
-
     class Meta:
         model = Business
-        fields = ["id", "document_type", "document", "legal_name", "trade_name", "mcc", "email", "phone_number", "own_status"]
+        fields = ["id", "document_type", "document", "name", "trade_name", "cod_cnae", "email", "phone", "landline", "status"]
