@@ -1,5 +1,9 @@
 
 from django.db import models
+from django.core.validators import MinValueValidator, RegexValidator
+
+
+digits_only = RegexValidator(r"^\d+$", "This field must contain only digits.")
 
 
 class DocumentType(models.TextChoices):
@@ -149,3 +153,48 @@ class Business(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class BusinessDetails(models.Model):
+    business = models.OneToOneField(
+        Business, on_delete=models.CASCADE, related_name="details"
+    )
+    bank_code = models.CharField(max_length=8, validators=[digits_only])
+    branch = models.CharField(max_length=20, validators=[digits_only])
+    branch_digit = models.CharField(max_length=5, validators=[digits_only])
+    account_number = models.CharField(max_length=30, validators=[digits_only])
+    account_digit = models.CharField(max_length=5, validators=[digits_only])
+    cep = models.CharField(max_length=8, validators=[digits_only])
+    address_number = models.CharField(max_length=20, validators=[digits_only])
+    address_line2 = models.CharField(max_length=255, blank=True)
+    projected_revenue = models.DecimalField(
+        max_digits=15, decimal_places=2, validators=[MinValueValidator(0)]
+    )
+    commited_revenue = models.DecimalField(
+        max_digits=15, decimal_places=2, validators=[MinValueValidator(0)]
+    )
+    amount_of_terminals = models.PositiveIntegerField()
+    plan = models.ForeignKey(Plan, on_delete=models.PROTECT, related_name="business_details")
+
+    class Meta:
+        db_table = "business_details"
+
+    def __str__(self):
+        return f"Details for {self.business}"
+
+
+class PosDevice(models.Model):
+    model = models.ForeignKey(PosModel, on_delete=models.PROTECT, related_name="devices")
+    serial = models.CharField(max_length=100, validators=[digits_only])
+    business = models.ForeignKey(
+        Business, on_delete=models.CASCADE, related_name="pos_devices"
+    )
+
+    class Meta:
+        db_table = "pos_device"
+        constraints = [
+            models.UniqueConstraint(fields=["model", "serial"], name="unique_pos_device_serial")
+        ]
+
+    def __str__(self):
+        return self.serial

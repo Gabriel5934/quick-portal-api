@@ -6,10 +6,11 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from quickportal.models import Acquirer, Business, CnaeMccMapping, MccFee, Plan, PosModel
+from quickportal.models import Acquirer, Business, BusinessDetails, CnaeMccMapping, MccFee, Plan, PosDevice, PosModel
 from quickportal.serializers import (
     AcquirerSerializer,
     BusinessReadSerializer,
+    BusinessDetailsSerializer,
     BusinessWriteSerializer,
     CnaeMccMappingSerializer,
     EmailTokenObtainPairSerializer,
@@ -17,6 +18,7 @@ from quickportal.serializers import (
     MccListSerializer,
     PlanReadSerializer,
     PlanWriteSerializer,
+    PosDeviceSerializer,
     PosModelSerializer,
     UserCreateSerializer,
 )
@@ -28,13 +30,20 @@ from quickportal.services.own_merchant import register_merchant, MerchantRegistr
 def _brasil_api_error_response(exc: BrasilApiError) -> Response:
     if exc.status_code and 400 <= exc.status_code < 500:
         return Response(
-            {"error": "invalid_cnpj", "detail": str(exc)},
+            {"error": f"invalid_{exc.resource or 'brasil_api_resource'}", "detail": str(exc)},
             status=status.HTTP_400_BAD_REQUEST,
         )
     return Response(
         {"error": "brasil_api_failed", "detail": str(exc)},
         status=status.HTTP_502_BAD_GATEWAY,
     )
+
+
+def _get_object_or_none(model, pk):
+    try:
+        return model.objects.get(pk=pk)
+    except model.DoesNotExist:
+        return None
 
 
 class UserRegistrationView(APIView):
@@ -221,10 +230,7 @@ class BusinessDetailView(APIView):
     permission_classes = [IsAuthenticated]
 
     def _get_object(self, pk):
-        try:
-            return Business.objects.get(pk=pk)
-        except Business.DoesNotExist:
-            return None
+        return _get_object_or_none(Business, pk)
 
     def get(self, request, pk):
         business = self._get_object(pk)
@@ -261,4 +267,103 @@ class BusinessDetailView(APIView):
         if business is None:
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
         business.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class BusinessDetailsListCreateView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        details = BusinessDetails.objects.select_related("business", "plan")
+        if business_id := request.query_params.get("business"):
+            details = details.filter(business_id=business_id)
+        return Response(BusinessDetailsSerializer(details, many=True).data)
+
+    def post(self, request):
+        serializer = BusinessDetailsSerializer(data=request.data)
+        try:
+            serializer.is_valid(raise_exception=True)
+        except BrasilApiError as exc:
+            return _brasil_api_error_response(exc)
+        details = serializer.save()
+        return Response(BusinessDetailsSerializer(details).data, status=status.HTTP_201_CREATED)
+
+
+class BusinessDetailsDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        details = _get_object_or_none(BusinessDetails, pk)
+        if details is None:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        return Response(BusinessDetailsSerializer(details).data)
+
+    def put(self, request, pk):
+        return self._update(request, pk)
+
+    def patch(self, request, pk):
+        return self._update(request, pk, partial=True)
+
+    def _update(self, request, pk, partial=False):
+        details = _get_object_or_none(BusinessDetails, pk)
+        if details is None:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        serializer = BusinessDetailsSerializer(details, data=request.data, partial=partial)
+        try:
+            serializer.is_valid(raise_exception=True)
+        except BrasilApiError as exc:
+            return _brasil_api_error_response(exc)
+        return Response(BusinessDetailsSerializer(serializer.save()).data)
+
+    def delete(self, request, pk):
+        details = _get_object_or_none(BusinessDetails, pk)
+        if details is None:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        details.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class PosDeviceListCreateView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        devices = PosDevice.objects.select_related("model", "business")
+        if business_id := request.query_params.get("business"):
+            devices = devices.filter(business_id=business_id)
+        return Response(PosDeviceSerializer(devices, many=True).data)
+
+    def post(self, request):
+        serializer = PosDeviceSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        return Response(PosDeviceSerializer(serializer.save()).data, status=status.HTTP_201_CREATED)
+
+
+class PosDeviceDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        device = _get_object_or_none(PosDevice, pk)
+        if device is None:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        return Response(PosDeviceSerializer(device).data)
+
+    def put(self, request, pk):
+        return self._update(request, pk)
+
+    def patch(self, request, pk):
+        return self._update(request, pk, partial=True)
+
+    def _update(self, request, pk, partial=False):
+        device = _get_object_or_none(PosDevice, pk)
+        if device is None:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        serializer = PosDeviceSerializer(device, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        return Response(PosDeviceSerializer(serializer.save()).data)
+
+    def delete(self, request, pk):
+        device = _get_object_or_none(PosDevice, pk)
+        if device is None:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        device.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(jq -r '.tool_input.file_path // empty'); if echo \"$file\" | grep -qE 'migrations/[^_].*\\.py$'; then echo '{\"continue\": false, \"stopReason\": \"Do not write migrations by hand. Run: docker compose exec web python manage.py makemigrations\"}'; exit 1; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

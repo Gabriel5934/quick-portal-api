@@ -4,8 +4,11 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from quickportal.models import Acquirer, Business, CnaeMccMapping, DocumentType, Fee, MccFee, Plan, PlanFee, PosModel
-from quickportal.services.brasil_api import fetch_cnpj_info
+from quickportal.models import (
+    Acquirer, Business, BusinessDetails, CnaeMccMapping, DocumentType, Fee, MccFee,
+    Plan, PlanFee, PosDevice, PosModel,
+)
+from quickportal.services.brasil_api import fetch_bank_info, fetch_cep_info, fetch_cnpj_info
 
 
 FEE_NETWORK_METHODS = {
@@ -259,3 +262,27 @@ class BusinessReadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Business
         fields = ["id", "document_type", "document", "name", "trade_name", "cod_cnae", "email", "phone", "landline", "status"]
+
+
+class BusinessDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BusinessDetails
+        fields = [
+            "id", "business", "bank_code", "branch", "branch_digit", "account_number",
+            "account_digit", "cep", "address_number", "address_line2",
+            "projected_revenue", "commited_revenue", "amount_of_terminals", "plan",
+        ]
+
+    def validate_bank_code(self, value):
+        fetch_bank_info(value)
+        return value
+
+    def validate_cep(self, value):
+        fetch_cep_info(value)
+        return value
+
+
+class PosDeviceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PosDevice
+        fields = ["id", "model", "serial", "business"]
