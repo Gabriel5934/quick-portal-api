@@ -6,7 +6,7 @@ Minimal Django 5 project running in Docker with PostgreSQL.
 
 ```bash
 # 1. Copy env file
-cp .env.example .env
+cp .env.example .env.dev
 
 # 2. Build & start (migrations run automatically on first boot)
 docker compose up --build
@@ -19,8 +19,30 @@ docker compose exec web python manage.py createsuperuser
 
 | URL                             | Description                       |
 | ------------------------------- | --------------------------------- |
-| `http://localhost:8000/health/` | Health check → `{"status": "ok"}` |
-| `http://localhost:8000/admin/`  | Django admin                      |
+| `http://localhost:8080/health/` | Health check → `{"status": "ok"}` |
+| `http://localhost:8080/admin/`  | Django admin                      |
+
+nginx is the only public service. It proxies application requests to Django and
+serves files collected by Django under `/static/`.
+
+For the production stack, copy `.env.example` to `.env`, then configure it
+before starting:
+
+- Replace `DJANGO_SECRET_KEY=dev-secret-key-change-in-prod` with a strong,
+  unique secret.
+- Replace `POSTGRES_PASSWORD=app` with a strong, unique database password.
+- Set `DEBUG=0`.
+- Set `ALLOWED_HOSTS` for the deployment.
+
+After those production values are configured, run:
+
+```bash
+docker compose -f docker-compose.prod.yml up --build
+```
+
+The production nginx port defaults to `80` and can be changed with `NGINX_PORT`.
+When `DEBUG=0`, Django enables HTTPS redirects, secure cookies, and HSTS, and
+trusts nginx's `X-Forwarded-Proto` header.
 
 ## Project layout
 

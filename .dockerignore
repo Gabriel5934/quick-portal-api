@@ -3,4 +3,6 @@
 **/*.pyo
 .git
 .env
+.env.*
 *.sqlite3
+app/staticfiles/

@@ -144,3 +144,7 @@ uv.lock
 
 # Data dump files
 load_*.json
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
