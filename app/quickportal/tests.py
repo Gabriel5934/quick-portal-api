@@ -7,7 +7,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from quickportal.models import Acquirer, Business, Fee, MccFee, Plan, PosModel
+from quickportal.models import Acquirer, Business, Fee, MccFee, Plan, PosModel, Status
 
 
 class BusinessDetailsApiTests(APITestCase):
@@ -52,6 +52,8 @@ class BusinessDetailsApiTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(response.data["projected_revenue"], str(Decimal("1000.50")))
+        self.business.refresh_from_db()
+        self.assertEqual(self.business.status, Status.PENDING)
         fetch_bank_info.assert_called_once_with("1")
         fetch_cep_info.assert_called_once_with("01001000")
 
@@ -77,6 +79,8 @@ class BusinessDetailsApiTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn("branch", response.data)
+        self.business.refresh_from_db()
+        self.assertEqual(self.business.status, Status.NOT_STARTED)
 
 
 class PosDeviceApiTests(APITestCase):

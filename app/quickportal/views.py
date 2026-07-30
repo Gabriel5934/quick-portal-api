@@ -1,3 +1,4 @@
+from django.db import transaction
 from django.db.models import Count
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
@@ -6,7 +7,17 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from quickportal.models import Acquirer, Business, BusinessDetails, CnaeMccMapping, MccFee, Plan, PosDevice, PosModel
+from quickportal.models import (
+    Acquirer,
+    Business,
+    BusinessDetails,
+    CnaeMccMapping,
+    MccFee,
+    Plan,
+    PosDevice,
+    PosModel,
+    Status,
+)
 from quickportal.serializers import (
     AcquirerSerializer,
     BusinessReadSerializer,
@@ -285,7 +296,10 @@ class BusinessDetailsListCreateView(APIView):
             serializer.is_valid(raise_exception=True)
         except BrasilApiError as exc:
             return _brasil_api_error_response(exc)
-        details = serializer.save()
+        with transaction.atomic():
+            details = serializer.save()
+            details.business.status = Status.PENDING
+            details.business.save(update_fields=["status"])
         return Response(BusinessDetailsSerializer(details).data, status=status.HTTP_201_CREATED)
 
 

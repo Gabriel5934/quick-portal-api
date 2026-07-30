@@ -13,6 +13,7 @@ class DocumentType(models.TextChoices):
 
 class Status(models.TextChoices):
     NOT_STARTED = "NOT_STARTED"
+    PENDING = "PENDING"
 
 
 class Acquirer(models.Model):
