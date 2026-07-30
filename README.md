@@ -37,12 +37,19 @@ before starting:
 After those production values are configured, run:
 
 ```bash
-docker compose -f docker-compose.prod.yml up --build
+docker compose up --build
 ```
 
 The production nginx port defaults to `80` and can be changed with `NGINX_PORT`.
-When `DEBUG=0`, Django enables HTTPS redirects, secure cookies, and HSTS, and
+Production enables HTTPS redirects, secure cookies, and HSTS by default, and
 trusts nginx's `X-Forwarded-Proto` header.
+
+For an HTTP-only QA environment, keep `DEBUG=0` and set `USE_HTTPS=0`. This
+disables HTTPS enforcement without exposing Django debug pages:
+
+```bash
+eb setenv USE_HTTPS=0
+```
 
 ## Project layout
 
@@ -69,6 +76,7 @@ trusts nginx's `X-Forwarded-Proto` header.
 | Variable            | Default               | Description              |
 | ------------------- | --------------------- | ------------------------ |
 | `DEBUG`             | `1`                   | Set to `0` in production |
+| `USE_HTTPS`         | Inverse of `DEBUG`    | Set to `0` for HTTP-only QA |
 | `DJANGO_SECRET_KEY` | insecure default      | **Change in production** |
 | `ALLOWED_HOSTS`     | `localhost 127.0.0.1` | Space-separated list     |
 | `POSTGRES_DB`       | `app`                 | Database name            |

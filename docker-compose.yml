@@ -38,6 +38,7 @@ services:
       - static_data:/app/staticfiles
     environment:
       DEBUG: 0
+      USE_HTTPS: ${USE_HTTPS:-1}
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Set DJANGO_SECRET_KEY to a secure production value}
       ALLOWED_HOSTS: ${ALLOWED_HOSTS:?Set ALLOWED_HOSTS for production}
       POSTGRES_DB: ${POSTGRES_DB:-app}
