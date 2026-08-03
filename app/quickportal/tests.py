@@ -3,16 +3,69 @@ from decimal import Decimal
 from unittest.mock import patch
 
 from django.contrib.auth.models import User
+from django.db import IntegrityError, transaction
+from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from quickportal.models import Acquirer, Business, Fee, MccFee, Plan, PosModel, Status
+from quickportal.models import (
+    Acquirer,
+    Business,
+    Client,
+    Fee,
+    Network,
+    Plan,
+    PlanFee,
+    PosModel,
+    Status,
+)
+
+
+class FeeModelTests(TestCase):
+    def setUp(self):
+        self.acquirer = Acquirer.objects.create(name="OWN")
+        self.network = Network.objects.create(name="Visa")
+        self.client = Client.objects.create(
+            user=User.objects.create_user(username="fee-owner")
+        )
+
+    def create_fee(self, **overrides):
+        values = {
+            "acquirer": self.acquirer,
+            "cnae": "1234",
+            "network": self.network,
+            "installments": -1,
+            "value": Decimal("0.0092"),
+        }
+        values.update(overrides)
+        return Fee.objects.create(**values)
+
+    def test_allows_negative_installments(self):
+        fee = self.create_fee()
+        self.assertEqual(fee.installments, -1)
+
+    def test_fee_dimensions_are_unique(self):
+        self.create_fee()
+        with self.assertRaises(IntegrityError), transaction.atomic():
+            self.create_fee(value=Decimal("0.0100"))
+
+    def test_fee_can_only_have_one_plan_fee(self):
+        fee = self.create_fee()
+        first_plan = Plan.objects.create(name="First", client=self.client, cnae="1234")
+        second_plan = Plan.objects.create(name="Second", client=self.client, cnae="1234")
+        PlanFee.objects.create(plan=first_plan, fee=fee, value=Decimal("0.0010"))
+
+        with self.assertRaises(IntegrityError), transaction.atomic():
+            PlanFee.objects.create(
+                plan=second_plan, fee=fee, value=Decimal("0.0020")
+            )
 
 
 class BusinessDetailsApiTests(APITestCase):
     def setUp(self):
         self.user = User.objects.create_user(username="user", password="password123")
+        self.plan_client = Client.objects.create(user=self.user)
         self.client.force_authenticate(self.user)
         self.business = Business.objects.create(
             document_type="CNPJ",
@@ -21,9 +74,9 @@ class BusinessDetailsApiTests(APITestCase):
             email="business@example.com",
             phone="11999999999",
         )
-        fee = Fee.objects.create()
-        mcc = MccFee.objects.create(mcc="1234", fee=fee)
-        self.plan = Plan.objects.create(name="Standard", mcc=mcc)
+        self.plan = Plan.objects.create(
+            name="Standard", client=self.plan_client, cnae="1234"
+        )
 
     @patch("quickportal.serializers.fetch_cep_info")
     @patch("quickportal.serializers.fetch_bank_info")

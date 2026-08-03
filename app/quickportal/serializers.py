@@ -11,14 +11,6 @@ from quickportal.models import (
 from quickportal.services.brasil_api import fetch_bank_info, fetch_cep_info, fetch_cnpj_info
 
 
-FEE_NETWORK_METHODS = {
-    "mastercard": ["debit", "credit", "installmentsA", "installmentsB", "installmentsC", "installmentsD"],
-    "visa": ["debit", "credit", "installmentsA", "installmentsB", "installmentsC", "installmentsD"],
-    "elo": ["debit", "credit", "installmentsA", "installmentsB", "installmentsC", "installmentsD"],
-    "pix": ["pix"],
-}
-
-
 class UserCreateSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, min_length=8)
 
@@ -170,15 +162,10 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
         return attrs
 
 
-class FeeSerializer(serializers.Serializer):
-    def to_representation(self, instance: Fee):
-        return {
-            network: {
-                method: getattr(instance, f"{network}{method[0].upper()}{method[1:]}")
-                for method in methods
-            }
-            for network, methods in FEE_NETWORK_METHODS.items()
-        }
+class FeeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Fee
+        fields = ["id", "acquirer", "cnae", "network", "installments", "value"]
 
 
 class MccListSerializer(serializers.ModelSerializer):
@@ -198,53 +185,51 @@ class MccFeeSerializer(serializers.ModelSerializer):
 class PlanFeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PlanFee
-        fields = ["network", "payment_type", "commission"]
+        fields = ["fee", "value"]
 
 
 class PlanReadSerializer(serializers.ModelSerializer):
-    mcc = MccListSerializer(read_only=True)
     fees = PlanFeeSerializer(many=True, read_only=True)
 
     class Meta:
         model = Plan
         fields = [
             "id",
+            "client",
             "name",
             "description",
             "split",
             "anticipation",
             "anticipation_fee",
-            "mcc",
+            "cnae",
             "fees",
             "created_at",
         ]
 
 
 class PlanWriteSerializer(serializers.ModelSerializer):
-    mcc_id = serializers.PrimaryKeyRelatedField(
-        source="mcc", queryset=MccFee.objects.all(), write_only=True
-    )
     fees = PlanFeeSerializer(many=True)
 
     class Meta:
         model = Plan
         fields = [
+            "client",
             "name",
             "description",
             "split",
             "anticipation",
             "anticipation_fee",
-            "mcc_id",
+            "cnae",
             "fees",
         ]
 
     def validate_fees(self, value):
         seen = set()
         for fee in value:
-            key = (fee["network"], fee["payment_type"])
+            key = fee["fee"].pk
             if key in seen:
                 raise serializers.ValidationError(
-                    f"Duplicate fee for {fee['network']} / {fee['payment_type']}."
+                    f"Duplicate fee with id {key}."
                 )
             seen.add(key)
         return value
