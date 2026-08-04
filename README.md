@@ -91,16 +91,6 @@ docker compose exec web python manage.py startapp myapp
 
 Then add `'myapp'` to `INSTALLED_APPS` in `config/settings.py`.
 
-## MCC Codes
-
-Using cURL or any other tool fetch the list of MCC codes from the OWN api (agilli/parceiro/v2/consultarAtividades)
-Save the raw output in a json file called "cnaemcc.json" inside /app
-Then update the database with the populate_cnae_mcc management command
-
-```bash
-docker compose exec web python manage.py populate_cnae_mcc
-```
-
 ## Flushing blacklisted tokens
 
 ```bash

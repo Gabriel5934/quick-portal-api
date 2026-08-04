@@ -1,5 +1,5 @@
 from django.db import transaction
-from django.db.models import Count
+from django.db.models import Count, Exists, OuterRef
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -11,8 +11,8 @@ from quickportal.models import (
     Acquirer,
     Business,
     BusinessDetails,
-    CnaeMccMapping,
-    MccFee,
+    Cnae,
+    Fee,
     Plan,
     PosDevice,
     PosModel,
@@ -23,10 +23,9 @@ from quickportal.serializers import (
     BusinessReadSerializer,
     BusinessDetailsSerializer,
     BusinessWriteSerializer,
-    CnaeMccMappingSerializer,
+    CnaeSerializer,
     EmailTokenObtainPairSerializer,
-    MccFeeSerializer,
-    MccListSerializer,
+    FeeSerializer,
     PlanReadSerializer,
     PlanWriteSerializer,
     PosDeviceSerializer,
@@ -142,39 +141,87 @@ class PosModelListView(APIView):
         return Response(serializer.data)
 
 
-class CnaeMccMappingListView(APIView):
+class CnaeListView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        mappings = CnaeMccMapping.objects.all()
-        serializer = CnaeMccMappingSerializer(mappings, many=True)
-        return Response(serializer.data)
+        cnaes = Cnae.objects.order_by("code")
+        return Response(CnaeSerializer(cnaes, many=True).data)
 
 
-class MccListView(APIView):
+class CnaesWithFeesListView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        mccs = MccFee.objects.order_by("mcc")
-        return Response(MccListSerializer(mccs, many=True).data)
+        acquirer_value = request.query_params.get("acquirer", "").strip()
+        if not acquirer_value:
+            return Response(
+                {"detail": "The acquirer query parameter is required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        acquirer = None
+        if acquirer_value.isdigit():
+            acquirer = Acquirer.objects.filter(pk=int(acquirer_value)).first()
+        if acquirer is None:
+            acquirer = Acquirer.objects.filter(name__iexact=acquirer_value).first()
+        if acquirer is None:
+            return Response(
+                {"detail": "Acquirer not found."}, status=status.HTTP_404_NOT_FOUND
+            )
+
+        fee_exists = Fee.objects.filter(
+            acquirer=acquirer,
+            cnae=OuterRef("pk"),
+        )
+        cnaes = (
+            Cnae.objects.annotate(has_fees=Exists(fee_exists))
+            .filter(has_fees=True)
+            .order_by("code")
+        )
+        return Response(CnaeSerializer(cnaes, many=True).data)
 
 
-class MccFeeDetailView(APIView):
+class FeeListView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request, pk):
-        try:
-            mcc_fee = MccFee.objects.select_related("fee").get(pk=pk)
-        except MccFee.DoesNotExist:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
-        return Response(MccFeeSerializer(mcc_fee).data)
+    def get(self, request):
+        acquirer_value = request.query_params.get("acquirer", "").strip()
+        cnae_value = request.query_params.get("cnae", "").strip()
+        if not acquirer_value or not cnae_value:
+            return Response(
+                {"detail": "Both acquirer and cnae query parameters are required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        acquirer = None
+        if acquirer_value.isdigit():
+            acquirer = Acquirer.objects.filter(pk=int(acquirer_value)).first()
+        if acquirer is None:
+            acquirer = Acquirer.objects.filter(name__iexact=acquirer_value).first()
+        if acquirer is None:
+            return Response(
+                {"detail": "Acquirer not found."}, status=status.HTTP_404_NOT_FOUND
+            )
+
+        cnae = "".join(character for character in cnae_value if character.isdigit())
+        if not cnae:
+            return Response(
+                {"detail": "CNAE must contain at least one digit."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        fees = Fee.objects.filter(acquirer=acquirer, cnae__code=cnae).order_by(
+            "network__name", "installments"
+        )
+        return Response(FeeSerializer(fees, many=True).data)
 
 
 class PlanListCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        plans = Plan.objects.select_related("client").prefetch_related("fees").all()
+        plans = Plan.objects.prefetch_related("fees").all()
         return Response(PlanReadSerializer(plans, many=True).data)
 
     def post(self, request):
@@ -189,9 +236,7 @@ class PlanDetailView(APIView):
 
     def get(self, request, pk):
         try:
-            plan = (
-                Plan.objects.select_related("client").prefetch_related("fees").get(pk=pk)
-            )
+            plan = Plan.objects.prefetch_related("fees").get(pk=pk)
         except Plan.DoesNotExist:
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
         return Response(PlanReadSerializer(plan).data)

@@ -1,8 +1,13 @@
 
+import json
 from decimal import Decimal
+from io import StringIO
+from pathlib import Path
+from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 from django.contrib.auth.models import User
+from django.core.management import call_command
 from django.db import IntegrityError, transaction
 from django.test import TestCase
 from django.urls import reverse
@@ -12,7 +17,7 @@ from rest_framework.test import APITestCase
 from quickportal.models import (
     Acquirer,
     Business,
-    Client,
+    Cnae,
     Fee,
     Network,
     Plan,
@@ -22,18 +27,191 @@ from quickportal.models import (
 )
 
 
+class PopulateCnaesCommandTests(TestCase):
+    def test_loads_custom_keys_and_normalizes_codes(self):
+        with TemporaryDirectory() as directory:
+            file_path = Path(directory) / "cnaes.json"
+            file_path.write_text(
+                json.dumps(
+                    [
+                        {"customCode": "47.11-3/02", "customDescription": "Retail", "customMcc": 5411},
+                        {"customCode": "62.01-5/01", "customDescription": "Software", "customMcc": "5734"},
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            call_command(
+                "populate_cnaes",
+                "customCode",
+                "customDescription",
+                "customMcc",
+                file=str(file_path),
+                stdout=StringIO(),
+            )
+
+        self.assertQuerySetEqual(
+            Cnae.objects.order_by("code").values_list("code", "description", "mcc"),
+            [("4711302", "Retail", "5411"), ("6201501", "Software", "5734")],
+        )
+
+
+class CreateFeesCommandTests(TestCase):
+    def test_creates_expected_fee_matrix(self):
+        acquirer = Acquirer.objects.create(name="OWN")
+        cnae = Cnae.objects.create(
+            code="4711302", description="Retail", mcc="5411"
+        )
+
+        call_command(
+            "create_fees",
+            "OWN",
+            "47.11-3/02",
+            stdout=StringIO(),
+        )
+
+        fees = Fee.objects.filter(acquirer=acquirer, cnae=cnae)
+        self.assertEqual(fees.count(), 68)
+        for network_name in ("visa", "mastercard", "elo"):
+            self.assertEqual(
+                set(
+                    fees.filter(network__name__iexact=network_name).values_list(
+                        "installments", flat=True
+                    )
+                ),
+                set(range(22)),
+            )
+        self.assertTrue(
+            fees.filter(network__name__iexact="pix", installments=-1).exists()
+        )
+        self.assertTrue(
+            fees.filter(network__name__iexact="acquirer", installments=-2).exists()
+        )
+        self.assertFalse(
+            fees.exclude(value__gte=Decimal("0.01"), value__lte=Decimal("0.05")).exists()
+        )
+
+
+class CnaeListApiTests(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username="cnae-reader")
+        self.client.force_authenticate(self.user)
+
+    def test_returns_all_cnaes_ordered_by_code(self):
+        software = Cnae.objects.create(code="6201501", description="Software", mcc="5734")
+        retail = Cnae.objects.create(code="4711302", description="Retail", mcc="5411")
+
+        response = self.client.get(reverse("cnae_list"))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.data,
+            [
+                {"id": retail.id, "code": "4711302", "description": "Retail", "mcc": "5411"},
+                {"id": software.id, "code": "6201501", "description": "Software", "mcc": "5734"},
+            ],
+        )
+
+    def test_returns_only_cnaes_with_fees(self):
+        retail = Cnae.objects.create(code="4711302", description="Retail", mcc="5411")
+        software = Cnae.objects.create(code="6201501", description="Software", mcc="5734")
+        acquirer = Acquirer.objects.create(name="OWN")
+        other_acquirer = Acquirer.objects.create(name="OTHER")
+        network = Network.objects.create(name="visa")
+        Fee.objects.create(
+            acquirer=acquirer,
+            cnae=retail,
+            network=network,
+            installments=0,
+            value=Decimal("0.0123"),
+        )
+        Fee.objects.create(
+            acquirer=other_acquirer,
+            cnae=software,
+            network=network,
+            installments=0,
+            value=Decimal("0.0123"),
+        )
+
+        response = self.client.get(
+            reverse("cnaes_with_fees_list"), {"acquirer": acquirer.id}
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.data,
+            [{"id": retail.id, "code": "4711302", "description": "Retail", "mcc": "5411"}],
+        )
+
+    def test_cnaes_with_fees_requires_acquirer(self):
+        response = self.client.get(reverse("cnaes_with_fees_list"))
+
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_cnaes_with_fees_returns_not_found_for_unknown_acquirer(self):
+        response = self.client.get(
+            reverse("cnaes_with_fees_list"), {"acquirer": "unknown"}
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+
+class FeeListApiTests(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username="fee-reader")
+        self.client.force_authenticate(self.user)
+        self.acquirer = Acquirer.objects.create(name="OWN")
+        self.visa = Network.objects.create(name="visa")
+        self.retail = Cnae.objects.create(
+            code="4711302", description="Retail", mcc="5411"
+        )
+        self.software = Cnae.objects.create(
+            code="6201501", description="Software", mcc="5734"
+        )
+
+    def test_returns_fees_for_acquirer_and_normalized_cnae(self):
+        matching_fee = Fee.objects.create(
+            acquirer=self.acquirer,
+            cnae=self.retail,
+            network=self.visa,
+            installments=0,
+            value=Decimal("0.0123"),
+        )
+        Fee.objects.create(
+            acquirer=self.acquirer,
+            cnae=self.software,
+            network=self.visa,
+            installments=0,
+            value=Decimal("0.0250"),
+        )
+
+        response = self.client.get(
+            reverse("fee_list"),
+            {"acquirer": "OWN", "cnae": "47.11-3/02"},
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 1)
+        self.assertEqual(response.data[0]["id"], matching_fee.id)
+
+    def test_requires_acquirer_and_cnae(self):
+        response = self.client.get(reverse("fee_list"), {"acquirer": "OWN"})
+
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
 class FeeModelTests(TestCase):
     def setUp(self):
         self.acquirer = Acquirer.objects.create(name="OWN")
         self.network = Network.objects.create(name="Visa")
-        self.client = Client.objects.create(
-            user=User.objects.create_user(username="fee-owner")
+        self.cnae = Cnae.objects.create(
+            code="1234", description="Test CNAE", mcc="1234"
         )
 
     def create_fee(self, **overrides):
         values = {
             "acquirer": self.acquirer,
-            "cnae": "1234",
+            "cnae": self.cnae,
             "network": self.network,
             "installments": -1,
             "value": Decimal("0.0092"),
@@ -50,22 +228,26 @@ class FeeModelTests(TestCase):
         with self.assertRaises(IntegrityError), transaction.atomic():
             self.create_fee(value=Decimal("0.0100"))
 
-    def test_fee_can_only_have_one_plan_fee(self):
+    def test_plan_and_fee_combination_is_unique(self):
         fee = self.create_fee()
-        first_plan = Plan.objects.create(name="First", client=self.client, cnae="1234")
-        second_plan = Plan.objects.create(name="Second", client=self.client, cnae="1234")
+        first_plan = Plan.objects.create(
+            name="First", acquirer=self.acquirer, cnae=self.cnae
+        )
+        second_plan = Plan.objects.create(
+            name="Second", acquirer=self.acquirer, cnae=self.cnae
+        )
         PlanFee.objects.create(plan=first_plan, fee=fee, value=Decimal("0.0010"))
+        PlanFee.objects.create(plan=second_plan, fee=fee, value=Decimal("0.0020"))
 
         with self.assertRaises(IntegrityError), transaction.atomic():
             PlanFee.objects.create(
-                plan=second_plan, fee=fee, value=Decimal("0.0020")
+                plan=first_plan, fee=fee, value=Decimal("0.0030")
             )
 
 
 class BusinessDetailsApiTests(APITestCase):
     def setUp(self):
         self.user = User.objects.create_user(username="user", password="password123")
-        self.plan_client = Client.objects.create(user=self.user)
         self.client.force_authenticate(self.user)
         self.business = Business.objects.create(
             document_type="CNPJ",
@@ -74,8 +256,12 @@ class BusinessDetailsApiTests(APITestCase):
             email="business@example.com",
             phone="11999999999",
         )
+        self.cnae = Cnae.objects.create(
+            code="1234", description="Test CNAE", mcc="1234"
+        )
+        self.acquirer = Acquirer.objects.create(name="OWN")
         self.plan = Plan.objects.create(
-            name="Standard", client=self.plan_client, cnae="1234"
+            name="Standard", acquirer=self.acquirer, cnae=self.cnae
         )
 
     @patch("quickportal.serializers.fetch_cep_info")
@@ -87,6 +273,7 @@ class BusinessDetailsApiTests(APITestCase):
             reverse("business_details_list_create"),
             {
                 "business": self.business.id,
+                "acquirer": self.acquirer.id,
                 "bank_code": "1",
                 "branch": "1234",
                 "branch_digit": "5",
@@ -104,6 +291,7 @@ class BusinessDetailsApiTests(APITestCase):
         )
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.data["acquirer"], self.acquirer.id)
         self.assertEqual(response.data["projected_revenue"], str(Decimal("1000.50")))
         self.business.refresh_from_db()
         self.assertEqual(self.business.status, Status.PENDING)

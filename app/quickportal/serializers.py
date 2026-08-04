@@ -5,7 +5,7 @@ from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from quickportal.models import (
-    Acquirer, Business, BusinessDetails, CnaeMccMapping, DocumentType, Fee, MccFee,
+    Acquirer, Business, BusinessDetails, Cnae, DocumentType, Fee,
     Plan, PlanFee, PosDevice, PosModel,
 )
 from quickportal.services.brasil_api import fetch_bank_info, fetch_cep_info, fetch_cnpj_info
@@ -90,21 +90,20 @@ class PosModelSerializer(serializers.ModelSerializer):
         fields = ["id", "model", "acquirer"]
 
 
-class CnaeMccMappingSerializer(serializers.ModelSerializer):
+class CnaeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = CnaeMccMapping
-        fields = ["id", "cod_cnae", "desc_cnae", "cod_mcc"]
+        model = Cnae
+        fields = ["id", "code", "description", "mcc"]
 
 
 class BusinessWriteSerializer(serializers.ModelSerializer):
     name = serializers.CharField(required=False, allow_blank=False)
-    cod_cnae = serializers.CharField(required=False, allow_blank=False)
     trade_name = serializers.CharField(required=False, allow_blank=True, default="")
     landline = serializers.CharField(required=False, allow_blank=True, default="")
 
     class Meta:
         model = Business
-        fields = ["document_type", "document", "name", "trade_name", "cod_cnae", "email", "phone", "landline"]
+        fields = ["document_type", "document", "name", "trade_name", "cnae", "email", "phone", "landline"]
 
     @staticmethod
     def _validate_digits(value, field_name):
@@ -114,9 +113,6 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
 
     def validate_document(self, value):
         return self._validate_digits(value, "document")
-
-    def validate_cod_cnae(self, value):
-        return self._validate_digits(value, "cod_cnae")
 
     def validate_phone(self, value):
         return self._validate_digits(value, "phone")
@@ -134,18 +130,18 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError(immutable_errors)
 
         document_type = attrs.get("document_type") or getattr(self.instance, "document_type", None)
-        cod_cnae = attrs.get("cod_cnae")
+        cnae = attrs.get("cnae")
 
         if document_type == DocumentType.CPF:
             errors = {}
             if not attrs.get("name") and not getattr(self.instance, "name", None):
                 errors["name"] = "This field is required when document_type is CPF."
-            if not cod_cnae and not getattr(self.instance, "cod_cnae", None):
-                errors["cod_cnae"] = "This field is required when document_type is CPF."
+            if not cnae and not getattr(self.instance, "cnae", None):
+                errors["cnae"] = "This field is required when document_type is CPF."
             if errors:
                 raise serializers.ValidationError(errors)
         elif document_type == DocumentType.CNPJ:
-            managed_fields = ("name", "trade_name", "cod_cnae")
+            managed_fields = ("name", "trade_name", "cnae")
             conflicting = [f for f in managed_fields if f in self.initial_data]
             if conflicting:
                 raise serializers.ValidationError({
@@ -155,7 +151,12 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
             document = attrs.get("document") or getattr(self.instance, "document", None)
             if document and self.instance is None:
                 info = fetch_cnpj_info(document)
-                attrs["cod_cnae"] = info["cod_cnae"]
+                try:
+                    attrs["cnae"] = Cnae.objects.get(code=info["cod_cnae"])
+                except Cnae.DoesNotExist as exc:
+                    raise serializers.ValidationError(
+                        {"cnae": "The CNAE returned for this CNPJ is not registered."}
+                    ) from exc
                 attrs["trade_name"] = info["trade_name"]
                 attrs["name"] = info["name"]
 
@@ -166,20 +167,6 @@ class FeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fee
         fields = ["id", "acquirer", "cnae", "network", "installments", "value"]
-
-
-class MccListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MccFee
-        fields = ["id", "mcc"]
-
-
-class MccFeeSerializer(serializers.ModelSerializer):
-    fee = FeeSerializer(read_only=True)
-
-    class Meta:
-        model = MccFee
-        fields = ["id", "mcc", "fee"]
 
 
 class PlanFeeSerializer(serializers.ModelSerializer):
@@ -195,12 +182,12 @@ class PlanReadSerializer(serializers.ModelSerializer):
         model = Plan
         fields = [
             "id",
-            "client",
             "name",
             "description",
             "split",
             "anticipation",
             "anticipation_fee",
+            "acquirer",
             "cnae",
             "fees",
             "created_at",
@@ -213,12 +200,12 @@ class PlanWriteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Plan
         fields = [
-            "client",
             "name",
             "description",
             "split",
             "anticipation",
             "anticipation_fee",
+            "acquirer",
             "cnae",
             "fees",
         ]
@@ -246,14 +233,14 @@ class PlanWriteSerializer(serializers.ModelSerializer):
 class BusinessReadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Business
-        fields = ["id", "document_type", "document", "name", "trade_name", "cod_cnae", "email", "phone", "landline", "status"]
+        fields = ["id", "document_type", "document", "name", "trade_name", "cnae", "email", "phone", "landline", "status"]
 
 
 class BusinessDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = BusinessDetails
         fields = [
-            "id", "business", "bank_code", "branch", "branch_digit", "account_number",
+            "id", "business", "acquirer", "bank_code", "branch", "branch_digit", "account_number",
             "account_digit", "cep", "address_number", "address_line2",
             "projected_revenue", "commited_revenue", "amount_of_terminals", "plan",
         ]
