@@ -8,7 +8,12 @@ from quickportal.models import (
     Acquirer, Business, BusinessDetails, Cnae, DocumentType, Fee,
     Plan, PlanFee, PosDevice, PosModel,
 )
-from quickportal.services.brasil_api import fetch_bank_info, fetch_cep_info, fetch_cnpj_info
+from quickportal.services.brasil_api import (
+    BrasilApiError,
+    fetch_bank_info,
+    fetch_cep_info,
+    fetch_cnpj_info,
+)
 
 
 class UserCreateSerializer(serializers.ModelSerializer):
@@ -258,11 +263,21 @@ class BusinessDetailsSerializer(serializers.ModelSerializer):
         ]
 
     def validate_bank_code(self, value):
-        fetch_bank_info(value)
+        try:
+            fetch_bank_info(value)
+        except BrasilApiError as exc:
+            if exc.status_code and 400 <= exc.status_code < 500:
+                raise serializers.ValidationError(str(exc)) from exc
+            raise
         return value
 
     def validate_cep(self, value):
-        fetch_cep_info(value)
+        try:
+            fetch_cep_info(value)
+        except BrasilApiError as exc:
+            if exc.status_code and 400 <= exc.status_code < 500:
+                raise serializers.ValidationError(str(exc)) from exc
+            raise
         return value
 
 

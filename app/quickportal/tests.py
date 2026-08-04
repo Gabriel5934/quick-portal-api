@@ -25,6 +25,7 @@ from quickportal.models import (
     PosModel,
     Status,
 )
+from quickportal.services.brasil_api import BrasilApiError
 
 
 class PopulateCnaesCommandTests(TestCase):
@@ -297,14 +298,50 @@ class BusinessDetailsApiTests(APITestCase):
             {
                 "business": self.business.id,
                 "acquirer": self.acquirer.id,
-                "bank_code": "1",
+                "bank_code": "102",
+                "branch": "1234",
+                "branch_digit": "5",
+                "account_number": "123456",
+                "account_digit": "7",
+                "cep": "12244867",
+                "address_number": "82",
+                "address_line2": "Floradas da Serra",
+                "projected_revenue": 10,
+                "commited_revenue": 10,
+                "amount_of_terminals": 2,
+                "plan": self.plan.id,
+            },
+            format="json",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.data["acquirer"], self.acquirer.id)
+        self.assertEqual(response.data["projected_revenue"], str(Decimal("10.00")))
+        self.business.refresh_from_db()
+        self.assertEqual(self.business.status, Status.PENDING)
+        fetch_bank_info.assert_called_once_with("102")
+        fetch_cep_info.assert_called_once_with("12244867")
+
+    @patch("quickportal.serializers.fetch_cep_info")
+    @patch("quickportal.serializers.fetch_bank_info")
+    def test_returns_field_error_for_invalid_bank_code(
+        self, fetch_bank_info, _fetch_cep_info
+    ):
+        fetch_bank_info.side_effect = BrasilApiError(
+            "Brasil API returned status 404", status_code=404, resource="bank"
+        )
+
+        response = self.client.post(
+            reverse("business_details_list_create"),
+            {
+                "business": self.business.id,
+                "bank_code": "999",
                 "branch": "1234",
                 "branch_digit": "5",
                 "account_number": "123456",
                 "account_digit": "7",
                 "cep": "01001000",
                 "address_number": "100",
-                "address_line2": "Suite 2",
                 "projected_revenue": "1000.50",
                 "commited_revenue": "800.00",
                 "amount_of_terminals": 3,
@@ -313,13 +350,10 @@ class BusinessDetailsApiTests(APITestCase):
             format="json",
         )
 
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(response.data["acquirer"], self.acquirer.id)
-        self.assertEqual(response.data["projected_revenue"], str(Decimal("1000.50")))
-        self.business.refresh_from_db()
-        self.assertEqual(self.business.status, Status.PENDING)
-        fetch_bank_info.assert_called_once_with("1")
-        fetch_cep_info.assert_called_once_with("01001000")
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(
+            response.data, {"bank_code": ["Brasil API returned status 404"]}
+        )
 
     def test_rejects_non_digit_bank_account_fields(self):
         response = self.client.post(
