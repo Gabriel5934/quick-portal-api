@@ -29,6 +29,28 @@ docker compose exec web python manage.py startapp <appname>
 
 The Django manage.py lives at `app/manage.py`. The Docker volume mounts `./app` to `/app` in the container, so code changes are reflected immediately.
 
+## Testing authenticated endpoints
+
+The development compose startup creates or updates a development user with email
+`root@email.com` and password `JustTesting593!`. Before testing an authenticated
+endpoint, request an access token with cURL:
+
+```bash
+TOKEN=$(curl --fail --silent --show-error \
+  --request POST http://localhost:8080/api/token/ \
+  --header 'Content-Type: application/json' \
+  --data '{"email":"root@email.com","password":"JustTesting593!"}' \
+  | python -c 'import json,sys; print(json.load(sys.stdin)["access"])')
+```
+
+Use that token for every authenticated endpoint test:
+
+```bash
+curl --fail --silent --show-error \
+  --header "Authorization: Bearer $TOKEN" \
+  http://localhost:8080/api/cnaes/
+```
+
 ## Architecture
 
 This is a Django 5 + DRF API backend for "Quick Portal" — a portal that integrates with OWN Financial's acquiring platform. It runs in Docker with PostgreSQL 16.
