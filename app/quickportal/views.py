@@ -223,7 +223,7 @@ class PlanListCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        plans = Plan.objects.prefetch_related("fees").all()
+        plans = Plan.objects.select_related("cnae").prefetch_related("fees").all()
         return Response(PlanReadSerializer(plans, many=True).data)
 
     def post(self, request):
@@ -238,7 +238,7 @@ class PlanDetailView(APIView):
 
     def get(self, request, pk):
         try:
-            plan = Plan.objects.prefetch_related("fees").get(pk=pk)
+            plan = Plan.objects.select_related("cnae").prefetch_related("fees").get(pk=pk)
         except Plan.DoesNotExist:
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
         return Response(PlanReadSerializer(plan).data)

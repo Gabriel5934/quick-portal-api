@@ -245,6 +245,29 @@ class FeeModelTests(TestCase):
             )
 
 
+class PlanApiTests(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username="plan-reader")
+        self.client.force_authenticate(self.user)
+        self.cnae = Cnae.objects.create(
+            code="4711302", description="Retail", mcc="5411"
+        )
+        self.plan = Plan.objects.create(name="Standard", cnae=self.cnae)
+
+    def test_list_includes_cnae_code(self):
+        response = self.client.get(reverse("plan_list_create"))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data[0]["cnae"], self.cnae.id)
+        self.assertEqual(response.data[0]["cnae_code"], "4711302")
+
+    def test_detail_includes_cnae_code(self):
+        response = self.client.get(reverse("plan_detail", args=[self.plan.id]))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["cnae_code"], "4711302")
+
+
 class BusinessDetailsApiTests(APITestCase):
     def setUp(self):
         self.user = User.objects.create_user(username="user", password="password123")

@@ -187,6 +187,7 @@ class PlanFeeSerializer(serializers.ModelSerializer):
 
 class PlanReadSerializer(serializers.ModelSerializer):
     fees = PlanFeeSerializer(many=True, read_only=True)
+    cnae_code = serializers.CharField(source="cnae.code", read_only=True)
 
     class Meta:
         model = Plan
@@ -199,6 +200,7 @@ class PlanReadSerializer(serializers.ModelSerializer):
             "anticipation_fee",
             "acquirer",
             "cnae",
+            "cnae_code",
             "fees",
             "created_at",
         ]
