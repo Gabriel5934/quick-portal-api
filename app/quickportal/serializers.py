@@ -164,9 +164,19 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
 
 
 class FeeSerializer(serializers.ModelSerializer):
+    network_code = serializers.CharField(source="network.name", read_only=True)
+
     class Meta:
         model = Fee
-        fields = ["id", "acquirer", "cnae", "network", "installments", "value"]
+        fields = [
+            "id",
+            "acquirer",
+            "cnae",
+            "network",
+            "network_code",
+            "installments",
+            "value",
+        ]
 
 
 class PlanFeeSerializer(serializers.ModelSerializer):

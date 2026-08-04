@@ -211,8 +211,10 @@ class FeeListView(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        fees = Fee.objects.filter(acquirer=acquirer, cnae__code=cnae).order_by(
-            "network__name", "installments"
+        fees = (
+            Fee.objects.select_related("network")
+            .filter(acquirer=acquirer, cnae__code=cnae)
+            .order_by("network__name", "installments")
         )
         return Response(FeeSerializer(fees, many=True).data)
 
