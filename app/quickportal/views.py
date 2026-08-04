@@ -13,6 +13,7 @@ from quickportal.models import (
     BusinessDetails,
     Cnae,
     Fee,
+    Network,
     Plan,
     PosDevice,
     PosModel,
@@ -26,6 +27,7 @@ from quickportal.serializers import (
     CnaeSerializer,
     EmailTokenObtainPairSerializer,
     FeeSerializer,
+    NetworkSerializer,
     PlanReadSerializer,
     PlanWriteSerializer,
     PosDeviceSerializer,
@@ -139,6 +141,14 @@ class PosModelListView(APIView):
         pos_models = PosModel.objects.select_related("acquirer").all()
         serializer = PosModelSerializer(pos_models, many=True)
         return Response(serializer.data)
+
+
+class NetworkListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        networks = Network.objects.order_by("id")
+        return Response(NetworkSerializer(networks, many=True).data)
 
 
 class CnaeListView(APIView):

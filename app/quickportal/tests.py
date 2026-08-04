@@ -7,7 +7,7 @@ from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 from django.contrib.auth.models import User
-from django.core.management import call_command
+from django.core.management import call_command, CommandError
 from django.db import IntegrityError, transaction
 from django.test import TestCase
 from django.urls import reverse
@@ -57,6 +57,46 @@ class PopulateCnaesCommandTests(TestCase):
         )
 
 
+class PopulateNetworksCommandTests(TestCase):
+    def test_creates_and_updates_network_colors_without_duplicates(self):
+        existing = Network.objects.create(name="visa", color="#000000")
+        with TemporaryDirectory() as directory:
+            file_path = Path(directory) / "networks.json"
+            file_path.write_text(
+                json.dumps(
+                    [
+                        {"name": "Visa", "color": "#1b34cb"},
+                        {"name": "Pix", "color": "#39b4aa"},
+                        {"color": "#ffffff"},
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            call_command(
+                "populate_networks", file=str(file_path), stdout=StringIO()
+            )
+
+        self.assertEqual(Network.objects.filter(name__iexact="visa").count(), 1)
+        existing.refresh_from_db()
+        self.assertEqual(existing.name, "Visa")
+        self.assertEqual(existing.color, "#1b34cb")
+        self.assertEqual(Network.objects.get(name="Pix").color, "#39b4aa")
+
+    def test_rejects_invalid_color(self):
+        with TemporaryDirectory() as directory:
+            file_path = Path(directory) / "networks.json"
+            file_path.write_text(
+                json.dumps([{"name": "Visa", "color": "blue"}]),
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesMessage(CommandError, "Invalid color for network Visa"):
+                call_command(
+                    "populate_networks", file=str(file_path), stdout=StringIO()
+                )
+
+
 class CreateFeesCommandTests(TestCase):
     def test_creates_expected_fee_matrix(self):
         acquirer = Acquirer.objects.create(name="OWN")
@@ -90,6 +130,23 @@ class CreateFeesCommandTests(TestCase):
         )
         self.assertFalse(
             fees.exclude(value__gte=Decimal("0.01"), value__lte=Decimal("0.05")).exists()
+        )
+
+
+class NetworkListApiTests(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username="network-reader")
+        self.client.force_authenticate(self.user)
+
+    def test_returns_network_names_and_colors(self):
+        visa = Network.objects.create(name="Visa", color="#1b34cb")
+
+        response = self.client.get(reverse("network_list"))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.data,
+            [{"id": visa.id, "name": "Visa", "color": "#1b34cb"}],
         )
 
 

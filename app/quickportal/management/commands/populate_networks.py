@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
@@ -13,7 +14,7 @@ JSON_FILE = Path(__file__).resolve().parents[3] / "load_networks.json"
 
 
 class Command(BaseCommand):
-    help = "Populate network table from load_networks.json (replaces all existing data)"
+    help = "Create or update networks from load_networks.json"
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -34,18 +35,25 @@ class Command(BaseCommand):
         except json.JSONDecodeError as exc:
             raise CommandError(f"Invalid JSON: {exc}") from exc
 
-        networks = []
+        networks = {}
         for item in data:
             name = item.get("name")
             if not name:
                 logger.warning("Skipping incomplete record: %s", item)
                 continue
-            networks.append(Network(name=str(name)))
+            name = str(name).strip()
+            color = str(item.get("color") or "").strip()
+            if color and not re.fullmatch(r"#[0-9a-fA-F]{6}", color):
+                raise CommandError(f"Invalid color for network {name}: {color}")
+            networks[name.casefold()] = (name, color)
 
         with transaction.atomic():
-            Network.objects.all().delete()
-            Network.objects.bulk_create(networks)
+            for name, color in networks.values():
+                Network.objects.update_or_create(
+                    name__iexact=name,
+                    defaults={"name": name, "color": color},
+                )
 
         self.stdout.write(
-            self.style.SUCCESS(f"Populated {len(networks)} network records.")
+            self.style.SUCCESS(f"Loaded {len(networks)} network records.")
         )

@@ -28,6 +28,11 @@ class Acquirer(models.Model):
 
 class Network(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    color = models.CharField(
+        max_length=7,
+        blank=True,
+        validators=[RegexValidator(r"^#[0-9a-fA-F]{6}$", "Enter a valid hex color.")],
+    )
 
     class Meta:
         db_table = "network"

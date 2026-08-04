@@ -1,0 +1,8 @@
+[
+  { "name": "Acquirer", "color": "" },
+  { "name": "Default", "color": "" },
+  { "name": "Mastercard", "color": "#f79e1a" },
+  { "name": "Visa", "color": "#1b34cb" },
+  { "name": "Elo", "color": "#0c3a34" },
+  { "name": "Pix", "color": "#39b4aa" }
+]

@@ -6,7 +6,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from quickportal.models import (
     Acquirer, Business, BusinessDetails, Cnae, DocumentType, Fee,
-    Plan, PlanFee, PosDevice, PosModel,
+    Network, Plan, PlanFee, PosDevice, PosModel,
 )
 from quickportal.services.brasil_api import (
     BrasilApiError,
@@ -85,6 +85,12 @@ class AcquirerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Acquirer
         fields = ["id", "name"]
+
+
+class NetworkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Network
+        fields = ["id", "name", "color"]
 
 
 class PosModelSerializer(serializers.ModelSerializer):
