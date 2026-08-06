@@ -302,6 +302,8 @@ class BusinessListCreateView(APIView):
 
     def get(self, request):
         businesses = accessible_businesses(request.user).order_by("id")
+        if parent := request.query_params.get("parent"):
+            businesses = businesses.filter(parent_id=parent)
         if document := request.query_params.get("document"):
             businesses = businesses.filter(document=document)
         if name := request.query_params.get("name"):
