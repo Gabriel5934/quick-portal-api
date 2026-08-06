@@ -5,8 +5,8 @@ from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from quickportal.models import (
-    Acquirer, Business, BusinessDetails, Cnae, DocumentType, Fee,
-    Network, Plan, PlanFee, PosDevice, PosModel,
+    Acquirer, Business, BusinessDetails, BusinessMembership, BusinessType, Cnae,
+    DocumentType, Fee, Network, Plan, PlanFee, PosDevice, PosModel,
 )
 from quickportal.services.brasil_api import (
     BrasilApiError,
@@ -114,7 +114,10 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Business
-        fields = ["document_type", "document", "name", "trade_name", "cnae", "email", "phone", "landline"]
+        fields = [
+            "type", "parent", "document_type", "document", "name", "trade_name",
+            "cnae", "email", "phone", "landline",
+        ]
 
     @staticmethod
     def _validate_digits(value, field_name):
@@ -142,6 +145,43 @@ class BusinessWriteSerializer(serializers.ModelSerializer):
 
         document_type = attrs.get("document_type") or getattr(self.instance, "document_type", None)
         cnae = attrs.get("cnae")
+        business_type = attrs.get("type") or getattr(self.instance, "type", None)
+        parent = attrs.get("parent", getattr(self.instance, "parent", None))
+
+        if self.instance is not None and parent == self.instance:
+            raise serializers.ValidationError(
+                {"parent": "A business cannot be its own parent."}
+            )
+        if business_type == BusinessType.RESELLER and parent is not None:
+            raise serializers.ValidationError(
+                {"parent": "A reseller must be a root business."}
+            )
+        if business_type == BusinessType.RE_RESELLER:
+            if parent is None or parent.type != BusinessType.RESELLER:
+                raise serializers.ValidationError(
+                    {"parent": "A re-reseller must belong to a reseller."}
+                )
+        if (
+            business_type == BusinessType.STORE
+            and parent is not None
+            and parent.type not in {BusinessType.RESELLER, BusinessType.RE_RESELLER}
+        ):
+            raise serializers.ValidationError(
+                {"parent": "A store may only belong to a reseller or re-reseller."}
+            )
+        if self.instance is not None and business_type != self.instance.type:
+            allowed_children = {
+                BusinessType.RESELLER: {
+                    BusinessType.RE_RESELLER,
+                    BusinessType.STORE,
+                },
+                BusinessType.RE_RESELLER: {BusinessType.STORE},
+                BusinessType.STORE: set(),
+            }[business_type]
+            if self.instance.children.exclude(type__in=allowed_children).exists():
+                raise serializers.ValidationError(
+                    {"type": "The new type is incompatible with existing children."}
+                )
 
         if document_type == DocumentType.CPF:
             errors = {}
@@ -256,7 +296,44 @@ class PlanWriteSerializer(serializers.ModelSerializer):
 class BusinessReadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Business
-        fields = ["id", "document_type", "document", "name", "trade_name", "cnae", "email", "phone", "landline", "status"]
+        fields = [
+            "id", "type", "parent", "document_type", "document", "name",
+            "trade_name", "cnae", "email", "phone", "landline", "status",
+        ]
+
+
+class BusinessMembershipReadSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(source="user.email", read_only=True)
+
+    class Meta:
+        model = BusinessMembership
+        fields = ["id", "user", "email", "business", "role"]
+
+
+class BusinessMembershipWriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BusinessMembership
+        fields = ["user", "role"]
+
+    def validate(self, attrs):
+        user = attrs.get("user", getattr(self.instance, "user", None))
+        if (
+            self.instance is not None
+            and "user" in attrs
+            and user != self.instance.user
+        ):
+            raise serializers.ValidationError(
+                {"user": "The user on a membership cannot be changed."}
+            )
+        business = self.context.get("business")
+        if self.instance is None and business is not None:
+            if BusinessMembership.objects.filter(
+                user=user, business=business
+            ).exists():
+                raise serializers.ValidationError(
+                    {"user": "This user already belongs to this business."}
+                )
+        return attrs
 
 
 class BusinessDetailsSerializer(serializers.ModelSerializer):
@@ -277,6 +354,13 @@ class BusinessDetailsSerializer(serializers.ModelSerializer):
             raise
         return value
 
+    def validate_business(self, value):
+        if value.type != BusinessType.STORE:
+            raise serializers.ValidationError(
+                "Business details can only be assigned to a store."
+            )
+        return value
+
     def validate_cep(self, value):
         try:
             fetch_cep_info(value)
@@ -291,3 +375,10 @@ class PosDeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = PosDevice
         fields = ["id", "model", "serial", "business"]
+
+    def validate_business(self, value):
+        if value.type != BusinessType.STORE:
+            raise serializers.ValidationError(
+                "POS devices can only be assigned to a store."
+            )
+        return value

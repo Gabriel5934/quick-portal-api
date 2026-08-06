@@ -1,5 +1,8 @@
 
+from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models import F, Q
 from django.core.validators import MinValueValidator, RegexValidator
 
 
@@ -14,6 +17,18 @@ class DocumentType(models.TextChoices):
 class Status(models.TextChoices):
     NOT_STARTED = "NOT_STARTED"
     PENDING = "PENDING"
+
+
+class BusinessType(models.TextChoices):
+    RESELLER = "RESELLER", "Reseller"
+    RE_RESELLER = "RE_RESELLER", "Re-reseller"
+    STORE = "STORE", "Store"
+
+
+class BusinessRole(models.TextChoices):
+    ADMIN = "ADMIN", "Admin"
+    MANAGER = "MANAGER", "Manager"
+    VIEWER = "VIEWER", "Viewer"
 
 
 class Acquirer(models.Model):
@@ -132,6 +147,14 @@ class PlanFee(models.Model):
 
 
 class Business(models.Model):
+    type = models.CharField(max_length=20, choices=BusinessType.choices)
+    parent = models.ForeignKey(
+        "self",
+        on_delete=models.PROTECT,
+        related_name="children",
+        null=True,
+        blank=True,
+    )
     document_type = models.CharField(max_length=4, choices=DocumentType.choices)
     document = models.CharField(max_length=20)
     name = models.CharField(max_length=200)
@@ -150,9 +173,75 @@ class Business(models.Model):
 
     class Meta:
         db_table = "business"
+        constraints = [
+            models.CheckConstraint(
+                condition=Q(parent__isnull=True) | ~Q(parent=F("id")),
+                name="business_parent_not_self",
+            )
+        ]
+
+    def clean(self):
+        super().clean()
+        if self.parent_id == self.pk and self.pk is not None:
+            raise ValidationError({"parent": "A business cannot be its own parent."})
+        if self.type == BusinessType.RESELLER and self.parent_id is not None:
+            raise ValidationError({"parent": "A reseller must be a root business."})
+        if self.type == BusinessType.RE_RESELLER:
+            if self.parent_id is None or self.parent.type != BusinessType.RESELLER:
+                raise ValidationError(
+                    {"parent": "A re-reseller must belong to a reseller."}
+                )
+        if (
+            self.type == BusinessType.STORE
+            and self.parent_id is not None
+            and self.parent.type
+            not in {BusinessType.RESELLER, BusinessType.RE_RESELLER}
+        ):
+            raise ValidationError(
+                {"parent": "A store may only belong to a reseller or re-reseller."}
+            )
+        if self.pk is not None:
+            allowed_children = {
+                BusinessType.RESELLER: {
+                    BusinessType.RE_RESELLER,
+                    BusinessType.STORE,
+                },
+                BusinessType.RE_RESELLER: {BusinessType.STORE},
+                BusinessType.STORE: set(),
+            }.get(self.type, set())
+            if self.children.exclude(type__in=allowed_children).exists():
+                raise ValidationError(
+                    {"type": "This type is incompatible with existing children."}
+                )
 
     def __str__(self):
         return self.name
+
+
+class BusinessMembership(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="business_memberships",
+    )
+    business = models.ForeignKey(
+        Business,
+        on_delete=models.CASCADE,
+        related_name="memberships",
+    )
+    role = models.CharField(max_length=20, choices=BusinessRole.choices)
+
+    class Meta:
+        db_table = "business_membership"
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user", "business"],
+                name="unique_user_business_membership",
+            )
+        ]
+
+    def __str__(self):
+        return f"{self.user_id} / {self.business_id} / {self.role}"
 
 
 class BusinessDetails(models.Model):

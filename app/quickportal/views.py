@@ -1,6 +1,8 @@
 from django.db import transaction
+from django.db.models.deletion import ProtectedError
 from django.db.models import Count, Exists, OuterRef
 from rest_framework import status
+from rest_framework.exceptions import NotFound, PermissionDenied, ValidationError
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
@@ -9,8 +11,10 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 from quickportal.models import (
     Acquirer,
-    Business,
     BusinessDetails,
+    BusinessMembership,
+    BusinessRole,
+    BusinessType,
     Cnae,
     Fee,
     Network,
@@ -23,6 +27,8 @@ from quickportal.serializers import (
     AcquirerSerializer,
     BusinessReadSerializer,
     BusinessDetailsSerializer,
+    BusinessMembershipReadSerializer,
+    BusinessMembershipWriteSerializer,
     BusinessWriteSerializer,
     CnaeSerializer,
     EmailTokenObtainPairSerializer,
@@ -35,6 +41,12 @@ from quickportal.serializers import (
     UserCreateSerializer,
 )
 from quickportal.services.brasil_api import BrasilApiError
+from quickportal.services.business_access import (
+    accessible_businesses,
+    get_accessible_business_or_404,
+    has_business_role,
+    has_governing_ancestor_admin,
+)
 from quickportal.services.own_auth import get_own_token, OwnAuthError
 from quickportal.services.own_merchant import register_merchant, MerchantRegistrationError
 
@@ -56,6 +68,14 @@ def _get_object_or_none(model, pk):
         return model.objects.get(pk=pk)
     except model.DoesNotExist:
         return None
+
+
+WRITE_ROLES = {BusinessRole.ADMIN, BusinessRole.MANAGER}
+
+
+def _require_business_role(user, business, allowed_roles):
+    if not has_business_role(user, business, allowed_roles):
+        raise PermissionDenied()
 
 
 class UserRegistrationView(APIView):
@@ -99,8 +119,23 @@ class MerchantRegistrationView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
+        business_id = request.data.get("business")
+        if business_id is None:
+            return Response(
+                {"business": ["This field is required."]},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        business = get_accessible_business_or_404(request.user, business_id)
+        if business.type != BusinessType.STORE:
+            return Response(
+                {"business": ["Merchant registration requires a store."]},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        _require_business_role(request.user, business, WRITE_ROLES)
+        payload = request.data.copy()
+        payload.pop("business", None)
         try:
-            result = register_merchant(request.data)
+            result = register_merchant(payload)
         except OwnAuthError as exc:
             return Response(
                 {"error": "own_auth_failed", "detail": str(exc)},
@@ -237,6 +272,8 @@ class PlanListCreateView(APIView):
         return Response(PlanReadSerializer(plans, many=True).data)
 
     def post(self, request):
+        if not request.user.is_superuser:
+            raise PermissionDenied()
         serializer = PlanWriteSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         plan = serializer.save()
@@ -264,14 +301,14 @@ class BusinessListCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        businesses = Business.objects.all()
+        businesses = accessible_businesses(request.user).order_by("id")
         if document := request.query_params.get("document"):
             businesses = businesses.filter(document=document)
         if name := request.query_params.get("name"):
             businesses = businesses.filter(name__icontains=name)
         status_counts = {
             item["status"]: item["total"]
-            for item in businesses.values("status").annotate(total=Count("id"))
+            for item in businesses.order_by().values("status").annotate(total=Count("id"))
         }
         paginator = BusinessPagination()
         page = paginator.paginate_queryset(businesses, request)
@@ -288,6 +325,15 @@ class BusinessListCreateView(APIView):
         serializer = BusinessWriteSerializer(data=request.data)
         try:
             serializer.is_valid(raise_exception=True)
+            parent = serializer.validated_data.get("parent")
+            if parent is None:
+                if not request.user.is_superuser:
+                    raise PermissionDenied()
+            else:
+                parent = get_accessible_business_or_404(request.user, parent.pk)
+                _require_business_role(
+                    request.user, parent, {BusinessRole.ADMIN}
+                )
             business = serializer.save()
         except BrasilApiError as exc:
             return _brasil_api_error_response(exc)
@@ -297,57 +343,168 @@ class BusinessListCreateView(APIView):
 class BusinessDetailView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def _get_object(self, pk):
-        return _get_object_or_none(Business, pk)
+    def _get_object(self, user, pk):
+        return get_accessible_business_or_404(user, pk)
 
     def get(self, request, pk):
-        business = self._get_object(pk)
-        if business is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        business = self._get_object(request.user, pk)
         return Response(BusinessReadSerializer(business).data)
 
     def put(self, request, pk):
-        business = self._get_object(pk)
-        if business is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        business = self._get_object(request.user, pk)
+        _require_business_role(request.user, business, WRITE_ROLES)
         serializer = BusinessWriteSerializer(business, data=request.data)
         try:
             serializer.is_valid(raise_exception=True)
+            self._authorize_hierarchy_change(request, business, serializer)
             business = serializer.save()
         except BrasilApiError as exc:
             return _brasil_api_error_response(exc)
         return Response(BusinessReadSerializer(business).data)
 
     def patch(self, request, pk):
-        business = self._get_object(pk)
-        if business is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        business = self._get_object(request.user, pk)
+        _require_business_role(request.user, business, WRITE_ROLES)
         serializer = BusinessWriteSerializer(business, data=request.data, partial=True)
         try:
             serializer.is_valid(raise_exception=True)
+            self._authorize_hierarchy_change(request, business, serializer)
             business = serializer.save()
         except BrasilApiError as exc:
             return _brasil_api_error_response(exc)
         return Response(BusinessReadSerializer(business).data)
 
     def delete(self, request, pk):
-        business = self._get_object(pk)
-        if business is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
-        business.delete()
+        business = self._get_object(request.user, pk)
+        _require_business_role(request.user, business, {BusinessRole.ADMIN})
+        try:
+            business.delete()
+        except ProtectedError:
+            return Response(
+                {"detail": "The business cannot be deleted while it has child businesses."},
+                status=status.HTTP_409_CONFLICT,
+            )
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    @staticmethod
+    def _authorize_hierarchy_change(request, business, serializer):
+        new_type = serializer.validated_data.get("type", business.type)
+        new_parent = serializer.validated_data.get("parent", business.parent)
+        if new_type == business.type and new_parent == business.parent:
+            return
+        _require_business_role(request.user, business, {BusinessRole.ADMIN})
+        if new_parent is None:
+            if not request.user.is_superuser:
+                raise PermissionDenied()
+            return
+        accessible_parent = get_accessible_business_or_404(request.user, new_parent.pk)
+        _require_business_role(
+            request.user, accessible_parent, {BusinessRole.ADMIN}
+        )
+
+
+class BusinessMembershipListCreateView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, business_id):
+        business = self._get_admin_business(request.user, business_id)
+        memberships = business.memberships.select_related("user").order_by("id")
+        return Response(BusinessMembershipReadSerializer(memberships, many=True).data)
+
+    def post(self, request, business_id):
+        business = self._get_admin_business(request.user, business_id)
+        serializer = BusinessMembershipWriteSerializer(
+            data=request.data, context={"business": business}
+        )
+        serializer.is_valid(raise_exception=True)
+        membership = serializer.save(business=business)
+        return Response(
+            BusinessMembershipReadSerializer(membership).data,
+            status=status.HTTP_201_CREATED,
+        )
+
+    @staticmethod
+    def _get_admin_business(user, business_id):
+        business = get_accessible_business_or_404(user, business_id)
+        _require_business_role(user, business, {BusinessRole.ADMIN})
+        return business
+
+
+class BusinessMembershipDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def patch(self, request, business_id, pk):
+        business = BusinessMembershipListCreateView._get_admin_business(
+            request.user, business_id
+        )
+        membership = self._get_membership(business, pk)
+        serializer = BusinessMembershipWriteSerializer(
+            membership,
+            data=request.data,
+            partial=True,
+            context={"business": business},
+        )
+        serializer.is_valid(raise_exception=True)
+        new_role = serializer.validated_data.get("role", membership.role)
+        with transaction.atomic():
+            self._protect_final_admin(membership, new_role)
+            membership = serializer.save()
+        return Response(BusinessMembershipReadSerializer(membership).data)
+
+    def delete(self, request, business_id, pk):
+        business = BusinessMembershipListCreateView._get_admin_business(
+            request.user, business_id
+        )
+        membership = self._get_membership(business, pk)
+        with transaction.atomic():
+            self._protect_final_admin(membership, None)
+            membership.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    @staticmethod
+    def _get_membership(business, pk):
+        try:
+            return business.memberships.select_related(
+                "business__parent__parent", "user"
+            ).get(pk=pk)
+        except BusinessMembership.DoesNotExist as exc:
+            raise NotFound() from exc
+
+    @staticmethod
+    def _protect_final_admin(membership, new_role):
+        if membership.role != BusinessRole.ADMIN or new_role == BusinessRole.ADMIN:
+            return
+        memberships = BusinessMembership.objects.select_for_update().filter(
+            business=membership.business
+        )
+        has_other_admin = any(
+            item.pk != membership.pk and item.role == BusinessRole.ADMIN
+            for item in memberships
+        )
+        if not has_other_admin and not has_governing_ancestor_admin(
+            membership.business
+        ):
+            raise ValidationError(
+                {"role": "The final governing admin cannot be removed or demoted."}
+            )
 
 
 class BusinessDetailsListCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        details = BusinessDetails.objects.select_related("business", "plan")
+        details = BusinessDetails.objects.select_related("business", "plan").filter(
+            business__in=accessible_businesses(request.user)
+        )
         if business_id := request.query_params.get("business"):
             details = details.filter(business_id=business_id)
         return Response(BusinessDetailsSerializer(details, many=True).data)
 
     def post(self, request):
+        business_id = request.data.get("business")
+        if business_id is not None:
+            business = get_accessible_business_or_404(request.user, business_id)
+            _require_business_role(request.user, business, WRITE_ROLES)
         serializer = BusinessDetailsSerializer(data=request.data)
         try:
             serializer.is_valid(raise_exception=True)
@@ -364,9 +521,7 @@ class BusinessDetailsDetailView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
-        details = _get_object_or_none(BusinessDetails, pk)
-        if details is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        details = self._get_object(request.user, pk)
         return Response(BusinessDetailsSerializer(details).data)
 
     def put(self, request, pk):
@@ -376,34 +531,50 @@ class BusinessDetailsDetailView(APIView):
         return self._update(request, pk, partial=True)
 
     def _update(self, request, pk, partial=False):
-        details = _get_object_or_none(BusinessDetails, pk)
-        if details is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        details = self._get_object(request.user, pk)
+        _require_business_role(request.user, details.business, WRITE_ROLES)
         serializer = BusinessDetailsSerializer(details, data=request.data, partial=partial)
         try:
             serializer.is_valid(raise_exception=True)
+            target = serializer.validated_data.get("business", details.business)
+            target = get_accessible_business_or_404(request.user, target.pk)
+            _require_business_role(request.user, target, WRITE_ROLES)
         except BrasilApiError as exc:
             return _brasil_api_error_response(exc)
         return Response(BusinessDetailsSerializer(serializer.save()).data)
 
     def delete(self, request, pk):
-        details = _get_object_or_none(BusinessDetails, pk)
-        if details is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        details = self._get_object(request.user, pk)
+        _require_business_role(request.user, details.business, WRITE_ROLES)
         details.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    @staticmethod
+    def _get_object(user, pk):
+        try:
+            return BusinessDetails.objects.select_related(
+                "business", "business__parent"
+            ).get(pk=pk, business__in=accessible_businesses(user))
+        except BusinessDetails.DoesNotExist as exc:
+            raise NotFound() from exc
 
 
 class PosDeviceListCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        devices = PosDevice.objects.select_related("model", "business")
+        devices = PosDevice.objects.select_related("model", "business").filter(
+            business__in=accessible_businesses(request.user)
+        )
         if business_id := request.query_params.get("business"):
             devices = devices.filter(business_id=business_id)
         return Response(PosDeviceSerializer(devices, many=True).data)
 
     def post(self, request):
+        business_id = request.data.get("business")
+        if business_id is not None:
+            business = get_accessible_business_or_404(request.user, business_id)
+            _require_business_role(request.user, business, WRITE_ROLES)
         serializer = PosDeviceSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(PosDeviceSerializer(serializer.save()).data, status=status.HTTP_201_CREATED)
@@ -413,9 +584,7 @@ class PosDeviceDetailView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
-        device = _get_object_or_none(PosDevice, pk)
-        if device is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        device = self._get_object(request.user, pk)
         return Response(PosDeviceSerializer(device).data)
 
     def put(self, request, pk):
@@ -425,16 +594,26 @@ class PosDeviceDetailView(APIView):
         return self._update(request, pk, partial=True)
 
     def _update(self, request, pk, partial=False):
-        device = _get_object_or_none(PosDevice, pk)
-        if device is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        device = self._get_object(request.user, pk)
+        _require_business_role(request.user, device.business, WRITE_ROLES)
         serializer = PosDeviceSerializer(device, data=request.data, partial=partial)
         serializer.is_valid(raise_exception=True)
+        target = serializer.validated_data.get("business", device.business)
+        target = get_accessible_business_or_404(request.user, target.pk)
+        _require_business_role(request.user, target, WRITE_ROLES)
         return Response(PosDeviceSerializer(serializer.save()).data)
 
     def delete(self, request, pk):
-        device = _get_object_or_none(PosDevice, pk)
-        if device is None:
-            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+        device = self._get_object(request.user, pk)
+        _require_business_role(request.user, device.business, WRITE_ROLES)
         device.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    @staticmethod
+    def _get_object(user, pk):
+        try:
+            return PosDevice.objects.select_related(
+                "business", "business__parent"
+            ).get(pk=pk, business__in=accessible_businesses(user))
+        except PosDevice.DoesNotExist as exc:
+            raise NotFound() from exc
