@@ -624,7 +624,7 @@ class BusinessAuthorizationApiTests(APITestCase):
             },
         )
 
-    def test_business_list_can_be_filtered_to_direct_children(self):
+    def test_business_list_can_be_filtered_to_a_business_branch(self):
         BusinessMembership.objects.create(
             user=self.user, business=self.reseller, role=BusinessRole.VIEWER
         )
@@ -634,10 +634,10 @@ class BusinessAuthorizationApiTests(APITestCase):
         )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data["count"], 2)
+        self.assertEqual(response.data["count"], 3)
         self.assertSetEqual(
             {item["id"] for item in response.data["results"]},
-            {self.re_reseller.id, self.direct_store.id},
+            {self.re_reseller.id, self.direct_store.id, self.nested_store.id},
         )
 
     def test_re_reseller_and_store_memberships_only_see_their_branches(self):
