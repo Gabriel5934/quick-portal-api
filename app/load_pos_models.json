@@ -1,0 +1,11 @@
+[
+  {"model": "POS GPOS 700", "acquirer": "OWN"},
+  {"model": "POS GPOS 700 MINI", "acquirer": "OWN"},
+  {"model": "POS GPOS 760", "acquirer": "OWN"},
+  {"model": "POS IWL251", "acquirer": "OWN"},
+  {"model": "POS MOVE 2500", "acquirer": "OWN"},
+  {"model": "POS PAX D195", "acquirer": "OWN"},
+  {"model": "POS PAX D195", "acquirer": "OWN"},
+  {"model": "POS PAX Q92X", "acquirer": "OWN"},
+  {"model": "POS PAX S920", "acquirer": "OWN"}
+]

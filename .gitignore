@@ -142,8 +142,6 @@ yarn-error.log*
 # uv lockfile (optional)
 uv.lock
 
-# Data dump files
-load_*.json
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

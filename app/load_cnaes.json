@@ -1,0 +1,6817 @@
+[
+  {
+    "codCnae": "5829-8/00",
+    "descCnae": "EDIÇÃO INTEGRADA À IMPRESSÃO DE CADASTROS, LISTAS E OUTROS PRODUTOS GRÁFICOS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5914-6/00",
+    "descCnae": "ATIVIDADES DE EXIBIÇÃO CINEMATOGRÁFICA",
+    "codMcc": 7832
+  },
+  {
+    "codCnae": "6022-5/02",
+    "descCnae": "ATIVIDADES RELACIONADAS À TELEVISÃO POR ASSINATURA, EXCETO PROGRAMADORAS",
+    "codMcc": 4899
+  },
+  {
+    "codCnae": "6110-8/01",
+    "descCnae": "SERVIÇOS DE TELEFONIA FIXA COMUTADA  STFC",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6110-8/02",
+    "descCnae": "SERVIÇOS DE REDES DE TRANSPORTE DE TELECOMUNICAÇÕES  SRTT",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6110-8/03",
+    "descCnae": "SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA  SCM",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6110-8/99",
+    "descCnae": "SERVIÇOS DE TELECOMUNICAÇÕES POR FIO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6120-5/01",
+    "descCnae": "TELEFONIA MÓVEL CELULAR",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "4742-3/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE MATERIAL ELÉTRICO",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "4743-1/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE VIDROS",
+    "codMcc": 5231
+  },
+  {
+    "codCnae": "4744-0/01",
+    "descCnae": "COMÉRCIO VAREJISTA DE FERRAGENS E FERRAMENTAS",
+    "codMcc": 5251
+  },
+  {
+    "codCnae": "4744-0/03",
+    "descCnae": "COMÉRCIO VAREJISTA DE MATERIAIS HIDRÁULICOS",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "4752-1/00",
+    "descCnae": "COMÉRCIO VAREJISTA ESPECIALIZADO DE EQUIPAMENTOS DE TELEFONIA E COMUNICAÇÃO",
+    "codMcc": 4812
+  },
+  {
+    "codCnae": "4754-7/02",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS DE COLCHOARIA",
+    "codMcc": 5712
+  },
+  {
+    "codCnae": "4754-7/03",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS DE ILUMINAÇÃO",
+    "codMcc": 5712
+  },
+  {
+    "codCnae": "4761-0/01",
+    "descCnae": "COMÉRCIO VAREJISTA DE LIVROS",
+    "codMcc": 5942
+  },
+  {
+    "codCnae": "4761-0/02",
+    "descCnae": "COMÉRCIO VAREJISTA DE JORNAIS E REVISTAS",
+    "codMcc": 5994
+  },
+  {
+    "codCnae": "4762-8/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE DISCOS, CDS, DVDS E FITAS",
+    "codMcc": 5735
+  },
+  {
+    "codCnae": "4763-6/01",
+    "descCnae": "COMÉRCIO VAREJISTA DE BRINQUEDOS E ARTIGOS RECREATIVOS",
+    "codMcc": 5945
+  },
+  {
+    "codCnae": "4763-6/02",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS ESPORTIVOS",
+    "codMcc": 5941
+  },
+  {
+    "codCnae": "4763-6/04",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS DE CAÇA, PESCA E CAMPING",
+    "codMcc": 5941
+  },
+  {
+    "codCnae": "4763-6/05",
+    "descCnae": "COMÉRCIO VAREJISTA DE EMBARCAÇÕES E OUTROS VEÍCULOS RECREATIVOS; PEÇAS E ACESSÓRIOS",
+    "codMcc": 5551
+  },
+  {
+    "codCnae": "4771-7/02",
+    "descCnae": "COMÉRCIO VAREJISTA DE PRODUTOS FARMACÊUTICOS, COM MANIPULAÇÃO DE FÓRMULAS",
+    "codMcc": 5912
+  },
+  {
+    "codCnae": "4771-7/04",
+    "descCnae": "COMÉRCIO VAREJISTA DE MEDICAMENTOS VETERINÁRIOS",
+    "codMcc": 5912
+  },
+  {
+    "codCnae": "4773-3/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS MÉDICOS E ORTOPÉDICOS",
+    "codMcc": 5976
+  },
+  {
+    "codCnae": "4781-4/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS DO VESTUÁRIO E ACESSÓRIOS",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "4782-2/01",
+    "descCnae": "COMÉRCIO VAREJISTA DE CALÇADOS",
+    "codMcc": 5661
+  },
+  {
+    "codCnae": "4782-2/02",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS DE VIAGEM",
+    "codMcc": 5947
+  },
+  {
+    "codCnae": "4784-9/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE GÁS LIQÜEFEITO DE PETRÓLEO (GLP)",
+    "codMcc": 5983
+  },
+  {
+    "codCnae": "4785-7/01",
+    "descCnae": "COMÉRCIO VAREJISTA DE ANTIGÜIDADES",
+    "codMcc": 5932
+  },
+  {
+    "codCnae": "4785-7/99",
+    "descCnae": "COMÉRCIO VAREJISTA DE OUTROS ARTIGOS USADOS",
+    "codMcc": 5931
+  },
+  {
+    "codCnae": "4789-0/01",
+    "descCnae": "COMÉRCIO VAREJISTA DE SUVENIRES, BIJUTERIAS E ARTESANATOS",
+    "codMcc": 5947
+  },
+  {
+    "codCnae": "4789-0/02",
+    "descCnae": "COMÉRCIO VAREJISTA DE PLANTAS E FLORES NATURAIS",
+    "codMcc": 5992
+  },
+  {
+    "codCnae": "4789-0/03",
+    "descCnae": "COMÉRCIO VAREJISTA DE OBJETOS DE ARTE",
+    "codMcc": 5971
+  },
+  {
+    "codCnae": "4789-0/05",
+    "descCnae": "COMÉRCIO VAREJISTA DE PRODUTOS SANEANTES DOMISSANITÁRIOS",
+    "codMcc": 5999
+  },
+  {
+    "codCnae": "4789-0/06",
+    "descCnae": "COMÉRCIO VAREJISTA DE FOGOS DE ARTIFÍCIO E ARTIGOS PIROTÉCNICOS",
+    "codMcc": 5999
+  },
+  {
+    "codCnae": "4789-0/07",
+    "descCnae": "COMÉRCIO VAREJISTA DE EQUIPAMENTOS PARA ESCRITÓRIO",
+    "codMcc": 5943
+  },
+  {
+    "codCnae": "4789-0/08",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARTIGOS FOTOGRÁFICOS E PARA FILMAGEM",
+    "codMcc": 5946
+  },
+  {
+    "codCnae": "4789-0/09",
+    "descCnae": "COMÉRCIO VAREJISTA DE ARMAS E MUNIÇÕES",
+    "codMcc": 5999
+  },
+  {
+    "codCnae": "4789-0/99",
+    "descCnae": "COMÉRCIO VAREJISTA DE OUTROS PRODUTOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5999
+  },
+  {
+    "codCnae": "4911-6/00",
+    "descCnae": "TRANSPORTE FERROVIÁRIO DE CARGA",
+    "codMcc": 4011
+  },
+  {
+    "codCnae": "4912-4/01",
+    "descCnae": "TRANSPORTE FERROVIÁRIO DE PASSAGEIROS INTERMUNICIPAL E INTERESTADUAL",
+    "codMcc": 4112
+  },
+  {
+    "codCnae": "4912-4/02",
+    "descCnae": "TRANSPORTE FERROVIÁRIO DE PASSAGEIROS MUNICIPAL E EM REGIÃO METROPOLITANA",
+    "codMcc": 4111
+  },
+  {
+    "codCnae": "4912-4/03",
+    "descCnae": "TRANSPORTE METROVIÁRIO",
+    "codMcc": 4111
+  },
+  {
+    "codCnae": "4921-3/01",
+    "descCnae": "TRANSPORTE RODOVIÁRIO COLETIVO DE PASSAGEIROS, COM ITINERÁRIO FIXO, MUNICIPAL",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4921-3/02",
+    "descCnae": "TRANSPORTE RODOVIÁRIO COLETIVO DE PASSAGEIROS, COM ITINERÁRIO FIXO, INTERMUNICIPAL EM REGIÃO METROPOLITANA",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4922-1/01",
+    "descCnae": "TRANSPORTE RODOVIÁRIO COLETIVO DE PASSAGEIROS, COM ITINERÁRIO FIXO, INTERMUNICIPAL, EXCETO EM REGIÃO METROPOLITANA",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4922-1/02",
+    "descCnae": "TRANSPORTE RODOVIÁRIO COLETIVO DE PASSAGEIROS, COM ITINERÁRIO FIXO, INTERESTADUAL",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4922-1/03",
+    "descCnae": "TRANSPORTE RODOVIÁRIO COLETIVO DE PASSAGEIROS, COM ITINERÁRIO FIXO, INTERNACIONAL",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4923-0/01",
+    "descCnae": "SERVIÇO DE TÁXI",
+    "codMcc": 4121
+  },
+  {
+    "codCnae": "4923-0/02",
+    "descCnae": "SERVIÇO DE TRANSPORTE DE PASSAGEIROS  LOCAÇÃO DE AUTOMÓVEIS COM MOTORISTA",
+    "codMcc": 4121
+  },
+  {
+    "codCnae": "4924-8/00",
+    "descCnae": "TRANSPORTE ESCOLAR",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "4929-9/01",
+    "descCnae": "TRANSPORTE RODOVIÁRIO COLETIVO DE PASSAGEIROS, SOB REGIME DE FRETAMENTO, MUNICIPAL",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4929-9/02",
+    "descCnae": "TRANSPORTE RODOVIÁRIO COLETIVO DE PASSAGEIROS, SOB REGIME DE FRETAMENTO, INTERMUNICIPAL, INTERESTADUAL E INTERNACIONAL",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4929-9/03",
+    "descCnae": "ORGANIZAÇÃO DE EXCURSÕES EM VEÍCULOS RODOVIÁRIOS PRÓPRIOS, MUNICIPAL",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4929-9/04",
+    "descCnae": "ORGANIZAÇÃO DE EXCURSÕES EM VEÍCULOS RODOVIÁRIOS PRÓPRIOS, INTERMUNICIPAL, INTERESTADUAL E INTERNACIONAL",
+    "codMcc": 4131
+  },
+  {
+    "codCnae": "4929-9/99",
+    "descCnae": "OUTROS TRANSPORTES RODOVIÁRIOS DE PASSAGEIROS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "4930-2/01",
+    "descCnae": "TRANSPORTE RODOVIÁRIO DE CARGA, EXCETO PRODUTOS PERIGOSOS E MUDANÇAS, MUNICIPAL",
+    "codMcc": 4214
+  },
+  {
+    "codCnae": "4930-2/02",
+    "descCnae": "TRANSPORTE RODOVIÁRIO DE CARGA, EXCETO PRODUTOS PERIGOSOS E MUDANÇAS, INTERMUNICIPAL, INTERESTADUAL E INTERNACIONAL",
+    "codMcc": 4214
+  },
+  {
+    "codCnae": "4930-2/03",
+    "descCnae": "TRANSPORTE RODOVIÁRIO DE PRODUTOS PERIGOSOS",
+    "codMcc": 4214
+  },
+  {
+    "codCnae": "4930-2/04",
+    "descCnae": "TRANSPORTE RODOVIÁRIO DE MUDANÇAS",
+    "codMcc": 4214
+  },
+  {
+    "codCnae": "5012-2/02",
+    "descCnae": "TRANSPORTE MARÍTIMO DE LONGO CURSO  PASSAGEIROS",
+    "codMcc": 4411
+  },
+  {
+    "codCnae": "5022-0/01",
+    "descCnae": "TRANSPORTE POR NAVEGAÇÃO INTERIOR DE PASSAGEIROS EM LINHAS REGULARES, MUNICIPAL, EXCETO TRAVESSIA",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5022-0/02",
+    "descCnae": "TRANSPORTE POR NAVEGAÇÃO INTERIOR DE PASSAGEIROS EM LINHAS REGULARES, INTERMUNICIPAL, INTERESTADUAL E INTERNACIONAL, EXCETO TRAVESSIA",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5091-2/01",
+    "descCnae": "TRANSPORTE POR NAVEGAÇÃO DE TRAVESSIA, MUNICIPAL",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5091-2/02",
+    "descCnae": "TRANSPORTE POR NAVEGAÇÃO DE TRAVESSIA, INTERMUNICIPAL",
+    "codMcc": 4111
+  },
+  {
+    "codCnae": "5099-8/01",
+    "descCnae": "TRANSPORTE AQUAVIÁRIO PARA PASSEIOS TURÍSTICOS",
+    "codMcc": 4111
+  },
+  {
+    "codCnae": "5099-8/99",
+    "descCnae": "OUTROS TRANSPORTES AQUAVIÁRIOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 4111
+  },
+  {
+    "codCnae": "5111-1/00",
+    "descCnae": "TRANSPORTE AÉREO DE PASSAGEIROS REGULAR",
+    "codMcc": 4511
+  },
+  {
+    "codCnae": "5112-9/01",
+    "descCnae": "SERVIÇO DE TÁXI AÉREO E LOCAÇÃO DE AERONAVES COM TRIPULAÇÃO",
+    "codMcc": 4511
+  },
+  {
+    "codCnae": "5112-9/99",
+    "descCnae": "OUTROS SERVIÇOS DE TRANSPORTE AÉREO DE PASSAGEIROS NÃOREGULAR",
+    "codMcc": 4511
+  },
+  {
+    "codCnae": "5211-7/02",
+    "descCnae": "GUARDAMÓVEIS",
+    "codMcc": 4225
+  },
+  {
+    "codCnae": "5211-7/99",
+    "descCnae": "DEPÓSITOS DE MERCADORIAS PARA TERCEIROS, EXCETO ARMAZÉNS GERAIS E GUARDAMÓVEIS",
+    "codMcc": 4225
+  },
+  {
+    "codCnae": "5212-5/00",
+    "descCnae": "CARGA E DESCARGA",
+    "codMcc": 4214
+  },
+  {
+    "codCnae": "5222-2/00",
+    "descCnae": "TERMINAIS RODOVIÁRIOS E FERROVIÁRIOS",
+    "codMcc": 4111
+  },
+  {
+    "codCnae": "5223-1/00",
+    "descCnae": "ESTACIONAMENTO DE VEÍCULOS",
+    "codMcc": 7523
+  },
+  {
+    "codCnae": "5229-0/01",
+    "descCnae": "SERVIÇOS DE APOIO AO TRANSPORTE POR TÁXI, INCLUSIVE CENTRAIS DE CHAMADA",
+    "codMcc": 4121
+  },
+  {
+    "codCnae": "5229-0/02",
+    "descCnae": "SERVIÇOS DE REBOQUE DE VEÍCULOS",
+    "codMcc": 7549
+  },
+  {
+    "codCnae": "5229-0/99",
+    "descCnae": "OUTRAS ATIVIDADES AUXILIARES DOS TRANSPORTES TERRESTRES NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5320-2/02",
+    "descCnae": "SERVIÇOS DE ENTREGA RÁPIDA",
+    "codMcc": 4215
+  },
+  {
+    "codCnae": "5612-1/00",
+    "descCnae": "SERVIÇOS AMBULANTES DE ALIMENTAÇÃO",
+    "codMcc": 5499
+  },
+  {
+    "codCnae": "5620-1/01",
+    "descCnae": "FORNECIMENTO DE ALIMENTOS PREPARADOS PREPONDERANTEMENTE PARA EMPRESAS",
+    "codMcc": 5499
+  },
+  {
+    "codCnae": "5620-1/02",
+    "descCnae": "SERVIÇOS DE ALIMENTAÇÃO PARA EVENTOS E RECEPÇÕES  BUFÊ",
+    "codMcc": 5811
+  },
+  {
+    "codCnae": "5620-1/03",
+    "descCnae": "CANTINAS  SERVIÇOS DE ALIMENTAÇÃO PRIVATIVOS",
+    "codMcc": 5812
+  },
+  {
+    "codCnae": "5620-1/04",
+    "descCnae": "FORNECIMENTO DE ALIMENTOS PREPARADOS PREPONDERANTEMENTE PARA CONSUMO DOMICILIAR",
+    "codMcc": 5812
+  },
+  {
+    "codCnae": "5811-5/00",
+    "descCnae": "EDIÇÃO DE LIVROS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5812-3/00",
+    "descCnae": "EDIÇÃO DE JORNAIS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5813-1/00",
+    "descCnae": "EDIÇÃO DE REVISTAS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5819-1/00",
+    "descCnae": "EDIÇÃO DE CADASTROS, LISTAS E OUTROS PRODUTOS GRÁFICOS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5821-2/00",
+    "descCnae": "EDIÇÃO INTEGRADA À IMPRESSÃO DE LIVROS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5822-1/00",
+    "descCnae": "EDIÇÃO INTEGRADA À IMPRESSÃO DE JORNAIS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5823-9/00",
+    "descCnae": "EDIÇÃO INTEGRADA À IMPRESSÃO DE REVISTAS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "6120-5/02",
+    "descCnae": "SERVIÇO MÓVEL ESPECIALIZADO  SME",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6120-5/99",
+    "descCnae": "SERVIÇOS DE TELECOMUNICAÇÕES SEM FIO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6130-2/00",
+    "descCnae": "TELECOMUNICAÇÕES POR SATÉLITE",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "5611-2/02",
+    "descCnae": "BARES E OUTROS ESTABELECIMENTOS ESPECIALIZADOS EM SEVIR BEBIDAS",
+    "codMcc": 5813
+  },
+  {
+    "codCnae": "0161-0/01",
+    "descCnae": "SERVIÇO DE PULVERIZAÇÃO E CONTROLE DE PRAGAS AGRÍCOLAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0161-0/02",
+    "descCnae": "SERVIÇO DE PODA DE ÁRVORES PARA LAVOURAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0161-0/03",
+    "descCnae": "SERVIÇO DE PREPARAÇÃO DE TERRENO, CULTIVO E COLHEITA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0161-0/99",
+    "descCnae": "ATIVIDADES DE APOIO À AGRICULTURA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0162-8/01",
+    "descCnae": "SERVIÇO DE INSEMINAÇÃO ARTIFICIAL EM ANIMAIS",
+    "codMcc": 742
+  },
+  {
+    "codCnae": "1052-0/00",
+    "descCnae": "FABRICAÇÃO DE LATICÍNIOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1111-9/01",
+    "descCnae": "FABRICAÇÃO DE AGUARDENTE DE CANADEAÇÚCAR",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1111-9/02",
+    "descCnae": "FABRICAÇÃO DE OUTRAS AGUARDENTES E BEBIDAS DESTILADAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1112-7/00",
+    "descCnae": "FABRICAÇÃO DE VINHO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1113-5/02",
+    "descCnae": "FABRICAÇÃO DE CERVEJAS E CHOPES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1121-6/00",
+    "descCnae": "FABRICAÇÃO DE ÁGUAS ENVASADAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1122-4/01",
+    "descCnae": "FABRICAÇÃO DE REFRIGERANTES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1122-4/02",
+    "descCnae": "FABRICAÇÃO DE CHÁ MATE E OUTROS CHÁS PRONTOS PARA CONSUMO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1122-4/03",
+    "descCnae": "FABRICAÇÃO DE REFRESCOS, XAROPES E PÓS PARA REFRESCOS, EXCETO REFRESCOS DE FRUTAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1340-5/01",
+    "descCnae": "ESTAMPARIA E TEXTURIZAÇÃO EM FIOS, TECIDOS, ARTEFATOS TÊXTEIS E PEÇAS DO VESTUÁRIO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1340-5/02",
+    "descCnae": "ALVEJAMENTO, TINGIMENTO E TORÇÃO EM FIOS, TECIDOS, ARTEFATOS TÊXTEIS E PEÇAS DO VESTUÁRIO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1340-5/99",
+    "descCnae": "OUTROS SERVIÇOS DE ACABAMENTO EM FIOS, TECIDOS, ARTEFATOS TÊXTEIS E PEÇAS DO VESTUÁRIO",
+    "codMcc": 5697
+  },
+  {
+    "codCnae": "1411-8/01",
+    "descCnae": "CONFECÇÃO DE ROUPAS ÍNTIMAS",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "1411-8/02",
+    "descCnae": "FACÇÃO DE ROUPAS ÍNTIMAS",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "1412-6/01",
+    "descCnae": "CONFECÇÃO DE PEÇAS DO VESTUÁRIO, EXCETO ROUPAS ÍNTIMAS E AS CONFECCIONADAS SOB MEDIDA",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "1412-6/02",
+    "descCnae": "CONFECÇÃO, SOB MEDIDA, DE PEÇAS DO VESTUÁRIO, EXCETO ROUPAS ÍNTIMAS",
+    "codMcc": 5697
+  },
+  {
+    "codCnae": "1412-6/03",
+    "descCnae": "FACÇÃO DE PEÇAS DO VESTUÁRIO, EXCETO ROUPAS ÍNTIMAS",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "1413-4/01",
+    "descCnae": "CONFECÇÃO DE ROUPAS PROFISSIONAIS, EXCETO SOB MEDIDA",
+    "codMcc": 5137
+  },
+  {
+    "codCnae": "1413-4/02",
+    "descCnae": "CONFECÇÃO, SOB MEDIDA, DE ROUPAS PROFISSIONAIS",
+    "codMcc": 5697
+  },
+  {
+    "codCnae": "1413-4/03",
+    "descCnae": "FACÇÃO DE ROUPAS PROFISSIONAIS",
+    "codMcc": 5137
+  },
+  {
+    "codCnae": "1414-2/00",
+    "descCnae": "FABRICAÇÃO DE ACESSÓRIOS DO VESTUÁRIO, EXCETO PARA SEGURANÇA E PROTEÇÃO",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "1422-3/00",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS DO VESTUÁRIO, PRODUZIDOS EM MALHARIAS E TRICOTAGENS, EXCETO MEIAS",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "1521-1/00",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS PARA VIAGEM, BOLSAS E SEMELHANTES DE QUALQUER MATERIAL",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1529-7/00",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE COURO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5948
+  },
+  {
+    "codCnae": "1531-9/01",
+    "descCnae": "FABRICAÇÃO DE CALÇADOS DE COURO",
+    "codMcc": 5139
+  },
+  {
+    "codCnae": "1532-7/00",
+    "descCnae": "FABRICAÇÃO DE TÊNIS DE QUALQUER MATERIAL",
+    "codMcc": 5139
+  },
+  {
+    "codCnae": "1533-5/00",
+    "descCnae": "FABRICAÇÃO DE CALÇADOS DE MATERIAL SINTÉTICO",
+    "codMcc": 5139
+  },
+  {
+    "codCnae": "1539-4/00",
+    "descCnae": "FABRICAÇÃO DE CALÇADOS DE MATERIAIS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5139
+  },
+  {
+    "codCnae": "1621-8/00",
+    "descCnae": "FABRICAÇÃO DE MADEIRA LAMINADA E DE CHAPAS DE MADEIRA COMPENSADA, PRENSADA E AGLOMERADA",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "1622-6/01",
+    "descCnae": "FABRICAÇÃO DE CASAS DE MADEIRA PRÉFABRICADAS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "1622-6/02",
+    "descCnae": "FABRICAÇÃO DE ESQUADRIAS DE MADEIRA E DE PEÇAS DE MADEIRA PARA INSTALAÇÕES INDUSTRIAIS E COMERCIAIS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "1622-6/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS ARTIGOS DE CARPINTARIA PARA CONSTRUÇÃO",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "1623-4/00",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE TANOARIA E DE EMBALAGENS DE MADEIRA",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "1629-3/01",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DIVERSOS DE MADEIRA, EXCETO MÓVEIS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "1629-3/02",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DIVERSOS DE CORTIÇA, BAMBU, PALHA, VIME E OUTROS MATERIAIS TRANÇADOS, EXCETO MÓVEIS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "1821-1/00",
+    "descCnae": "SERVIÇOS DE PRÉIMPRESSÃO",
+    "codMcc": 2791
+  },
+  {
+    "codCnae": "1822-9/00",
+    "descCnae": "SERVIÇOS DE ACABAMENTOS GRÁFICOS",
+    "codMcc": 7338
+  },
+  {
+    "codCnae": "1830-0/01",
+    "descCnae": "REPRODUÇÃO DE SOM EM QUALQUER SUPORTE",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "1830-0/02",
+    "descCnae": "REPRODUÇÃO DE VÍDEO EM QUALQUER SUPORTE",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "1830-0/03",
+    "descCnae": "REPRODUÇÃO DE SOFTWARE EM QUALQUER SUPORTE",
+    "codMcc": 5045
+  },
+  {
+    "codCnae": "2071-1/00",
+    "descCnae": "FABRICAÇÃO DE TINTAS, VERNIZES, ESMALTES E LACAS",
+    "codMcc": 5198
+  },
+  {
+    "codCnae": "2072-0/00",
+    "descCnae": "FABRICAÇÃO DE TINTAS DE IMPRESSÃO",
+    "codMcc": 5198
+  },
+  {
+    "codCnae": "2073-8/00",
+    "descCnae": "FABRICAÇÃO DE IMPERMEABILIZANTES, SOLVENTES E PRODUTOS AFINS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2091-6/00",
+    "descCnae": "FABRICAÇÃO DE ADESIVOS E SELANTES",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2092-4/02",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS PIROTÉCNICOS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2099-1/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS PRODUTOS QUÍMICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2110-6/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS FARMOQUÍMICOS",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "2123-8/00",
+    "descCnae": "FABRICAÇÃO DE PREPARAÇÕES FARMACÊUTICAS",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "2212-9/00",
+    "descCnae": "REFORMA DE PNEUMÁTICOS USADOS",
+    "codMcc": 7534
+  },
+  {
+    "codCnae": "2330-3/04",
+    "descCnae": "FABRICAÇÃO DE CASAS PRÉMOLDADAS DE CONCRETO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2330-3/05",
+    "descCnae": "PREPARAÇÃO DE MASSA DE CONCRETO E ARGAMASSA PARA CONSTRUÇÃO",
+    "codMcc": 1771
+  },
+  {
+    "codCnae": "2330-3/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS ARTEFATOS E PRODUTOS DE CONCRETO, CIMENTO, FIBROCIMENTO, GESSO E MATERIAIS SEMELHANTES",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2341-9/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS CERÂMICOS REFRATÁRIOS",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2342-7/02",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE CERÂMICA E BARRO COZIDO PARA USO NA CONSTRUÇÃO, EXCETO AZULEJOS E PISOS",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2399-1/01",
+    "descCnae": "DECORAÇÃO, LAPIDAÇÃO, GRAVAÇÃO, VITRIFICAÇÃO E OUTROS TRABALHOS EM CERÂMICA, LOUÇA, VIDRO E CRISTAL",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "2539-0/00",
+    "descCnae": "SERVIÇOS DE USINAGEM, SOLDA, TRATAMENTO E REVESTIMENTO EM METAIS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2542-0/00",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS DE SERRALHERIA, EXCETO ESQUADRIAS",
+    "codMcc": 5072
+  },
+  {
+    "codCnae": "3104-7/00",
+    "descCnae": "FABRICAÇÃO DE COLCHÕES",
+    "codMcc": 5712
+  },
+  {
+    "codCnae": "3211-6/02",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE JOALHERIA E OURIVESARIA",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "3212-4/00",
+    "descCnae": "FABRICAÇÃO DE BIJUTERIAS E ARTEFATOS SEMELHANTES",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "3240-0/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS BRINQUEDOS E JOGOS RECREATIVOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3250-7/06",
+    "descCnae": "SERVIÇOS DE PRÓTESE DENTÁRIA",
+    "codMcc": 8021
+  },
+  {
+    "codCnae": "3299-0/03",
+    "descCnae": "FABRICAÇÃO DE LETRAS, LETREIROS E PLACAS DE QUALQUER MATERIAL, EXCETO LUMINOSOS",
+    "codMcc": 2791
+  },
+  {
+    "codCnae": "3299-0/04",
+    "descCnae": "FABRICAÇÃO DE PAINÉIS E LETREIROS LUMINOSOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "3311-2/00",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE TANQUES, RESERVATÓRIOS METÁLICOS E CALDEIRAS, EXCETO PARA VEÍCULOS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3312-1/02",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE APARELHOS E INSTRUMENTOS DE MEDIDA, TESTE E CONTROLE",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3312-1/03",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE APARELHOS ELETROMÉDICOS E ELETROTERAPÊUTICOS E EQUIPAMENTOS DE IRRADIAÇÃO",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3312-1/04",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE EQUIPAMENTOS E INSTRUMENTOS ÓPTICOS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3313-9/01",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE GERADORES, TRANSFORMADORES E MOTORES ELÉTRICOS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3313-9/02",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE BATERIAS E ACUMULADORES ELÉTRICOS, EXCETO PARA VEÍCULOS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3313-9/99",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS, APARELHOS E MATERIAIS ELÉTRICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/01",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS MOTRIZES NÃOELÉTRICAS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/02",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE EQUIPAMENTOS HIDRÁULICOS E PNEUMÁTICOS, EXCETO VÁLVULAS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/07",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E APARELHOS DE REFRIGERAÇÃO E VENTILAÇÃO PARA USO INDUSTRIAL E COMERCIAL",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/08",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS, EQUIPAMENTOS E APARELHOS PARA TRANSPORTE E ELEVAÇÃO DE CARGAS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/09",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS DE ESCREVER, CALCULAR E DE OUTROS EQUIPAMENTOS NÃOELETRÔNICOS PARA ESCRITÓRIO",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/10",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA USO GERAL NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/11",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA AGRICULTURA E PECUÁRIA",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/13",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINASFERRAMENTA",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/17",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E EQUIPAMENTOS DE TERRAPLENAGEM, PAVIMENTAÇÃO E CONSTRUÇÃO, EXCETO TRATORES",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3321-0/00",
+    "descCnae": "INSTALAÇÃO DE MÁQUINAS E EQUIPAMENTOS INDUSTRIAIS",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "3329-5/01",
+    "descCnae": "SERVIÇOS DE MONTAGEM DE MÓVEIS DE QUALQUER MATERIAL",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "4759-8/99",
+    "descCnae": "COMERCIO VAREJISTA DE OUTROS ARTIGOS DE USO PESSOAL E DOMESTICO NAO ESPECIFICADO ANTERIORMENTE",
+    "codMcc": 5999
+  },
+  {
+    "codCnae": "9329-8/01",
+    "descCnae": "DISCOTECAS, DANCETERIAS, SALOES DE DANCA E SIMILARES",
+    "codMcc": 5813
+  },
+  {
+    "codCnae": "4520-0/05",
+    "descCnae": "SERVICOS DE LAVAGEM, LUBRIFICACAO E POLIMENTO DE VEICULOS AUTOMOTORES",
+    "codMcc": 7542
+  },
+  {
+    "codCnae": "3329-5/99",
+    "descCnae": "INSTALAÇÃO DE OUTROS EQUIPAMENTOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "3831-9/01",
+    "descCnae": "RECUPERAÇÃO DE SUCATAS DE ALUMÍNIO",
+    "codMcc": 5935
+  },
+  {
+    "codCnae": "3831-9/99",
+    "descCnae": "RECUPERAÇÃO DE MATERIAIS METÁLICOS, EXCETO ALUMÍNIO",
+    "codMcc": 5935
+  },
+  {
+    "codCnae": "3839-4/01",
+    "descCnae": "USINAS DE COMPOSTAGEM",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "3839-4/99",
+    "descCnae": "RECUPERAÇÃO DE MATERIAIS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "4292-8/01",
+    "descCnae": "MONTAGEM DE ESTRUTURAS METÁLICAS",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4313-4/00",
+    "descCnae": "OBRAS DE TERRAPLENAGEM",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4321-5/00",
+    "descCnae": "INSTALAÇÃO E MANUTENÇÃO ELÉTRICA",
+    "codMcc": 1731
+  },
+  {
+    "codCnae": "4322-3/01",
+    "descCnae": "INSTALAÇÕES HIDRÁULICAS, SANITÁRIAS E DE GÁS",
+    "codMcc": 1711
+  },
+  {
+    "codCnae": "4322-3/03",
+    "descCnae": "INSTALAÇÕES DE SISTEMA DE PREVENÇÃO CONTRA INCÊNDIO",
+    "codMcc": 1711
+  },
+  {
+    "codCnae": "4329-1/01",
+    "descCnae": "INSTALAÇÃO DE PAINÉIS PUBLICITÁRIOS",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "4329-1/03",
+    "descCnae": "INSTALAÇÃO, MANUTENÇÃO E REPARAÇÃO DE ELEVADORES, ESCADAS E ESTEIRAS ROLANTES, EXCETO DE FABRICAÇÃO PRÓPRIA",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "4329-1/99",
+    "descCnae": "OUTRAS OBRAS DE INSTALAÇÕES EM CONSTRUÇÕES NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "4330-4/01",
+    "descCnae": "IMPERMEABILIZAÇÃO EM OBRAS DE ENGENHARIA CIVIL",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "4330-4/02",
+    "descCnae": "INSTALAÇÃO DE PORTAS, JANELAS, TETOS, DIVISÓRIAS E ARMÁRIOS EMBUTIDOS DE QUALQUER MATERIAL",
+    "codMcc": 1750
+  },
+  {
+    "codCnae": "4330-4/03",
+    "descCnae": "OBRAS DE ACABAMENTO EM GESSO E ESTUQUE",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "4330-4/04",
+    "descCnae": "SERVIÇOS DE PINTURA DE EDIFÍCIOS EM GERAL",
+    "codMcc": 1761
+  },
+  {
+    "codCnae": "4330-4/05",
+    "descCnae": "APLICAÇÃO DE REVESTIMENTOS E DE RESINAS EM INTERIORES E EXTERIORES",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "4330-4/99",
+    "descCnae": "OUTRAS OBRAS DE ACABAMENTO DA CONSTRUÇÃO",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "4391-6/00",
+    "descCnae": "OBRAS DE FUNDAÇÕES",
+    "codMcc": 1771
+  },
+  {
+    "codCnae": "4399-1/01",
+    "descCnae": "ADMINISTRAÇÃO DE OBRAS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4399-1/02",
+    "descCnae": "MONTAGEM E DESMONTAGEM DE ANDAIMES E OUTRAS ESTRUTURAS TEMPORÁRIAS",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "4399-1/03",
+    "descCnae": "OBRAS DE ALVENARIA",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "4399-1/05",
+    "descCnae": "PERFURAÇÃO E CONSTRUÇÃO DE POÇOS DE ÁGUA",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "4399-1/99",
+    "descCnae": "SERVIÇOS ESPECIALIZADOS PARA CONSTRUÇÃO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4511-1/01",
+    "descCnae": "COMÉRCIO A VAREJO DE AUTOMÓVEIS, CAMIONETAS E UTILITÁRIOS NOVOS",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "4511-1/02",
+    "descCnae": "COMÉRCIO A VAREJO DE AUTOMÓVEIS, CAMIONETAS E UTILITÁRIOS USADOS",
+    "codMcc": 5521
+  },
+  {
+    "codCnae": "4511-1/03",
+    "descCnae": "COMÉRCIO POR ATACADO DE AUTOMÓVEIS, CAMIONETAS E UTILITÁRIOS NOVOS E USADOS",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "4511-1/04",
+    "descCnae": "COMÉRCIO POR ATACADO DE CAMINHÕES NOVOS E USADOS",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "4511-1/05",
+    "descCnae": "COMÉRCIO POR ATACADO DE REBOQUES E SEMIREBOQUES NOVOS E USADOS",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "4511-1/06",
+    "descCnae": "COMÉRCIO POR ATACADO DE ÔNIBUS E MICROÔNIBUS NOVOS E USADOS",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "4512-9/01",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE VEÍCULOS AUTOMOTORES",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "4512-9/02",
+    "descCnae": "COMÉRCIO SOB CONSIGNAÇÃO DE VEÍCULOS AUTOMOTORES",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "4520-0/02",
+    "descCnae": "SERVIÇOS DE LANTERNAGEM OU FUNILARIA E PINTURA DE VEÍCULOS AUTOMOTORES",
+    "codMcc": 7535
+  },
+  {
+    "codCnae": "4520-0/06",
+    "descCnae": "SERVIÇOS DE BORRACHARIA PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 7534
+  },
+  {
+    "codCnae": "4520-0/07",
+    "descCnae": "SERVIÇOS DE INSTALAÇÃO, MANUTENÇÃO E REPARAÇÃO DE ACESSÓRIOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4530-7/01",
+    "descCnae": "COMÉRCIO POR ATACADO DE PEÇAS E ACESSÓRIOS NOVOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5300
+  },
+  {
+    "codCnae": "4530-7/02",
+    "descCnae": "COMÉRCIO POR ATACADO DE PNEUMÁTICOS E CÂMARASDEAR",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "4530-7/03",
+    "descCnae": "COMÉRCIO A VAREJO DE PEÇAS E ACESSÓRIOS NOVOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4530-7/04",
+    "descCnae": "COMÉRCIO A VAREJO DE PEÇAS E ACESSÓRIOS USADOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4530-7/05",
+    "descCnae": "COMÉRCIO A VAREJO DE PNEUMÁTICOS E CÂMARASDEAR",
+    "codMcc": 5532
+  },
+  {
+    "codCnae": "4530-7/06",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE PEÇAS E ACESSÓRIOS NOVOS E USADOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4541-2/01",
+    "descCnae": "COMÉRCIO POR ATACADO DE MOTOCICLETAS E MOTONETAS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4541-2/02",
+    "descCnae": "COMÉRCIO POR ATACADO DE PEÇAS E ACESSÓRIOS PARA MOTOCICLETAS E MOTONETAS",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "4541-2/03",
+    "descCnae": "COMÉRCIO A VAREJO DE MOTOCICLETAS E MOTONETAS NOVAS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4541-2/04",
+    "descCnae": "COMÉRCIO A VAREJO DE MOTOCICLETAS E MOTONETAS USADAS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4541-2/05",
+    "descCnae": "COMÉRCIO A VAREJO DE PEÇAS E ACESSÓRIOS PARA MOTOCICLETAS E MOTONETAS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4542-1/01",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE MOTOCICLETAS E MOTONETAS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4542-1/02",
+    "descCnae": "COMÉRCIO SOB CONSIGNAÇÃO DE MOTOCICLETAS E MOTONETAS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4611-7/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE MATÉRIASPRIMAS AGRÍCOLAS E ANIMAIS VIVOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "4612-5/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE COMBUSTÍVEIS, MINERAIS, PRODUTOS SIDERÚRGICOS E QUÍMICOS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "4613-3/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE MADEIRA, MATERIAL DE CONSTRUÇÃO E FERRAGENS",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "4614-1/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE MÁQUINAS, EQUIPAMENTOS, EMBARCAÇÕES E AERONAVES",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "4615-0/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE ELETRODOMÉSTICOS, MÓVEIS E ARTIGOS DE USO DOMÉSTICO",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "4616-8/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE TÊXTEIS, VESTUÁRIO, CALÇADOS E ARTIGOS DE VIAGEM",
+    "codMcc": 5699
+  },
+  {
+    "codCnae": "4617-6/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE PRODUTOS ALIMENTÍCIOS, BEBIDAS E FUMO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4618-4/01",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE MEDICAMENTOS, COSMÉTICOS E PRODUTOS DE PERFUMARIA",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "4618-4/02",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE INSTRUMENTOS E MATERIAIS ODONTOMÉDICOHOSPITALARES",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "4618-4/03",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE JORNAIS, REVISTAS E OUTRAS PUBLICAÇÕES",
+    "codMcc": 5192
+  },
+  {
+    "codCnae": "4618-4/99",
+    "descCnae": "OUTROS REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO ESPECIALIZADO EM PRODUTOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5399
+  },
+  {
+    "codCnae": "4619-2/00",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE MERCADORIAS EM GERAL NÃO ESPECIALIZADO",
+    "codMcc": 5969
+  },
+  {
+    "codCnae": "4621-4/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE CAFÉ EM GRÃO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4622-2/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE SOJA",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4623-1/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE ANIMAIS VIVOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "4623-1/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE COUROS, LÃS, PELES E OUTROS SUBPRODUTOS NÃOCOMESTÍVEIS DE ORIGEM ANIMAL",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4623-1/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE ALGODÃO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4623-1/04",
+    "descCnae": "COMÉRCIO ATACADISTA DE FUMO EM FOLHA NÃO BENEFICIADO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4623-1/05",
+    "descCnae": "COMÉRCIO ATACADISTA DE CACAU",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4623-1/06",
+    "descCnae": "COMÉRCIO ATACADISTA DE SEMENTES, FLORES, PLANTAS E GRAMAS",
+    "codMcc": 5193
+  },
+  {
+    "codCnae": "4623-1/07",
+    "descCnae": "COMÉRCIO ATACADISTA DE SISAL",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "4623-1/08",
+    "descCnae": "COMÉRCIO ATACADISTA DE MATÉRIASPRIMAS AGRÍCOLAS COM ATIVIDADE DE FRACIONAMENTO E ACONDICIONAMENTO ASSOCIADA",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4623-1/09",
+    "descCnae": "COMÉRCIO ATACADISTA DE ALIMENTOS PARA ANIMAIS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4623-1/99",
+    "descCnae": "COMÉRCIO ATACADISTA DE MATÉRIASPRIMAS AGRÍCOLAS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "4631-1/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE LEITE E LATICÍNIOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4632-0/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE CEREAIS E LEGUMINOSAS BENEFICIADOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4632-0/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE FARINHAS, AMIDOS E FÉCULAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4632-0/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE CEREAIS E LEGUMINOSAS BENEFICIADOS, FARINHAS, AMIDOS E FÉCULAS, COM ATIVIDADE DE FRACIONAMENTO E ACONDICIONAMENTO ASSOCIADA",
+    "codMcc": 4225
+  },
+  {
+    "codCnae": "4633-8/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE FRUTAS, VERDURAS, RAÍZES, TUBÉRCULOS, HORTALIÇAS E LEGUMES FRESCOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4633-8/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE AVES VIVAS E OVOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4633-8/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE COELHOS E OUTROS PEQUENOS ANIMAIS VIVOS PARA ALIMENTAÇÃO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4634-6/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE CARNES BOVINAS E SUÍNAS E DERIVADOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4634-6/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE AVES ABATIDAS E DERIVADOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "3101-2/00",
+    "descCnae": "FABRICACAO DE MOVEIS COM PREDOMINANCIA DE MADEIRA ",
+    "codMcc": 5021
+  },
+  {
+    "codCnae": "3102-1/00",
+    "descCnae": "FABRICACAO DE MOVEIS COM PREDOMINANCIA DE METAL ",
+    "codMcc": 5021
+  },
+  {
+    "codCnae": "3103-9/00",
+    "descCnae": "FABRICACAO DE MOVEIS DE OUTROS MATERIAIS, EXCETO MADEIRA E METAL ",
+    "codMcc": 5021
+  },
+  {
+    "codCnae": "4754-7/01",
+    "descCnae": "COMERCIO VAREJISTA DE MOVEIS ",
+    "codMcc": 5712
+  },
+  {
+    "codCnae": "4731-8/00",
+    "descCnae": "COMERCIO VAREJISTA DE COMBUSTIVEIS PARA VEICULOS AUTOMOTORES ",
+    "codMcc": 5541
+  },
+  {
+    "codCnae": "4732-6/00",
+    "descCnae": "COMERCIO VAREJISTA DE LUBRIFICANTES ",
+    "codMcc": 5983
+  },
+  {
+    "codCnae": "4763-6/03",
+    "descCnae": "COMERCIO VAREJISTA DE BICICLETAS E TRICICLOS PECAS E ACESSORIOS ",
+    "codMcc": 5940
+  },
+  {
+    "codCnae": "9529-1/04",
+    "descCnae": "REPARACAO DE BICICLETAS, TRICICLOS E OUTROS VEICULOS NAO-MOTORIZADOS ",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "4774-1/00",
+    "descCnae": "COMERCIO VAREJISTA DE ARTIGOS DE OPTICA ",
+    "codMcc": 8043
+  },
+  {
+    "codCnae": "4713-0/01",
+    "descCnae": "LOJAS DE DEPARTAMENTOS OU MAGAZINES ",
+    "codMcc": 5311
+  },
+  {
+    "codCnae": "4755-5/01",
+    "descCnae": "COMERCIO VAREJISTA DE TECIDOS ",
+    "codMcc": 5949
+  },
+  {
+    "codCnae": "4755-5/02",
+    "descCnae": "COMERCIO VAREJISTA DE ARTIGOS DE ARMARINHO ",
+    "codMcc": 5949
+  },
+  {
+    "codCnae": "4783-1/01",
+    "descCnae": "COMERCIO VAREJISTA DE ARTIGOS DE JOALHERIA ",
+    "codMcc": 5944
+  },
+  {
+    "codCnae": "4783-1/02",
+    "descCnae": "COMERCIO VAREJISTA DE ARTIGOS DE RELOJOARIA ",
+    "codMcc": 5944
+  },
+  {
+    "codCnae": "4751-2/00",
+    "descCnae": "COMERCIO VAREJISTA ESPECIALIZADO DE EQUIPAMENTOS E SUPRIMENTOS DE INFORMATICA ",
+    "codMcc": 5734
+  },
+  {
+    "codCnae": "4751-2/01",
+    "descCnae": "COMERCIO VAREJISTA ESPECIALIZADO DE EQUIPAMENTOS E SUPRIMENTOS DE INFORMATICA ",
+    "codMcc": 5734
+  },
+  {
+    "codCnae": "4751-2/02",
+    "descCnae": "RECARGA DE CARTUCHOS PARA EQUIPAMENTOS DE INFORMATICA ",
+    "codMcc": 5734
+  },
+  {
+    "codCnae": "4789-0/04",
+    "descCnae": "COMERCIO VAREJISTA DE ANIMAIS VIVOS E DE ARTIGOS E ALIMENTOS PARA ANIMAIS DE ESTIMACAO ",
+    "codMcc": 5995
+  },
+  {
+    "codCnae": "9609-2/03",
+    "descCnae": "ALOJAMENTO, HIGIENE E EMBELEZAMENTO DE ANIMAIS ",
+    "codMcc": 5995
+  },
+  {
+    "codCnae": "9609-2/08",
+    "descCnae": "HIGIENE E EMBELEZAMENTO DE ANIMAIS DOMESTICOS ",
+    "codMcc": 5995
+  },
+  {
+    "codCnae": "2063-1/00",
+    "descCnae": "FABRICACAO DE COSMETICOS, PRODUTOS DE PERFUMARIA E DE HIGIENE PESSOAL ",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "4772-5/00",
+    "descCnae": "COMERCIO VAREJISTA DE COSMETICOS, PRODUTOS DE PERFUMARIA E DE HIGIENE PESSOAL ",
+    "codMcc": 5977
+  },
+  {
+    "codCnae": "4753-9/00",
+    "descCnae": "COMERCIO VAREJISTA ESPECIALIZADO DE ELETRODOMESTICOS E EQUIPAMENTOS DE AUDIO E VIDEO ",
+    "codMcc": 5722
+  },
+  {
+    "codCnae": "4757-1/00",
+    "descCnae": "COMERCIO VAREJISTA ESPECIALIZADO DE PECAS E ACESSORIOS PARA APARELHOS ELETROELETRONICOS PARA USO DOMESTICO, EXCETO INFORMATICA E COMUNICACAO ",
+    "codMcc": 5732
+  },
+  {
+    "codCnae": "4761-0/03",
+    "descCnae": "COMERCIO VAREJISTA DE ARTIGOS DE PAPELARIA ",
+    "codMcc": 5943
+  },
+  {
+    "codCnae": "1011-2/01",
+    "descCnae": "FRIGORIFICO - ABATE DE BOVINOS ",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1011-2/02",
+    "descCnae": "FRIGORIFICO - ABATE DE EQUINOS ",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1011-2/03",
+    "descCnae": "FRIGORIFICO - ABATE DE OVINOS E CAPRINOS ",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1011-2/04",
+    "descCnae": "FRIGORIFICO - ABATE DE BUFALINOS ",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1012-1/03",
+    "descCnae": "FRIGORIFICO - ABATE DE SUINOS ",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "4722-9/01",
+    "descCnae": "COMERCIO VAREJISTA DE CARNES - ACOUGUES ",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "4722-9/02",
+    "descCnae": "PEIXARIA ",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "4759-8/01",
+    "descCnae": "COMERCIO VAREJISTA DE ARTIGOS DE TAPECARIA, CORTINAS E PERSIANAS ",
+    "codMcc": 5714
+  },
+  {
+    "codCnae": "4756-3/00",
+    "descCnae": "COMERCIO VAREJISTA ESPECIALIZADO DE INSTRUMENTOS MUSICAIS E ACESSORIOS ",
+    "codMcc": 5733
+  },
+  {
+    "codCnae": "5611-2/03",
+    "descCnae": "LANCHONETES, CASAS DE CHA, DE SUCOS E SIMILARES ",
+    "codMcc": 5814
+  },
+  {
+    "codCnae": "5611-2/01",
+    "descCnae": "RESTAURANTES E SIMILARES ",
+    "codMcc": 5812
+  },
+  {
+    "codCnae": "9602-5/01",
+    "descCnae": "CABELEIREIROS ",
+    "codMcc": 7230
+  },
+  {
+    "codCnae": "9602-5/02",
+    "descCnae": "ATIVIDADES DE ESTETICA E OUTROS SERVICOS DE CUIDADOS COM A BELEZA ",
+    "codMcc": 7298
+  },
+  {
+    "codCnae": "2121-1/01",
+    "descCnae": "FABRICACAO DE MEDICAMENTOS ALOPATICOS PARA USO HUMANO ",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "2121-1/02",
+    "descCnae": "FABRICACAO DE MEDICAMENTOS HOMEOPATICOS PARA USO HUMANO ",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "2121-1/03",
+    "descCnae": "FABRICACAO DE MEDICAMENTOS FITOTERAPICOS PARA USO HUMANO ",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "4771-7/01",
+    "descCnae": "COMERCIO VAREJISTA DE PRODUTOS FARMACEUTICOS, SEM MANIPULACAO DE FORMULAS ",
+    "codMcc": 5912
+  },
+  {
+    "codCnae": "4771-7/03",
+    "descCnae": "COMERCIO VAREJISTA DE PRODUTOS FARMACEUTICOS HOMEOPATICOS ",
+    "codMcc": 5912
+  },
+  {
+    "codCnae": "5510-8/01",
+    "descCnae": "HOTEIS ",
+    "codMcc": 7011
+  },
+  {
+    "codCnae": "5510-8/02",
+    "descCnae": "APART-HOTEIS ",
+    "codMcc": 7011
+  },
+  {
+    "codCnae": "5510-8/03",
+    "descCnae": "MOTEIS ",
+    "codMcc": 7011
+  },
+  {
+    "codCnae": "5590-6/01",
+    "descCnae": "ALBERGUES, EXCETO ASSISTENCIAIS ",
+    "codMcc": 7011
+  },
+  {
+    "codCnae": "5590-6/02",
+    "descCnae": "CAMPINGS ",
+    "codMcc": 7033
+  },
+  {
+    "codCnae": "5590-6/03",
+    "descCnae": "PENSOES (ALOJAMENTO) ",
+    "codMcc": 7011
+  },
+  {
+    "codCnae": "5590-6/99",
+    "descCnae": "OUTROS ALOJAMENTOS NAO ESPECIFICADOS ANTERIORMENTE ",
+    "codMcc": 7011
+  },
+  {
+    "codCnae": "4711-3/01",
+    "descCnae": "COMERCIO VAREJISTA DE MERCADORIAS EM GERAL, COM PREDOMINANCIA DE PRODUTOS ALIMENTICIOS - HIPERMERCADOS ",
+    "codMcc": 5411
+  },
+  {
+    "codCnae": "4711-3/02",
+    "descCnae": "COMERCIO VAREJISTA DE MERCADORIAS EM GERAL, COM PREDOMINANCIA DE PRODUTOS ALIMENTICIOS - SUPERMERCADOS ",
+    "codMcc": 5411
+  },
+  {
+    "codCnae": "4712-1/00",
+    "descCnae": "COMERCIO VAREJISTA DE MERCADORIAS EM GERAL, COM PREDOMINANCIA DE PRODUTOS ALIMENTICIOS - MINIMERCADOS, MERCEARIAS E ARMAZENS ",
+    "codMcc": 5411
+  },
+  {
+    "codCnae": "2722-8/02",
+    "descCnae": "RECONDICIONAMENTO DE BATERIAS E ACUMULADORES PARA VEICULOS AUTOMOTORES ",
+    "codMcc": 7538
+  },
+  {
+    "codCnae": "2950-6/00",
+    "descCnae": "RECONDICIONAMENTO E RECUPERACAO DE MOTORES PARA VEICULOS AUTOMOTORES ",
+    "codMcc": 7538
+  },
+  {
+    "codCnae": "3314-7/12",
+    "descCnae": "MANUTENCAO E REPARACAO DE TRATORES AGRICOLAS ",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/16",
+    "descCnae": "MANUTENCAO E REPARACAO DE TRATORES, EXCETO AGRICOLAS ",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "4520-0/01",
+    "descCnae": "SERVICOS DE MANUTENCAO E REPARACAO MECANICA DE VEICULOS AUTOMOTORES ",
+    "codMcc": 7538
+  },
+  {
+    "codCnae": "4520-0/03",
+    "descCnae": "SERVICOS DE MANUTENCAO E REPARACAO ELETRICA DE VEICULOS AUTOMOTORES ",
+    "codMcc": 7538
+  },
+  {
+    "codCnae": "4520-0/04",
+    "descCnae": "SERVICOS DE ALINHAMENTO E BALANCEAMENTO DE VEICULOS AUTOMOTORES ",
+    "codMcc": 7538
+  },
+  {
+    "codCnae": "4543-9/00",
+    "descCnae": "MANUTENCAO E REPARACAO DE MOTOCICLETAS E MOTONETAS ",
+    "codMcc": 7538
+  },
+  {
+    "codCnae": "1091-1/00",
+    "descCnae": "FABRICACAO DE PRODUTOS DE PANIFICACAO ",
+    "codMcc": 5462
+  },
+  {
+    "codCnae": "1091-1/01",
+    "descCnae": "FABRICACAO DE PRODUTOS DE PANIFICACAO INDUSTRIAL ",
+    "codMcc": 5462
+  },
+  {
+    "codCnae": "1091-1/02",
+    "descCnae": "FABRICACAO DE PRODUTOS DE PADARIA E CONFEITARIA COM PREDOMINANCIA DE PRODUCAO PROPRIA ",
+    "codMcc": 5462
+  },
+  {
+    "codCnae": "1092-9/00",
+    "descCnae": "FABRICACAO DE BISCOITOS E BOLACHAS ",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4721-1/01",
+    "descCnae": "PADARIA E CONFEITARIA COM PREDOMINANCIA DE PRODUCAO PROPRIA ",
+    "codMcc": 5462
+  },
+  {
+    "codCnae": "4721-1/02",
+    "descCnae": "PADARIA E CONFEITARIA COM PREDOMINANCIA DE REVENDA ",
+    "codMcc": 5462
+  },
+  {
+    "codCnae": "4755-5/03",
+    "descCnae": "COMERCIO VAREJISTA DE ARTIGOS DE CAMA, MESA E BANHO ",
+    "codMcc": 5719
+  },
+  {
+    "codCnae": "4530-7/01",
+    "descCnae": "COMÉRCIO POR ATACADO DE PEÇAS E ACESSÓRIOS NOVOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5300
+  },
+  {
+    "codCnae": "4530-7/03",
+    "descCnae": "COMÉRCIO A VAREJO DE PEÇAS E ACESSÓRIOS NOVOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4530-7/06",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE PEÇAS E ACESSÓRIOS NOVOS E USADOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "1610-2/01",
+    "descCnae": "SERRARIAS COM DESDOBRAMENTO DE MADEIRA ",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "1610-2/02",
+    "descCnae": "SERRARIAS SEM DESDOBRAMENTO DE MADEIRA ",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "4744-0/02",
+    "descCnae": "COMERCIO VAREJISTA DE MADEIRA E ARTEFATOS ",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "4744-0/04",
+    "descCnae": "COMERCIO VAREJISTA DE CAL, AREIA, PEDRA BRITADA, TIJOLOS E TELHAS ",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "4744-0/05",
+    "descCnae": "COMERCIO VAREJISTA DE MATERIAIS DE CONSTRUCAO NAO ESPECIFICADOS ANTERIORMENTE ",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "5211-/",
+    "descCnae": "MADEIREIRAS",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "4744-0/99",
+    "descCnae": "COMERCIO VAREJISTA DE MATERIAIS DE CONSTRUCAO EM GERAL ",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "1094-5/00",
+    "descCnae": "FABRICACAO DE MASSAS ALIMENTICIAS ",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1095-3/00",
+    "descCnae": "FABRICACAO DE ESPECIARIAS, MOLHOS, TEMPEROS E CONDIMENTOS ",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1096-1/00",
+    "descCnae": "FABRICACAO DE ALIMENTOS E PRATOS PRONTOS ",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4729-6/02",
+    "descCnae": "COMERCIO VAREJISTA DE MERCADORIAS EM LOJAS DE CONVENIENCIA ",
+    "codMcc": 5499
+  },
+  {
+    "codCnae": "4729-6/99",
+    "descCnae": "COM VAREJISTA DE PROD ALIMENTICIOS EM GERAL OU ESPECIALIZADO EM PROD ALIMENTICIOS NAO ESPECIFICADOS ANTERIORMENTE ",
+    "codMcc": 5499
+  },
+  {
+    "codCnae": "4634-6/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE PESCADOS E FRUTOS DO MAR",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4634-6/99",
+    "descCnae": "COMÉRCIO ATACADISTA DE CARNES E DERIVADOS DE OUTROS ANIMAIS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4635-4/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE ÁGUA MINERAL",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4635-4/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE CERVEJA, CHOPE E REFRIGERANTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4635-4/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE BEBIDAS COM ATIVIDADE DE FRACIONAMENTO E ACONDICIONAMENTO ASSOCIADA",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4635-4/99",
+    "descCnae": "COMÉRCIO ATACADISTA DE BEBIDAS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4636-2/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE FUMO BENEFICIADO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4636-2/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE CIGARROS, CIGARRILHAS E CHARUTOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4637-1/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE CAFÉ TORRADO, MOÍDO E SOLÚVEL",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4637-1/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE AÇÚCAR",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4637-1/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE ÓLEOS E GORDURAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4637-1/04",
+    "descCnae": "COMÉRCIO ATACADISTA DE PÃES, BOLOS, BISCOITOS E SIMILARES",
+    "codMcc": 5462
+  },
+  {
+    "codCnae": "4637-1/05",
+    "descCnae": "COMÉRCIO ATACADISTA DE MASSAS ALIMENTÍCIAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4637-1/06",
+    "descCnae": "COMÉRCIO ATACADISTA DE SORVETES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4637-1/07",
+    "descCnae": "COMÉRCIO ATACADISTA DE CHOCOLATES, CONFEITOS, BALAS, BOMBONS E SEMELHANTES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4637-1/99",
+    "descCnae": "COMÉRCIO ATACADISTA ESPECIALIZADO EM OUTROS PRODUTOS ALIMENTÍCIOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5300
+  },
+  {
+    "codCnae": "4639-7/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS ALIMENTÍCIOS EM GERAL",
+    "codMcc": 5300
+  },
+  {
+    "codCnae": "4639-7/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS ALIMENTÍCIOS EM GERAL, COM ATIVIDADE DE FRACIONAMENTO E ACONDICIONAMENTO ASSOCIADA",
+    "codMcc": 5300
+  },
+  {
+    "codCnae": "4641-9/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE TECIDOS",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "4641-9/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE ARTIGOS DE CAMA, MESA E BANHO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4641-9/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE ARTIGOS DE ARMARINHO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "4642-7/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE ARTIGOS DO VESTUÁRIO E ACESSÓRIOS, EXCETO PROFISSIONAIS E DE SEGURANÇA",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "4642-7/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE ROUPAS E ACESSÓRIOS PARA USO PROFISSIONAL E DE SEGURANÇA DO TRABALHO",
+    "codMcc": 5137
+  },
+  {
+    "codCnae": "4643-5/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE CALÇADOS",
+    "codMcc": 5139
+  },
+  {
+    "codCnae": "4643-5/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE BOLSAS, MALAS E ARTIGOS DE VIAGEM",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4644-3/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE MEDICAMENTOS E DROGAS DE USO HUMANO",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "4644-3/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE MEDICAMENTOS E DROGAS DE USO VETERINÁRIO",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "4645-1/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE INSTRUMENTOS E MATERIAIS PARA USO MÉDICO, CIRÚRGICO, HOSPITALAR E DE LABORATÓRIOS",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "4645-1/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRÓTESES E ARTIGOS DE ORTOPEDIA",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "4645-1/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS ODONTOLÓGICOS",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "4646-0/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE COSMÉTICOS E PRODUTOS DE PERFUMARIA",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "4646-0/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS DE HIGIENE PESSOAL",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "4647-8/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE ARTIGOS DE ESCRITÓRIO E DE PAPELARIA",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "4647-8/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE LIVROS, JORNAIS E OUTRAS PUBLICAÇÕES",
+    "codMcc": 5192
+  },
+  {
+    "codCnae": "4649-4/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE EQUIPAMENTOS ELÉTRICOS DE USO PESSOAL E DOMÉSTICO",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "4649-4/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE APARELHOS ELETRÔNICOS DE USO PESSOAL E DOMÉSTICO",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "4649-4/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE BICICLETAS, TRICICLOS E OUTROS VEÍCULOS RECREATIVOS",
+    "codMcc": 5940
+  },
+  {
+    "codCnae": "4649-4/04",
+    "descCnae": "COMÉRCIO ATACADISTA DE MÓVEIS E ARTIGOS DE COLCHOARIA",
+    "codMcc": 5021
+  },
+  {
+    "codCnae": "4649-4/05",
+    "descCnae": "COMÉRCIO ATACADISTA DE ARTIGOS DE TAPEÇARIA; PERSIANAS E CORTINAS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "4649-4/06",
+    "descCnae": "COMÉRCIO ATACADISTA DE LUSTRES, LUMINÁRIAS E ABAJURES",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "4649-4/07",
+    "descCnae": "COMÉRCIO ATACADISTA DE FILMES, CDS, DVDS, FITAS E DISCOS",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "4649-4/08",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS DE HIGIENE, LIMPEZA E CONSERVAÇÃO DOMICILIAR",
+    "codMcc": 2842
+  },
+  {
+    "codCnae": "4649-4/09",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS DE HIGIENE, LIMPEZA E CONSERVAÇÃO DOMICILIAR, COM ATIVIDADE DE FRACIONAMENTO E ACONDICIONAMENTO ASSOCIADA",
+    "codMcc": 2842
+  },
+  {
+    "codCnae": "4649-4/10",
+    "descCnae": "COMÉRCIO ATACADISTA DE JÓIAS, RELÓGIOS E BIJUTERIAS, INCLUSIVE PEDRAS PRECIOSAS E SEMIPRECIOSAS LAPIDADAS",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "4649-4/99",
+    "descCnae": "COMÉRCIO ATACADISTA DE OUTROS EQUIPAMENTOS E ARTIGOS DE USO PESSOAL E DOMÉSTICO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "4651-6/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE EQUIPAMENTOS DE INFORMÁTICA",
+    "codMcc": 5045
+  },
+  {
+    "codCnae": "4651-6/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE SUPRIMENTOS PARA INFORMÁTICA",
+    "codMcc": 5045
+  },
+  {
+    "codCnae": "4652-4/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE COMPONENTES ELETRÔNICOS E EQUIPAMENTOS DE TELEFONIA E COMUNICAÇÃO",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "4661-3/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MÁQUINAS, APARELHOS E EQUIPAMENTOS PARA USO AGROPECUÁRIO; PARTES E PEÇAS",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "4662-1/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MÁQUINAS, EQUIPAMENTOS PARA TERRAPLENAGEM, MINERAÇÃO E CONSTRUÇÃO; PARTES E PEÇAS",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "4663-0/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MÁQUINAS E EQUIPAMENTOS PARA USO INDUSTRIAL; PARTES E PEÇAS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "4664-8/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MÁQUINAS, APARELHOS E EQUIPAMENTOS PARA USO ODONTOMÉDICOHOSPITALAR; PARTES E PEÇAS",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "4665-6/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MÁQUINAS E EQUIPAMENTOS PARA USO COMERCIAL; PARTES E PEÇAS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "4669-9/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE BOMBAS E COMPRESSORES; PARTES E PEÇAS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "4669-9/99",
+    "descCnae": "COMÉRCIO ATACADISTA DE OUTRAS MÁQUINAS E EQUIPAMENTOS NÃO ESPECIFICADOS ANTERIORMENTE; PARTES E PEÇAS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "4671-1/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MADEIRA E PRODUTOS DERIVADOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "4672-9/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE FERRAGENS E FERRAMENTAS",
+    "codMcc": 5072
+  },
+  {
+    "codCnae": "4673-7/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MATERIAL ELÉTRICO",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "4674-5/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE CIMENTO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "4679-6/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE TINTAS, VERNIZES E SIMILARES",
+    "codMcc": 5198
+  },
+  {
+    "codCnae": "4679-6/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE MÁRMORES E GRANITOS",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "4679-6/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE VIDROS, ESPELHOS E VITRAIS",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "4679-6/04",
+    "descCnae": "COMÉRCIO ATACADISTA ESPECIALIZADO DE MATERIAIS DE CONSTRUÇÃO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "4679-6/99",
+    "descCnae": "COMÉRCIO ATACADISTA DE MATERIAIS DE CONSTRUÇÃO EM GERAL",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "4681-8/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE ÁLCOOL CARBURANTE, BIODIESEL, GASOLINA E DEMAIS DERIVADOS DE PETRÓLEO, EXCETO LUBRIFICANTES, NÃO REALIZADO POR TRANSPORTADOR RETALHISTA (TRR)",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "4681-8/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE COMBUSTÍVEIS REALIZADO POR TRANSPORTADOR RETALHISTA (TRR)",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "4681-8/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE COMBUSTÍVEIS DE ORIGEM VEGETAL, EXCETO ÁLCOOL CARBURANTE",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "4681-8/04",
+    "descCnae": "COMÉRCIO ATACADISTA DE COMBUSTÍVEIS DE ORIGEM MINERAL EM BRUTO",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "4681-8/05",
+    "descCnae": "COMÉRCIO ATACADISTA DE LUBRIFICANTES",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "4682-6/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE GÁS LIQÜEFEITO DE PETRÓLEO (GLP)",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "4683-4/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE DEFENSIVOS AGRÍCOLAS, ADUBOS, FERTILIZANTES E CORRETIVOS DO SOLO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "4684-2/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE RESINAS E ELASTÔMEROS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "4684-2/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE SOLVENTES",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "4684-2/99",
+    "descCnae": "COMÉRCIO ATACADISTA DE OUTROS PRODUTOS QUÍMICOS E PETROQUÍMICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "4685-1/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS SIDERÚRGICOS E METALÚRGICOS, EXCETO PARA CONSTRUÇÃO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "4686-9/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE PAPEL E PAPELÃO EM BRUTO",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "4686-9/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE EMBALAGENS",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "4687-7/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE RESÍDUOS DE PAPEL E PAPELÃO",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "4687-7/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE RESÍDUOS E SUCATAS NÃOMETÁLICOS, EXCETO DE PAPEL E PAPELÃO",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "4687-7/03",
+    "descCnae": "COMÉRCIO ATACADISTA DE RESÍDUOS E SUCATAS METÁLICOS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "4689-3/01",
+    "descCnae": "COMÉRCIO ATACADISTA DE PRODUTOS DA EXTRAÇÃO MINERAL, EXCETO COMBUSTÍVEIS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "4689-3/02",
+    "descCnae": "COMÉRCIO ATACADISTA DE FIOS E FIBRAS TÊXTEIS BENEFICIADOS",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "4689-3/99",
+    "descCnae": "COMÉRCIO ATACADISTA ESPECIALIZADO EM OUTROS PRODUTOS INTERMEDIÁRIOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "4691-5/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MERCADORIAS EM GERAL, COM PREDOMINÂNCIA DE PRODUTOS ALIMENTÍCIOS",
+    "codMcc": 5300
+  },
+  {
+    "codCnae": "4692-3/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MERCADORIAS EM GERAL, COM PREDOMINÂNCIA DE INSUMOS AGROPECUÁRIOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "4693-1/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE MERCADORIAS EM GERAL, SEM PREDOMINÂNCIA DE ALIMENTOS OU DE INSUMOS AGROPECUÁRIOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "4713-0/02",
+    "descCnae": "LOJAS DE VARIEDADES, EXCETO LOJAS DE DEPARTAMENTOS OU MAGAZINES",
+    "codMcc": 5331
+  },
+  {
+    "codCnae": "4713-0/03",
+    "descCnae": "LOJAS DUTY FREE DE AEROPORTOS INTERNACIONAIS",
+    "codMcc": 5309
+  },
+  {
+    "codCnae": "4721-1/03",
+    "descCnae": "COMÉRCIO VAREJISTA DE LATICÍNIOS E FRIOS",
+    "codMcc": 5451
+  },
+  {
+    "codCnae": "4721-1/04",
+    "descCnae": "COMÉRCIO VAREJISTA DE DOCES, BALAS, BOMBONS E SEMELHANTES",
+    "codMcc": 5441
+  },
+  {
+    "codCnae": "4723-7/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE BEBIDAS",
+    "codMcc": 5921
+  },
+  {
+    "codCnae": "4724-5/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE HORTIFRUTIGRANJEIROS",
+    "codMcc": 5499
+  },
+  {
+    "codCnae": "4729-6/01",
+    "descCnae": "TABACARIA",
+    "codMcc": 5993
+  },
+  {
+    "codCnae": "4741-5/00",
+    "descCnae": "COMÉRCIO VAREJISTA DE TINTAS E MATERIAIS PARA PINTURA",
+    "codMcc": 5231
+  },
+  {
+    "codCnae": "8011-1/01",
+    "descCnae": "ATIVIDADES DE VIGILÂNCIA E SEGURANÇA PRIVADA",
+    "codMcc": 7393
+  },
+  {
+    "codCnae": "8011-1/02",
+    "descCnae": "SERVIÇOS DE ADESTRAMENTO DE CÃES DE GUARDA",
+    "codMcc": 7393
+  },
+  {
+    "codCnae": "8012-9/00",
+    "descCnae": "ATIVIDADES DE TRANSPORTE DE VALORES",
+    "codMcc": 7393
+  },
+  {
+    "codCnae": "8020-0/00",
+    "descCnae": "ATIVIDADES DE MONITORAMENTO DE SISTEMAS DE SEGURANÇA",
+    "codMcc": 7393
+  },
+  {
+    "codCnae": "8030-7/00",
+    "descCnae": "ATIVIDADES DE INVESTIGAÇÃO PARTICULAR",
+    "codMcc": 7393
+  },
+  {
+    "codCnae": "8111-7/00",
+    "descCnae": "SERVIÇOS COMBINADOS PARA APOIO A EDIFÍCIOS, EXCETO CONDOMÍNIOS PREDIAIS",
+    "codMcc": 7349
+  },
+  {
+    "codCnae": "8112-5/00",
+    "descCnae": "CONDOMÍNIOS PREDIAIS",
+    "codMcc": 7349
+  },
+  {
+    "codCnae": "8121-4/00",
+    "descCnae": "LIMPEZA EM PRÉDIOS E EM DOMICÍLIOS",
+    "codMcc": 7349
+  },
+  {
+    "codCnae": "8122-2/00",
+    "descCnae": "IMUNIZAÇÃO E CONTROLE DE PRAGAS URBANAS",
+    "codMcc": 7342
+  },
+  {
+    "codCnae": "8129-0/00",
+    "descCnae": "ATIVIDADES DE LIMPEZA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7349
+  },
+  {
+    "codCnae": "8130-3/00",
+    "descCnae": "ATIVIDADES PAISAGÍSTICAS",
+    "codMcc": 780
+  },
+  {
+    "codCnae": "8211-3/00",
+    "descCnae": "SERVIÇOS COMBINADOS DE ESCRITÓRIO E APOIO ADMINISTRATIVO",
+    "codMcc": 7392
+  },
+  {
+    "codCnae": "8219-9/01",
+    "descCnae": "FOTOCÓPIAS",
+    "codMcc": 7338
+  },
+  {
+    "codCnae": "8219-9/99",
+    "descCnae": "PREPARAÇÃO DE DOCUMENTOS E SERVIÇOS ESPECIALIZADOS DE APOIO ADMINISTRATIVO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "8220-2/00",
+    "descCnae": "ATIVIDADES DE TELEATENDIMENTO",
+    "codMcc": 5969
+  },
+  {
+    "codCnae": "8230-0/01",
+    "descCnae": "SERVIÇOS DE ORGANIZAÇÃO DE FEIRAS, CONGRESSOS, EXPOSIÇÕES E FESTAS",
+    "codMcc": 7991
+  },
+  {
+    "codCnae": "8230-0/02",
+    "descCnae": "CASAS DE FESTAS E EVENTOS",
+    "codMcc": 5811
+  },
+  {
+    "codCnae": "8291-1/00",
+    "descCnae": "ATIVIDADES DE COBRANÇA E INFORMAÇÕES CADASTRAIS",
+    "codMcc": 7321
+  },
+  {
+    "codCnae": "8292-0/00",
+    "descCnae": "ENVASAMENTO E EMPACOTAMENTO SOB CONTRATO",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "8299-7/01",
+    "descCnae": "MEDIÇÃO DE CONSUMO DE ENERGIA ELÉTRICA, GÁS E ÁGUA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "8299-7/02",
+    "descCnae": "EMISSÃO DE VALESALIMENTAÇÃO, VALESTRANSPORTE E SIMILARES",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "8299-7/03",
+    "descCnae": "SERVIÇOS DE GRAVAÇÃO DE CARIMBOS, EXCETO CONFECÇÃO",
+    "codMcc": 2791
+  },
+  {
+    "codCnae": "8299-7/04",
+    "descCnae": "LEILOEIROS INDEPENDENTES",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "8299-7/05",
+    "descCnae": "SERVIÇOS DE LEVANTAMENTO DE FUNDOS SOB CONTRATO",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "8299-7/06",
+    "descCnae": "CASAS LOTÉRICAS",
+    "codMcc": 9406
+  },
+  {
+    "codCnae": "8299-7/07",
+    "descCnae": "SALAS DE ACESSO À INTERNET",
+    "codMcc": 4816
+  },
+  {
+    "codCnae": "8299-7/99",
+    "descCnae": "OUTRAS ATIVIDADES DE SERVIÇOS PRESTADOS PRINCIPALMENTE ÀS EMPRESAS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "8411-6/00",
+    "descCnae": "ADMINISTRAÇÃO PÚBLICA EM GERAL",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8412-4/00",
+    "descCnae": "REGULAÇÃO DAS ATIVIDADES DE SAÚDE, EDUCAÇÃO, SERVIÇOS CULTURAIS E OUTROS SERVIÇOS SOCIAIS",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8413-2/00",
+    "descCnae": "REGULAÇÃO DAS ATIVIDADES ECONÔMICAS",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8421-3/00",
+    "descCnae": "RELAÇÕES EXTERIORES",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8422-1/00",
+    "descCnae": "DEFESA",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8423-0/00",
+    "descCnae": "JUSTIÇA",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8424-8/00",
+    "descCnae": "SEGURANÇA E ORDEM PÚBLICA",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8425-6/00",
+    "descCnae": "DEFESA CIVIL",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8430-2/00",
+    "descCnae": "SEGURIDADE SOCIAL OBRIGATÓRIA",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "8511-2/00",
+    "descCnae": "EDUCAÇÃO INFANTIL  CRECHE",
+    "codMcc": 8351
+  },
+  {
+    "codCnae": "8512-1/00",
+    "descCnae": "EDUCAÇÃO INFANTIL  PRÉESCOLA",
+    "codMcc": 8351
+  },
+  {
+    "codCnae": "8513-9/00",
+    "descCnae": "ENSINO FUNDAMENTAL",
+    "codMcc": 8211
+  },
+  {
+    "codCnae": "8520-1/00",
+    "descCnae": "ENSINO MÉDIO",
+    "codMcc": 8211
+  },
+  {
+    "codCnae": "8531-7/00",
+    "descCnae": "EDUCAÇÃO SUPERIOR  GRADUAÇÃO",
+    "codMcc": 8220
+  },
+  {
+    "codCnae": "8532-5/00",
+    "descCnae": "EDUCAÇÃO SUPERIOR  GRADUAÇÃO E PÓSGRADUAÇÃO",
+    "codMcc": 8220
+  },
+  {
+    "codCnae": "8533-3/00",
+    "descCnae": "EDUCAÇÃO SUPERIOR  PÓSGRADUAÇÃO E EXTENSÃO",
+    "codMcc": 8220
+  },
+  {
+    "codCnae": "8541-4/00",
+    "descCnae": "EDUCAÇÃO PROFISSIONAL DE NÍVEL TÉCNICO",
+    "codMcc": 8249
+  },
+  {
+    "codCnae": "8542-2/00",
+    "descCnae": "EDUCAÇÃO PROFISSIONAL DE NÍVEL TECNOLÓGICO",
+    "codMcc": 8249
+  },
+  {
+    "codCnae": "8550-3/01",
+    "descCnae": "ADMINISTRAÇÃO DE CAIXAS ESCOLARES",
+    "codMcc": 8244
+  },
+  {
+    "codCnae": "8550-3/02",
+    "descCnae": "ATIVIDADES DE APOIO À EDUCAÇÃO, EXCETO CAIXAS ESCOLARES",
+    "codMcc": 8244
+  },
+  {
+    "codCnae": "8591-1/00",
+    "descCnae": "ENSINO DE ESPORTES",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8592-9/01",
+    "descCnae": "ENSINO DE DANÇA",
+    "codMcc": 7911
+  },
+  {
+    "codCnae": "8592-9/02",
+    "descCnae": "ENSINO DE ARTES CÊNICAS, EXCETO DANÇA",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8592-9/03",
+    "descCnae": "ENSINO DE MÚSICA",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8592-9/99",
+    "descCnae": "ENSINO DE ARTE E CULTURA NÃO ESPECIFICADO ANTERIORMENTE",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8593-7/00",
+    "descCnae": "ENSINO DE IDIOMAS",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8599-6/01",
+    "descCnae": "FORMAÇÃO DE CONDUTORES",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8599-6/02",
+    "descCnae": "CURSOS DE PILOTAGEM",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8599-6/03",
+    "descCnae": "TREINAMENTO EM INFORMÁTICA",
+    "codMcc": 8244
+  },
+  {
+    "codCnae": "8599-6/04",
+    "descCnae": "TREINAMENTO EM DESENVOLVIMENTO PROFISSIONAL E GERENCIAL",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8599-6/05",
+    "descCnae": "CURSOS PREPARATÓRIOS PARA CONCURSOS",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8599-6/99",
+    "descCnae": "OUTRAS ATIVIDADES DE ENSINO NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8299
+  },
+  {
+    "codCnae": "8610-1/01",
+    "descCnae": "ATIVIDADES DE ATENDIMENTO HOSPITALAR, EXCETO PRONTOSOCORRO E UNIDADES PARA ATENDIMENTO A URGÊNCIAS",
+    "codMcc": 8062
+  },
+  {
+    "codCnae": "8610-1/02",
+    "descCnae": "ATIVIDADES DE ATENDIMENTO EM PRONTOSOCORRO E UNIDADES HOSPITALARES PARA ATENDIMENTO A URGÊNCIAS",
+    "codMcc": 8062
+  },
+  {
+    "codCnae": "8621-6/01",
+    "descCnae": "UTI MÓVEL",
+    "codMcc": 4119
+  },
+  {
+    "codCnae": "8621-6/02",
+    "descCnae": "SERVIÇOS MÓVEIS DE ATENDIMENTO A URGÊNCIAS, EXCETO POR UTI MÓVEL",
+    "codMcc": 4119
+  },
+  {
+    "codCnae": "8622-4/00",
+    "descCnae": "SERVIÇOS DE REMOÇÃO DE PACIENTES, EXCETO OS SERVIÇOS MÓVEIS DE ATENDIMENTO A URGÊNCIAS",
+    "codMcc": 4119
+  },
+  {
+    "codCnae": "8630-5/01",
+    "descCnae": "ATIVIDADE MÉDICA AMBULATORIAL COM RECURSOS PARA REALIZAÇÃO DE PROCEDIMENTOS CIRÚRGICOS",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8630-5/02",
+    "descCnae": "ATIVIDADE MÉDICA AMBULATORIAL COM RECURSOS PARA REALIZAÇÃO DE EXAMES COMPLEMENTARES",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8630-5/03",
+    "descCnae": "ATIVIDADE MÉDICA AMBULATORIAL RESTRITA A CONSULTAS",
+    "codMcc": 8011
+  },
+  {
+    "codCnae": "8630-5/04",
+    "descCnae": "ATIVIDADE ODONTOLÓGICA",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "8630-5/06",
+    "descCnae": "SERVIÇOS DE VACINAÇÃO E IMUNIZAÇÃO HUMANA",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8630-5/07",
+    "descCnae": "ATIVIDADES DE REPRODUÇÃO HUMANA ASSISTIDA",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8630-5/99",
+    "descCnae": "ATIVIDADES DE ATENÇÃO AMBULATORIAL NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8640-2/01",
+    "descCnae": "LABORATÓRIOS DE ANATOMIA PATOLÓGICA E CITOLÓGICA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/02",
+    "descCnae": "LABORATÓRIOS CLÍNICOS",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/03",
+    "descCnae": "SERVIÇOS DE DIÁLISE E NEFROLOGIA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/04",
+    "descCnae": "SERVIÇOS DE TOMOGRAFIA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/05",
+    "descCnae": "SERVIÇOS DE DIAGNÓSTICO POR IMAGEM COM USO DE RADIAÇÃO IONIZANTE, EXCETO TOMOGRAFIA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/06",
+    "descCnae": "SERVIÇOS DE RESSONÂNCIA MAGNÉTICA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/07",
+    "descCnae": "SERVIÇOS DE DIAGNÓSTICO POR IMAGEM SEM USO DE RADIAÇÃO IONIZANTE, EXCETO RESSONÂNCIA MAGNÉTICA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/08",
+    "descCnae": "SERVIÇOS DE DIAGNÓSTICO POR REGISTRO GRÁFICO  ECG, EEG E OUTROS EXAMES ANÁLOGOS",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/09",
+    "descCnae": "SERVIÇOS DE DIAGNÓSTICO POR MÉTODOS ÓPTICOS  ENDOSCOPIA E OUTROS EXAMES ANÁLOGOS",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/10",
+    "descCnae": "SERVIÇOS DE QUIMIOTERAPIA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/11",
+    "descCnae": "SERVIÇOS DE RADIOTERAPIA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/12",
+    "descCnae": "SERVIÇOS DE HEMOTERAPIA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/13",
+    "descCnae": "SERVIÇOS DE LITOTRIPSIA",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/14",
+    "descCnae": "SERVIÇOS DE BANCOS DE CÉLULAS E TECIDOS HUMANOS",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8640-2/99",
+    "descCnae": "ATIVIDADES DE SERVIÇOS DE COMPLEMENTAÇÃO DIAGNÓSTICA E TERAPÊUTICA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "8650-0/01",
+    "descCnae": "ATIVIDADES DE ENFERMAGEM",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8650-0/02",
+    "descCnae": "ATIVIDADES DE PROFISSIONAIS DA NUTRIÇÃO",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8650-0/03",
+    "descCnae": "ATIVIDADES DE PSICOLOGIA E PSICANÁLISE",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8650-0/04",
+    "descCnae": "ATIVIDADES DE FISIOTERAPIA",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8650-0/05",
+    "descCnae": "ATIVIDADES DE TERAPIA OCUPACIONAL",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8650-0/06",
+    "descCnae": "ATIVIDADES DE FONOAUDIOLOGIA",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8650-0/07",
+    "descCnae": "ATIVIDADES DE TERAPIA DE NUTRIÇÃO ENTERAL E PARENTERAL",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8650-0/99",
+    "descCnae": "ATIVIDADES DE PROFISSIONAIS DA ÁREA DE SAÚDE NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8660-7/00",
+    "descCnae": "ATIVIDADES DE APOIO À GESTÃO DE SAÚDE",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8690-9/01",
+    "descCnae": "ATIVIDADES DE PRÁTICAS INTEGRATIVAS E COMPLEMENTARES EM SAÚDE HUMANA",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8690-9/02",
+    "descCnae": "ATIVIDADES DE BANCOS DE LEITE HUMANO",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8690-9/99",
+    "descCnae": "OUTRAS ATIVIDADES DE ATENÇÃO À SAÚDE HUMANA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8711-5/01",
+    "descCnae": "CLÍNICAS E RESIDÊNCIAS GERIÁTRICAS",
+    "codMcc": 8050
+  },
+  {
+    "codCnae": "8711-5/02",
+    "descCnae": "INSTITUIÇÕES DE LONGA PERMANÊNCIA PARA IDOSOS",
+    "codMcc": 8050
+  },
+  {
+    "codCnae": "8711-5/03",
+    "descCnae": "ATIVIDADES DE ASSISTÊNCIA A DEFICIENTES FÍSICOS, IMUNODEPRIMIDOS E CONVALESCENTES",
+    "codMcc": 8050
+  },
+  {
+    "codCnae": "8711-5/04",
+    "descCnae": "CENTROS DE APOIO A PACIENTES COM CÂNCER E COM AIDS",
+    "codMcc": 8050
+  },
+  {
+    "codCnae": "8711-5/05",
+    "descCnae": "CONDOMÍNIOS RESIDENCIAIS PARA IDOSOS",
+    "codMcc": 8050
+  },
+  {
+    "codCnae": "8712-3/00",
+    "descCnae": "ATIVIDADES DE FORNECIMENTO DE INFRAESTRUTURA DE APOIO E ASSISTÊNCIA A PACIENTE NO DOMICÍLIO",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8720-4/01",
+    "descCnae": "ATIVIDADES DE CENTROS DE ASSISTÊNCIA PSICOSSOCIAL",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8720-4/99",
+    "descCnae": "ATIVIDADES DE ASSISTÊNCIA PSICOSSOCIAL E À SAÚDE A PORTADORES DE DISTÚRBIOS PSÍQUICOS, DEFICIÊNCIA MENTAL E DEPENDÊNCIA QUÍMICA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8099
+  },
+  {
+    "codCnae": "8730-1/01",
+    "descCnae": "ORFANATOS",
+    "codMcc": 8398
+  },
+  {
+    "codCnae": "8730-1/02",
+    "descCnae": "ALBERGUES ASSISTENCIAIS",
+    "codMcc": 8398
+  },
+  {
+    "codCnae": "8730-1/99",
+    "descCnae": "ATIVIDADES DE ASSISTÊNCIA SOCIAL PRESTADAS EM RESIDÊNCIAS COLETIVAS E PARTICULARES NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8398
+  },
+  {
+    "codCnae": "1359-6/00",
+    "descCnae": "FABRICACAO DE OUTROS PRODUTOS TEXTEIS NAO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "0723-5/01",
+    "descCnae": "EXTRAÇÃO DE MINÉRIO DE MANGANÊS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0723-5/02",
+    "descCnae": "BENEFICIAMENTO DE MINÉRIO DE MANGANÊS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0724-3/01",
+    "descCnae": "EXTRAÇÃO DE MINÉRIO DE METAIS PRECIOSOS",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "0724-3/02",
+    "descCnae": "BENEFICIAMENTO DE MINÉRIO DE METAIS PRECIOSOS",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "0725-1/00",
+    "descCnae": "EXTRAÇÃO DE MINERAIS RADIOATIVOS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0729-4/01",
+    "descCnae": "EXTRAÇÃO DE MINÉRIOS DE NIÓBIO E TITÂNIO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0729-4/02",
+    "descCnae": "EXTRAÇÃO DE MINÉRIO DE TUNGSTÊNIO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0729-4/03",
+    "descCnae": "EXTRAÇÃO DE MINÉRIO DE NÍQUEL",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0729-4/04",
+    "descCnae": "EXTRAÇÃO DE MINÉRIOS DE COBRE, CHUMBO, ZINCO E OUTROS MINERAIS METÁLICOS NÃO-FERROSOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0729-4/05",
+    "descCnae": "BENEFICIAMENTO DE MINÉRIOS DE COBRE, CHUMBO, ZINCO E OUTROS MINERAIS METÁLICOS NÃO-FERROSOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0810-0/01",
+    "descCnae": "EXTRAÇÃO DE ARDÓSIA E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/02",
+    "descCnae": "EXTRAÇÃO DE GRANITO E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/03",
+    "descCnae": "EXTRAÇÃO DE MÁRMORE E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/04",
+    "descCnae": "EXTRAÇÃO DE CALCÁRIO E DOLOMITA E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/05",
+    "descCnae": "EXTRAÇÃO DE GESSO E CAULIM",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/06",
+    "descCnae": "EXTRAÇÃO DE AREIA, CASCALHO OU PEDREGULHO E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/07",
+    "descCnae": "EXTRAÇÃO DE ARGILA E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/08",
+    "descCnae": "EXTRAÇÃO DE SAIBRO E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/09",
+    "descCnae": "EXTRAÇÃO DE BASALTO E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/10",
+    "descCnae": "BENEFICIAMENTO DE GESSO E CAULIM ASSOCIADO À EXTRAÇÃO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0810-0/99",
+    "descCnae": "EXTRAÇÃO E BRITAMENTO DE PEDRAS E OUTROS MATERIAIS PARA CONSTRUÇÃO E BENEFICIAMENTO ASSOCIADO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0891-6/00",
+    "descCnae": "EXTRAÇÃO DE MINERAIS PARA FABRICAÇÃO DE ADUBOS, FERTILIZANTES E OUTROS PRODUTOS QUÍMICOS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0892-4/01",
+    "descCnae": "EXTRAÇÃO DE SAL MARINHO",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0892-4/02",
+    "descCnae": "EXTRAÇÃO DE SAL-GEMA",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0892-4/03",
+    "descCnae": "REFINO E OUTROS TRATAMENTOS DO SAL",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0893-2/00",
+    "descCnae": "EXTRAÇÃO DE GEMAS (PEDRAS PRECIOSAS E SEMIPRECIOSAS)",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "0899-1/01",
+    "descCnae": "EXTRAÇÃO DE GRAFITA",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0899-1/02",
+    "descCnae": "EXTRAÇÃO DE QUARTZO",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0899-1/03",
+    "descCnae": "EXTRAÇÃO DE AMIANTO",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0899-1/99",
+    "descCnae": "EXTRAÇÃO DE OUTROS MINERAIS NÃO-METÁLICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "0910-6/00",
+    "descCnae": "ATIVIDADES DE APOIO À EXTRAÇÃO DE PETRÓLEO E GÁS NATURAL",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "0990-4/01",
+    "descCnae": "ATIVIDADES DE APOIO À EXTRAÇÃO DE MINÉRIO DE FERRO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0990-4/02",
+    "descCnae": "ATIVIDADES DE APOIO À EXTRAÇÃO DE MINERAIS METÁLICOS NÃO-FERROSOS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0990-4/03",
+    "descCnae": "ATIVIDADES DE APOIO À EXTRAÇÃO DE MINERAIS NÃO-METÁLICOS",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "1011-2/05",
+    "descCnae": "MATADOURO - ABATE DE RESES SOB CONTRATO, EXCETO ABATE DE SUÍNOS",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1012-1/01",
+    "descCnae": "ABATE DE AVES",
+    "codMcc": 5499
+  },
+  {
+    "codCnae": "1012-1/02",
+    "descCnae": "ABATE DE PEQUENOS ANIMAIS",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1012-1/04",
+    "descCnae": "MATADOURO - ABATE DE SUÍNOS SOB CONTRATO",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1013-9/01",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DE CARNE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1013-9/02",
+    "descCnae": "PREPARAÇÃO DE SUBPRODUTOS DO ABATE",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1020-1/01",
+    "descCnae": "PRESERVAÇÃO DE PEIXES, CRUSTÁCEOS E MOLUSCOS",
+    "codMcc": 5422
+  },
+  {
+    "codCnae": "1020-1/02",
+    "descCnae": "FABRICAÇÃO DE CONSERVAS DE PEIXES, CRUSTÁCEOS E MOLUSCOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1031-7/00",
+    "descCnae": "FABRICAÇÃO DE CONSERVAS DE FRUTAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1032-5/01",
+    "descCnae": "FABRICAÇÃO DE CONSERVAS DE PALMITO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1032-5/99",
+    "descCnae": "FABRICAÇÃO DE CONSERVAS DE LEGUMES E OUTROS VEGETAIS, EXCETO PALMITO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1033-3/01",
+    "descCnae": "FABRICAÇÃO DE SUCOS CONCENTRADOS DE FRUTAS, HORTALIÇAS E LEGUMES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1033-3/02",
+    "descCnae": "FABRICAÇÃO DE SUCOS DE FRUTAS, HORTALIÇAS E LEGUMES, EXCETO CONCENTRADOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1041-4/00",
+    "descCnae": "FABRICAÇÃO DE ÓLEOS VEGETAIS EM BRUTO, EXCETO ÓLEO DE MILHO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1042-2/00",
+    "descCnae": "FABRICAÇÃO DE ÓLEOS VEGETAIS REFINADOS, EXCETO ÓLEO DE MILHO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1043-1/00",
+    "descCnae": "FABRICAÇÃO DE MARGARINA E OUTRAS GORDURAS VEGETAIS E DE ÓLEOS NÃO-COMESTÍVEIS DE ANIMAIS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1051-1/00",
+    "descCnae": "PREPARAÇÃO DO LEITE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1053-8/00",
+    "descCnae": "FABRICAÇÃO DE SORVETES E OUTROS GELADOS COMESTÍVEIS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1061-9/01",
+    "descCnae": "BENEFICIAMENTO DE ARROZ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "1061-9/02",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DO ARROZ",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1062-7/00",
+    "descCnae": "MOAGEM DE TRIGO E FABRICAÇÃO DE DERIVADOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1063-5/00",
+    "descCnae": "FABRICAÇÃO DE FARINHA DE MANDIOCA E DERIVADOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1064-3/00",
+    "descCnae": "FABRICAÇÃO DE FARINHA DE MILHO E DERIVADOS, EXCETO ÓLEOS DE MILHO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1065-1/01",
+    "descCnae": "FABRICAÇÃO DE AMIDOS E FÉCULAS DE VEGETAIS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1065-1/02",
+    "descCnae": "FABRICAÇÃO DE ÓLEO DE MILHO EM BRUTO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1065-1/03",
+    "descCnae": "FABRICAÇÃO DE ÓLEO DE MILHO REFINADO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1066-0/00",
+    "descCnae": "FABRICAÇÃO DE ALIMENTOS PARA ANIMAIS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1069-4/00",
+    "descCnae": "MOAGEM E FABRICAÇÃO DE PRODUTOS DE ORIGEM VEGETAL NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1071-6/00",
+    "descCnae": "FABRICAÇÃO DE AÇÚCAR EM BRUTO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1072-4/01",
+    "descCnae": "FABRICAÇÃO DE AÇÚCAR DE CANA REFINADO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1072-4/02",
+    "descCnae": "FABRICAÇÃO DE AÇÚCAR DE CEREAIS (DEXTROSE) E DE BETERRABA",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1081-3/01",
+    "descCnae": "BENEFICIAMENTO DE CAFÉ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "1081-3/02",
+    "descCnae": "TORREFAÇÃO E MOAGEM DE CAFÉ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "1082-1/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS À BASE DE CAFÉ",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1093-7/01",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DERIVADOS DO CACAU E DE CHOCOLATES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1093-7/02",
+    "descCnae": "FABRICAÇÃO DE FRUTAS CRISTALIZADAS, BALAS E SEMELHANTES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/01",
+    "descCnae": "FABRICAÇÃO DE VINAGRES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/02",
+    "descCnae": "FABRICAÇÃO DE PÓS ALIMENTÍCIOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/03",
+    "descCnae": "FABRICAÇÃO DE FERMENTOS E LEVEDURAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/04",
+    "descCnae": "FABRICAÇÃO DE GELO COMUM",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/05",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS PARA INFUSÃO (CHÁ, MATE, ETC.)",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/06",
+    "descCnae": "FABRICAÇÃO DE ADOÇANTES NATURAIS E ARTIFICIAIS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/07",
+    "descCnae": "FABRICAÇÃO DE ALIMENTOS DIETÉTICOS E COMPLEMENTOS ALIMENTARES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1099-6/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS PRODUTOS ALIMENTÍCIOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1113-5/01",
+    "descCnae": "FABRICAÇÃO DE MALTE, INCLUSIVE MALTE UÍSQUE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1122-4/04",
+    "descCnae": "FABRICAÇÃO DE BEBIDAS ISOTÔNICAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1122-4/99",
+    "descCnae": "FABRICAÇÃO DE OUTRAS BEBIDAS NÃO-ALCOÓLICAS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1210-7/00",
+    "descCnae": "PROCESSAMENTO INDUSTRIAL DO FUMO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "1220-4/01",
+    "descCnae": "FABRICAÇÃO DE CIGARROS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1220-4/02",
+    "descCnae": "FABRICAÇÃO DE CIGARRILHAS E CHARUTOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1220-4/03",
+    "descCnae": "FABRICAÇÃO DE FILTROS PARA CIGARROS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1220-4/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS PRODUTOS DO FUMO, EXCETO CIGARROS, CIGARRILHAS E CHARUTOS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1311-1/00",
+    "descCnae": "PREPARAÇÃO E FIAÇÃO DE FIBRAS DE ALGODÃO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1312-0/00",
+    "descCnae": "PREPARAÇÃO E FIAÇÃO DE FIBRAS TÊXTEIS NATURAIS, EXCETO ALGODÃO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1313-8/00",
+    "descCnae": "FIAÇÃO DE FIBRAS ARTIFICIAIS E SINTÉTICAS",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1314-6/00",
+    "descCnae": "FABRICAÇÃO DE LINHAS PARA COSTURAR E BORDAR",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1321-9/00",
+    "descCnae": "TECELAGEM DE FIOS DE ALGODÃO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1322-7/00",
+    "descCnae": "TECELAGEM DE FIOS DE FIBRAS TÊXTEIS NATURAIS, EXCETO ALGODÃO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1323-5/00",
+    "descCnae": "TECELAGEM DE FIOS DE FIBRAS ARTIFICIAIS E SINTÉTICAS",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1330-8/00",
+    "descCnae": "FABRICAÇÃO DE TECIDOS DE MALHA",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1351-1/00",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS TÊXTEIS PARA USO DOMÉSTICO",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1352-9/00",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE TAPEÇARIA",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1353-7/00",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE CORDOARIA",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1354-5/00",
+    "descCnae": "FABRICAÇÃO DE TECIDOS ESPECIAIS, INCLUSIVE ARTEFATOS",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "1421-5/00",
+    "descCnae": "FABRICAÇÃO DE MEIAS",
+    "codMcc": 5651
+  },
+  {
+    "codCnae": "1510-6/00",
+    "descCnae": "CURTIMENTO E OUTRAS PREPARAÇÕES DE COURO",
+    "codMcc": 5948
+  },
+  {
+    "codCnae": "1531-9/02",
+    "descCnae": "ACABAMENTO DE CALÇADOS DE COURO SOB CONTRATO",
+    "codMcc": 5139
+  },
+  {
+    "codCnae": "1540-8/00",
+    "descCnae": "FABRICAÇÃO DE PARTES PARA CALÇADOS, DE QUALQUER MATERIAL",
+    "codMcc": 5139
+  },
+  {
+    "codCnae": "1610-2/03",
+    "descCnae": "SERRARIAS COM DESDOBRAMENTO DE MADEIRA EM BRUTO",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "5611-2/04",
+    "descCnae": "Bares e outros estabelecimentos especializados em servir bebidas, sem entretenimento",
+    "codMcc": 5813
+  },
+  {
+    "codCnae": "5611-2/05",
+    "descCnae": "Bares e outros estabelecimentos especializados em servir bebidas, com entretenimento",
+    "codMcc": 5813
+  },
+  {
+    "codCnae": "1610-2/04",
+    "descCnae": "SERRARIAS SEM DESDOBRAMENTO DE MADEIRA EM BRUTO - RESSERRAGEM",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "1610-2/05",
+    "descCnae": "SERVIÇO DE TRATAMENTO DE MADEIRA REALIZADO SOB CONTRATO",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "1710-9/00",
+    "descCnae": "FABRICAÇÃO DE CELULOSE E OUTRAS PASTAS PARA A FABRICAÇÃO DE PAPEL",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "1721-4/00",
+    "descCnae": "FABRICAÇÃO DE PAPEL",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "1722-2/00",
+    "descCnae": "FABRICAÇÃO DE CARTOLINA E PAPEL-CARTÃO",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "1731-1/00",
+    "descCnae": "FABRICAÇÃO DE EMBALAGENS DE PAPEL",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1732-0/00",
+    "descCnae": "FABRICAÇÃO DE EMBALAGENS DE CARTOLINA E PAPEL-CARTÃO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "1733-8/00",
+    "descCnae": "FABRICAÇÃO DE CHAPAS E DE EMBALAGENS DE PAPELÃO ONDULADO",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "1741-9/01",
+    "descCnae": "FABRICAÇÃO DE FORMULÁRIOS CONTÍNUOS",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "1741-9/02",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DE PAPEL, CARTOLINA, PAPEL-CARTÃO E PAPELÃO ONDULADO PARA USO COMERCIAL E DE ESCRITÓRIO",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "1742-7/01",
+    "descCnae": "FABRICAÇÃO DE FRALDAS DESCARTÁVEIS",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "1742-7/02",
+    "descCnae": "FABRICAÇÃO DE ABSORVENTES HIGIÊNICOS",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "1742-7/99",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DE PAPEL PARA USO DOMÉSTICO E HIGIÊNICO-SANITÁRIO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "1749-4/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DE PASTAS CELULÓSICAS, PAPEL, CARTOLINA, PAPEL-CARTÃO E PAPELÃO ONDULADO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "1811-3/01",
+    "descCnae": "IMPRESSÃO DE JORNAIS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "1811-3/02",
+    "descCnae": "IMPRESSÃO DE LIVROS, REVISTAS E OUTRAS PUBLICAÇÕES PERIÓDICAS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "1812-1/00",
+    "descCnae": "IMPRESSÃO DE MATERIAL DE SEGURANÇA",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "1813-0/01",
+    "descCnae": "IMPRESSÃO DE MATERIAL PARA USO PUBLICITÁRIO",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "1813-0/99",
+    "descCnae": "IMPRESSÃO DE MATERIAL PARA OUTROS USOS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "1822-9/01",
+    "descCnae": "SERVIÇOS DE ENCADERNAÇÃO E PLASTIFICAÇÃO",
+    "codMcc": 7338
+  },
+  {
+    "codCnae": "1822-9/99",
+    "descCnae": "SERVIÇOS DE ACABAMENTOS GRÁFICOS, EXCETO ENCADERNAÇÃO E PLASTIFICAÇÃO",
+    "codMcc": 7338
+  },
+  {
+    "codCnae": "1910-1/00",
+    "descCnae": "COQUERIAS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "1921-7/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DO REFINO DE PETRÓLEO",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "1922-5/01",
+    "descCnae": "FORMULAÇÃO DE COMBUSTÍVEIS",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "1922-5/02",
+    "descCnae": "RERREFINO DE ÓLEOS LUBRIFICANTES",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "1922-5/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS PRODUTOS DERIVADOS DO PETRÓLEO, EXCETO PRODUTOS DO REFINO",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "1931-4/00",
+    "descCnae": "FABRICAÇÃO DE ÁLCOOL",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "1932-2/00",
+    "descCnae": "FABRICAÇÃO DE BIOCOMBUSTÍVEIS, EXCETO ÁLCOOL",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "2011-8/00",
+    "descCnae": "FABRICAÇÃO DE CLORO E ÁLCALIS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2012-6/00",
+    "descCnae": "FABRICAÇÃO DE INTERMEDIÁRIOS PARA FERTILIZANTES",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2013-4/01",
+    "descCnae": "FABRICAÇÃO DE ADUBOS E FERTILIZANTES ORGANO-MINERAIS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2013-4/02",
+    "descCnae": "FABRICAÇÃO DE ADUBOS E FERTILIZANTES, EXCETO ORGANO-MINERAIS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2014-2/00",
+    "descCnae": "FABRICAÇÃO DE GASES INDUSTRIAIS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2019-3/01",
+    "descCnae": "ELABORAÇÃO DE COMBUSTÍVEIS NUCLEARES",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2019-3/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS PRODUTOS QUÍMICOS INORGÂNICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2021-5/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS PETROQUÍMICOS BÁSICOS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2022-3/00",
+    "descCnae": "FABRICAÇÃO DE INTERMEDIÁRIOS PARA PLASTIFICANTES, RESINAS E FIBRAS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2029-1/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS QUÍMICOS ORGÂNICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2031-2/00",
+    "descCnae": "FABRICAÇÃO DE RESINAS TERMOPLÁSTICAS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2032-1/00",
+    "descCnae": "FABRICAÇÃO DE RESINAS TERMOFIXAS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2033-9/00",
+    "descCnae": "FABRICAÇÃO DE ELASTÔMEROS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2040-1/00",
+    "descCnae": "FABRICAÇÃO DE FIBRAS ARTIFICIAIS E SINTÉTICAS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2051-7/00",
+    "descCnae": "FABRICAÇÃO DE DEFENSIVOS AGRÍCOLAS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2052-5/00",
+    "descCnae": "FABRICAÇÃO DE DESINFESTANTES DOMISSANITÁRIOS",
+    "codMcc": 2842
+  },
+  {
+    "codCnae": "2061-4/00",
+    "descCnae": "FABRICAÇÃO DE SABÕES E DETERGENTES SINTÉTICOS",
+    "codMcc": 2842
+  },
+  {
+    "codCnae": "2062-2/00",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DE LIMPEZA E POLIMENTO",
+    "codMcc": 2842
+  },
+  {
+    "codCnae": "2092-4/01",
+    "descCnae": "FABRICAÇÃO DE PÓLVORAS, EXPLOSIVOS E DETONANTES",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2092-4/03",
+    "descCnae": "FABRICAÇÃO DE FÓSFOROS DE SEGURANÇA",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2093-2/00",
+    "descCnae": "FABRICAÇÃO DE ADITIVOS DE USO INDUSTRIAL",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2094-1/00",
+    "descCnae": "FABRICAÇÃO DE CATALISADORES",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2099-1/01",
+    "descCnae": "FABRICAÇÃO DE CHAPAS, FILMES, PAPÉIS E OUTROS MATERIAIS E PRODUTOS QUÍMICOS PARA FOTOGRAFIA",
+    "codMcc": 5044
+  },
+  {
+    "codCnae": "2122-0/00",
+    "descCnae": "FABRICAÇÃO DE MEDICAMENTOS PARA USO VETERINÁRIO",
+    "codMcc": 5122
+  },
+  {
+    "codCnae": "2211-1/00",
+    "descCnae": "FABRICAÇÃO DE PNEUMÁTICOS E DE CÂMARAS-DE-AR",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2219-6/00",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE BORRACHA NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2221-8/00",
+    "descCnae": "FABRICAÇÃO DE LAMINADOS PLANOS E TUBULARES DE MATERIAL PLÁSTICO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2222-6/00",
+    "descCnae": "FABRICAÇÃO DE EMBALAGENS DE MATERIAL PLÁSTICO",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2223-4/00",
+    "descCnae": "FABRICAÇÃO DE TUBOS E ACESSÓRIOS DE MATERIAL PLÁSTICO PARA USO NA CONSTRUÇÃO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2229-3/01",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE MATERIAL PLÁSTICO PARA USO PESSOAL E DOMÉSTICO",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "2229-3/02",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE MATERIAL PLÁSTICO PARA USOS INDUSTRIAIS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2229-3/03",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE MATERIAL PLÁSTICO PARA USO NA CONSTRUÇÃO, EXCETO TUBOS E ACESSÓRIOS",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2229-3/99",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE MATERIAL PLÁSTICO PARA OUTROS USOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "2311-7/00",
+    "descCnae": "FABRICAÇÃO DE VIDRO PLANO E DE SEGURANÇA",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2312-5/00",
+    "descCnae": "FABRICAÇÃO DE EMBALAGENS DE VIDRO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2319-2/00",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS DE VIDRO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2320-6/00",
+    "descCnae": "FABRICAÇÃO DE CIMENTO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2330-3/01",
+    "descCnae": "FABRICAÇÃO DE ESTRUTURAS PRÉ-MOLDADAS DE CONCRETO ARMADO, EM SÉRIE E SOB ENCOMENDA",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2330-3/02",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE CIMENTO PARA USO NA CONSTRUÇÃO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2330-3/03",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE FIBROCIMENTO PARA USO NA CONSTRUÇÃO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2342-7/01",
+    "descCnae": "FABRICAÇÃO DE AZULEJOS E PISOS",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2349-4/01",
+    "descCnae": "FABRICAÇÃO DE MATERIAL SANITÁRIO DE CERÂMICA",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2349-4/99",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS CERÂMICOS NÃO-REFRATÁRIOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2391-5/01",
+    "descCnae": "BRITAMENTO DE PEDRAS, EXCETO ASSOCIADO À EXTRAÇÃO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2391-5/02",
+    "descCnae": "APARELHAMENTO DE PEDRAS PARA CONSTRUÇÃO, EXCETO ASSOCIADO À EXTRAÇÃO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "2391-5/03",
+    "descCnae": "APARELHAMENTO DE PLACAS E EXECUÇÃO DE TRABALHOS EM MÁRMORE, GRANITO, ARDÓSIA E OUTRAS PEDRAS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "2392-3/00",
+    "descCnae": "FABRICAÇÃO DE CAL E GESSO",
+    "codMcc": 5039
+  },
+  {
+    "codCnae": "2399-1/02",
+    "descCnae": "FABRICAÇÃO DE ABRASIVOS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "2399-1/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS PRODUTOS DE MINERAIS NÃO-METÁLICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "2411-3/00",
+    "descCnae": "PRODUÇÃO DE FERRO-GUSA",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2412-1/00",
+    "descCnae": "PRODUÇÃO DE FERROLIGAS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2421-1/00",
+    "descCnae": "PRODUÇÃO DE SEMI-ACABADOS DE AÇO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2422-9/01",
+    "descCnae": "PRODUÇÃO DE LAMINADOS PLANOS DE AÇO AO CARBONO, REVESTIDOS OU NÃO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2422-9/02",
+    "descCnae": "PRODUÇÃO DE LAMINADOS PLANOS DE AÇOS ESPECIAIS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2423-7/01",
+    "descCnae": "PRODUÇÃO DE TUBOS DE AÇO SEM COSTURA",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2423-7/02",
+    "descCnae": "PRODUÇÃO DE LAMINADOS LONGOS DE AÇO, EXCETO TUBOS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2424-5/01",
+    "descCnae": "PRODUÇÃO DE ARAMES DE AÇO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2424-5/02",
+    "descCnae": "PRODUÇÃO DE RELAMINADOS, TREFILADOS E PERFILADOS DE AÇO, EXCETO ARAMES",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2431-8/00",
+    "descCnae": "PRODUÇÃO DE TUBOS DE AÇO COM COSTURA",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2439-3/00",
+    "descCnae": "PRODUÇÃO DE OUTROS TUBOS DE FERRO E AÇO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2441-5/01",
+    "descCnae": "PRODUÇÃO DE ALUMÍNIO E SUAS LIGAS EM FORMAS PRIMÁRIAS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2441-5/02",
+    "descCnae": "PRODUÇÃO DE LAMINADOS DE ALUMÍNIO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2442-3/00",
+    "descCnae": "METALURGIA DOS METAIS PRECIOSOS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2443-1/00",
+    "descCnae": "METALURGIA DO COBRE",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2449-1/01",
+    "descCnae": "PRODUÇÃO DE ZINCO EM FORMAS PRIMÁRIAS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2449-1/02",
+    "descCnae": "PRODUÇÃO DE LAMINADOS DE ZINCO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2449-1/03",
+    "descCnae": "PRODUÇÃO DE ÂNODOS PARA GALVANOPLASTIA",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2449-1/99",
+    "descCnae": "METALURGIA DE OUTROS METAIS NÃO-FERROSOS E SUAS LIGAS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2451-2/00",
+    "descCnae": "FUNDIÇÃO DE FERRO E AÇO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2452-1/00",
+    "descCnae": "FUNDIÇÃO DE METAIS NÃO-FERROSOS E SUAS LIGAS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2511-0/00",
+    "descCnae": "FABRICAÇÃO DE ESTRUTURAS METÁLICAS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "9609-2/06",
+    "descCnae": "OUTROS SERVICOS  SEM CLASSIFICACAO",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "2512-8/00",
+    "descCnae": "FABRICAÇÃO DE ESQUADRIAS DE METAL",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2759-7/01",
+    "descCnae": "FABRICAÇÃO DE APARELHOS ELÉTRICOS DE USO PESSOAL, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2759-7/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS APARELHOS ELETRODOMÉSTICOS NÃO ESPECIFICADOS ANTERIORMENTE, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2790-2/01",
+    "descCnae": "FABRICAÇÃO DE ELETRODOS, CONTATOS E OUTROS ARTIGOS DE CARVÃO E GRAFITA PARA USO ELÉTRICO, ELETROÍMÃS E ISOLADORES",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2790-2/02",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS PARA SINALIZAÇÃO E ALARME",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2790-2/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS EQUIPAMENTOS E APARELHOS ELÉTRICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2811-9/00",
+    "descCnae": "FABRICAÇÃO DE MOTORES E TURBINAS, PEÇAS E ACESSÓRIOS, EXCETO PARA AVIÕES E VEÍCULOS RODOVIÁRIOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "2812-7/00",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS HIDRÁULICOS E PNEUMÁTICOS, PEÇAS E ACESSÓRIOS, EXCETO VÁLVULAS",
+    "codMcc": 5074
+  },
+  {
+    "codCnae": "2813-5/00",
+    "descCnae": "FABRICAÇÃO DE VÁLVULAS, REGISTROS E DISPOSITIVOS SEMELHANTES, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2814-3/01",
+    "descCnae": "FABRICAÇÃO DE COMPRESSORES PARA USO INDUSTRIAL, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2814-3/02",
+    "descCnae": "FABRICAÇÃO DE COMPRESSORES PARA USO NÃO-INDUSTRIAL, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "2815-1/01",
+    "descCnae": "FABRICAÇÃO DE ROLAMENTOS PARA FINS INDUSTRIAIS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2815-1/02",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS DE TRANSMISSÃO PARA FINS INDUSTRIAIS, EXCETO ROLAMENTOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2821-6/01",
+    "descCnae": "FABRICAÇÃO DE FORNOS INDUSTRIAIS, APARELHOS E EQUIPAMENTOS NÃO-ELÉTRICOS PARA INSTALAÇÕES TÉRMICAS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2821-6/02",
+    "descCnae": "FABRICAÇÃO DE ESTUFAS E FORNOS ELÉTRICOS PARA FINS INDUSTRIAIS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2822-4/01",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS, EQUIPAMENTOS E APARELHOS PARA TRANSPORTE E ELEVAÇÃO DE PESSOAS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2822-4/02",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS, EQUIPAMENTOS E APARELHOS PARA TRANSPORTE E ELEVAÇÃO DE CARGAS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2823-2/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E APARELHOS DE REFRIGERAÇÃO E VENTILAÇÃO PARA USO INDUSTRIAL E COMERCIAL, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2824-1/01",
+    "descCnae": "FABRICAÇÃO DE APARELHOS E EQUIPAMENTOS DE AR CONDICIONADO PARA USO INDUSTRIAL",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2824-1/02",
+    "descCnae": "FABRICAÇÃO DE APARELHOS E EQUIPAMENTOS DE AR CONDICIONADO PARA USO NÃO-INDUSTRIAL",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2825-9/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA SANEAMENTO BÁSICO E AMBIENTAL, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2829-1/01",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS DE ESCREVER, CALCULAR E OUTROS EQUIPAMENTOS NÃO-ELETRÔNICOS PARA ESCRITÓRIO, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5044
+  },
+  {
+    "codCnae": "2829-1/99",
+    "descCnae": "FABRICAÇÃO DE OUTRAS MÁQUINAS E EQUIPAMENTOS DE USO GERAL NÃO ESPECIFICADOS ANTERIORMENTE, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2831-3/00",
+    "descCnae": "FABRICAÇÃO DE TRATORES AGRÍCOLAS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "2832-1/00",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS PARA IRRIGAÇÃO AGRÍCOLA, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "2833-0/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA A AGRICULTURA E PECUÁRIA, PEÇAS E ACESSÓRIOS, EXCETO PARA IRRIGAÇÃO",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "2840-2/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS-FERRAMENTA, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2851-8/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA A PROSPECÇÃO E EXTRAÇÃO DE PETRÓLEO, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2852-6/00",
+    "descCnae": "FABRICAÇÃO DE OUTRAS MÁQUINAS E EQUIPAMENTOS PARA USO NA EXTRAÇÃO MINERAL, PEÇAS E ACESSÓRIOS, EXCETO NA EXTRAÇÃO DE PETRÓLEO",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2853-4/00",
+    "descCnae": "FABRICAÇÃO DE TRATORES, PEÇAS E ACESSÓRIOS, EXCETO AGRÍCOLAS",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "2854-2/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA TERRAPLENAGEM, PAVIMENTAÇÃO E CONSTRUÇÃO, PEÇAS E ACESSÓRIOS, EXCETO TRATORES",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "2861-5/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS PARA A INDÚSTRIA METALÚRGICA, PEÇAS E ACESSÓRIOS, EXCETO MÁQUINAS-FERRAMENTA",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2862-3/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA AS INDÚSTRIAS DE ALIMENTOS, BEBIDAS E FUMO, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2863-1/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA A INDÚSTRIA TÊXTIL, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2864-0/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA AS INDÚSTRIAS DO VESTUÁRIO, DO COURO E DE CALÇADOS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2865-8/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA AS INDÚSTRIAS DE CELULOSE, PAPEL E PAPELÃO E ARTEFATOS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2866-6/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA A INDÚSTRIA DO PLÁSTICO, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2869-1/00",
+    "descCnae": "FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA USO INDUSTRIAL ESPECÍFICO NÃO ESPECIFICADOS ANTERIORMENTE, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "2910-7/01",
+    "descCnae": "FABRICAÇÃO DE AUTOMÓVEIS, CAMIONETAS E UTILITÁRIOS",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "2910-7/02",
+    "descCnae": "FABRICAÇÃO DE CHASSIS COM MOTOR PARA AUTOMÓVEIS, CAMIONETAS E UTILITÁRIOS",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2910-7/03",
+    "descCnae": "FABRICAÇÃO DE MOTORES PARA AUTOMÓVEIS, CAMIONETAS E UTILITÁRIOS",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2920-4/01",
+    "descCnae": "FABRICAÇÃO DE CAMINHÕES E ÔNIBUS",
+    "codMcc": 5511
+  },
+  {
+    "codCnae": "2920-4/02",
+    "descCnae": "FABRICAÇÃO DE MOTORES PARA CAMINHÕES E ÔNIBUS",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2930-1/01",
+    "descCnae": "FABRICAÇÃO DE CABINES, CARROCERIAS E REBOQUES PARA CAMINHÕES",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "2930-1/02",
+    "descCnae": "FABRICAÇÃO DE CARROCERIAS PARA ÔNIBUS",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2930-1/03",
+    "descCnae": "FABRICAÇÃO DE CABINES, CARROCERIAS E REBOQUES PARA OUTROS VEÍCULOS AUTOMOTORES, EXCETO CAMINHÕES E ÔNIBUS",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "2941-7/00",
+    "descCnae": "FABRICAÇÃO DE PEÇAS E ACESSÓRIOS PARA O SISTEMA MOTOR DE VEÍCULOS AUTOMOTORES",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2942-5/00",
+    "descCnae": "FABRICAÇÃO DE PEÇAS E ACESSÓRIOS PARA OS SISTEMAS DE MARCHA E TRANSMISSÃO DE VEÍCULOS AUTOMOTORES",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2943-3/00",
+    "descCnae": "FABRICAÇÃO DE PEÇAS E ACESSÓRIOS PARA O SISTEMA DE FREIOS DE VEÍCULOS AUTOMOTORES",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2944-1/00",
+    "descCnae": "FABRICAÇÃO DE PEÇAS E ACESSÓRIOS PARA O SISTEMA DE DIREÇÃO E SUSPENSÃO DE VEÍCULOS AUTOMOTORES",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2945-0/00",
+    "descCnae": "FABRICAÇÃO DE MATERIAL ELÉTRICO E ELETRÔNICO PARA VEÍCULOS AUTOMOTORES, EXCETO BATERIAS",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2949-2/01",
+    "descCnae": "FABRICAÇÃO DE BANCOS E ESTOFADOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "2949-2/99",
+    "descCnae": "FABRICAÇÃO DE OUTRAS PEÇAS E ACESSÓRIOS PARA VEÍCULOS AUTOMOTORES NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 5013
+  },
+  {
+    "codCnae": "3011-3/01",
+    "descCnae": "CONSTRUÇÃO DE EMBARCAÇÕES DE GRANDE PORTE",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3011-3/02",
+    "descCnae": "CONSTRUÇÃO DE EMBARCAÇÕES PARA USO COMERCIAL E PARA USOS ESPECIAIS, EXCETO DE GRANDE PORTE",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3012-1/00",
+    "descCnae": "CONSTRUÇÃO DE EMBARCAÇÕES PARA ESPORTE E LAZER",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3031-8/00",
+    "descCnae": "FABRICAÇÃO DE LOCOMOTIVAS, VAGÕES E OUTROS MATERIAIS RODANTES",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "3032-6/00",
+    "descCnae": "FABRICAÇÃO DE PEÇAS E ACESSÓRIOS PARA VEÍCULOS FERROVIÁRIOS",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "3041-5/00",
+    "descCnae": "FABRICAÇÃO DE AERONAVES",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "3042-3/00",
+    "descCnae": "FABRICAÇÃO DE TURBINAS, MOTORES E OUTROS COMPONENTES E PEÇAS PARA AERONAVES",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "3050-4/00",
+    "descCnae": "FABRICAÇÃO DE VEÍCULOS MILITARES DE COMBATE",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "3091-1/01",
+    "descCnae": "FABRICAÇÃO DE MOTOCICLETAS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3091-1/02",
+    "descCnae": "FABRICAÇÃO DE PEÇAS E ACESSÓRIOS PARA MOTOCICLETAS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "3092-0/00",
+    "descCnae": "FABRICAÇÃO DE BICICLETAS E TRICICLOS NÃO-MOTORIZADOS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3099-7/00",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS DE TRANSPORTE NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5599
+  },
+  {
+    "codCnae": "3211-6/01",
+    "descCnae": "LAPIDAÇÃO DE GEMAS",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "3211-6/03",
+    "descCnae": "CUNHAGEM DE MOEDAS E MEDALHAS",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "3220-5/00",
+    "descCnae": "FABRICAÇÃO DE INSTRUMENTOS MUSICAIS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3230-2/00",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS PARA PESCA E ESPORTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "3240-0/01",
+    "descCnae": "FABRICAÇÃO DE JOGOS ELETRÔNICOS",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3240-0/02",
+    "descCnae": "FABRICAÇÃO DE MESAS DE BILHAR, DE SINUCA E ACESSÓRIOS NÃO ASSOCIADA À LOCAÇÃO",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3240-0/03",
+    "descCnae": "FABRICAÇÃO DE MESAS DE BILHAR, DE SINUCA E ACESSÓRIOS ASSOCIADA À LOCAÇÃO",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "3250-7/01",
+    "descCnae": "FABRICAÇÃO DE INSTRUMENTOS NÃO-ELETRÔNICOS E UTENSÍLIOS PARA USO MÉDICO, CIRÚRGICO, ODONTOLÓGICO E DE LABORATÓRIO",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "3250-7/02",
+    "descCnae": "FABRICAÇÃO DE MOBILIÁRIO PARA USO MÉDICO, CIRÚRGICO, ODONTOLÓGICO E DE LABORATÓRIO",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "3250-7/03",
+    "descCnae": "FABRICAÇÃO DE APARELHOS E UTENSÍLIOS PARA CORREÇÃO DE DEFEITOS FÍSICOS E APARELHOS ORTOPÉDICOS EM GERAL SOB ENCOMENDA",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "3250-7/04",
+    "descCnae": "FABRICAÇÃO DE APARELHOS E UTENSÍLIOS PARA CORREÇÃO DE DEFEITOS FÍSICOS E APARELHOS ORTOPÉDICOS EM GERAL, EXCETO SOB ENCOMENDA",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "3250-7/05",
+    "descCnae": "FABRICAÇÃO DE MATERIAIS PARA MEDICINA E ODONTOLOGIA",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "3250-7/07",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS ÓPTICOS",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "3250-7/08",
+    "descCnae": "FABRICAÇÃO DE ARTEFATOS DE TECIDO NÃO TECIDO PARA USO ODONTO-MÉDICO-HOSPITALAR",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "3250-7/09",
+    "descCnae": "SERVIÇO DE LABORATÓRIO ÓPTICO",
+    "codMcc": 8071
+  },
+  {
+    "codCnae": "3291-4/00",
+    "descCnae": "FABRICAÇÃO DE ESCOVAS, PINCÉIS E VASSOURAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "3292-2/01",
+    "descCnae": "FABRICAÇÃO DE ROUPAS DE PROTEÇÃO E SEGURANÇA E RESISTENTES A FOGO",
+    "codMcc": 5137
+  },
+  {
+    "codCnae": "3292-2/02",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS E ACESSÓRIOS PARA SEGURANÇA PESSOAL E PROFISSIONAL",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "3299-0/01",
+    "descCnae": "FABRICAÇÃO DE GUARDA-CHUVAS E SIMILARES",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "3299-0/02",
+    "descCnae": "FABRICAÇÃO DE CANETAS, LÁPIS E OUTROS ARTIGOS PARA ESCRITÓRIO",
+    "codMcc": 5111
+  },
+  {
+    "codCnae": "3299-0/05",
+    "descCnae": "FABRICAÇÃO DE AVIAMENTOS PARA COSTURA",
+    "codMcc": 5131
+  },
+  {
+    "codCnae": "3299-0/06",
+    "descCnae": "FABRICAÇÃO DE VELAS, INCLUSIVE DECORATIVAS",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "3299-0/99",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DIVERSOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5199
+  },
+  {
+    "codCnae": "3314-7/03",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE VÁLVULAS INDUSTRIAIS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/04",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE COMPRESSORES",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/05",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE EQUIPAMENTOS DE TRANSMISSÃO PARA FINS INDUSTRIAIS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/06",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS, APARELHOS E EQUIPAMENTOS PARA INSTALAÇÕES TÉRMICAS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/14",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA A PROSPECÇÃO E EXTRAÇÃO DE PETRÓLEO",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/15",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA USO NA EXTRAÇÃO MINERAL, EXCETO NA EXTRAÇÃO DE PETRÓLEO",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/18",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS PARA A INDÚSTRIA METALÚRGICA, EXCETO MÁQUINAS-FERRAMENTA",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/19",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA AS INDÚSTRIAS DE ALIMENTOS, BEBIDAS E FUMO",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/20",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA A INDÚSTRIA TÊXTIL, DO VESTUÁRIO, DO COURO E CALÇADOS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/21",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E APARELHOS PARA A INDÚSTRIA DE CELULOSE, PAPEL E PAPELÃO E ARTEFATOS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/22",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE MÁQUINAS E APARELHOS PARA A INDÚSTRIA DO PLÁSTICO",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3314-7/99",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE OUTRAS MÁQUINAS E EQUIPAMENTOS PARA USOS INDUSTRIAIS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3315-5/00",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE VEÍCULOS FERROVIÁRIOS",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3316-3/01",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE AERONAVES, EXCETO A MANUTENÇÃO NA PISTA",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3316-3/02",
+    "descCnae": "MANUTENÇÃO DE AERONAVES NA PISTA",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3317-1/01",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE EMBARCAÇÕES E ESTRUTURAS FLUTUANTES",
+    "codMcc": 4468
+  },
+  {
+    "codCnae": "3317-1/02",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE EMBARCAÇÕES PARA ESPORTE E LAZER",
+    "codMcc": 4468
+  },
+  {
+    "codCnae": "3319-8/00",
+    "descCnae": "MANUTENÇÃO E REPARAÇÃO DE EQUIPAMENTOS E PRODUTOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "3511-5/01",
+    "descCnae": "GERAÇÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3511-5/02",
+    "descCnae": "ATIVIDADES DE COORDENAÇÃO E CONTROLE DA OPERAÇÃO DA GERAÇÃO E TRANSMISSÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3512-3/00",
+    "descCnae": "TRANSMISSÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3513-1/00",
+    "descCnae": "COMÉRCIO ATACADISTA DE ENERGIA ELÉTRICA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3514-0/00",
+    "descCnae": "DISTRIBUIÇÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3520-4/01",
+    "descCnae": "PRODUÇÃO DE GÁS; PROCESSAMENTO DE GÁS NATURAL",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3520-4/02",
+    "descCnae": "DISTRIBUIÇÃO DE COMBUSTÍVEIS GASOSOS POR REDES URBANAS",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3530-1/00",
+    "descCnae": "PRODUÇÃO E DISTRIBUIÇÃO DE VAPOR, ÁGUA QUENTE E AR CONDICIONADO",
+    "codMcc": 1711
+  },
+  {
+    "codCnae": "3600-6/01",
+    "descCnae": "CAPTAÇÃO, TRATAMENTO E DISTRIBUIÇÃO DE ÁGUA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3600-6/02",
+    "descCnae": "DISTRIBUIÇÃO DE ÁGUA POR CAMINHÕES",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3701-1/00",
+    "descCnae": "GESTÃO DE REDES DE ESGOTO",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3702-9/00",
+    "descCnae": "ATIVIDADES RELACIONADAS A ESGOTO, EXCETO A GESTÃO DE REDES",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3811-4/00",
+    "descCnae": "COLETA DE RESÍDUOS NÃO-PERIGOSOS",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3812-2/00",
+    "descCnae": "COLETA DE RESÍDUOS PERIGOSOS",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3821-1/00",
+    "descCnae": "TRATAMENTO E DISPOSIÇÃO DE RESÍDUOS NÃO-PERIGOSOS",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3822-0/00",
+    "descCnae": "TRATAMENTO E DISPOSIÇÃO DE RESÍDUOS PERIGOSOS",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "3832-7/00",
+    "descCnae": "RECUPERAÇÃO DE MATERIAIS PLÁSTICOS",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "3900-5/00",
+    "descCnae": "DESCONTAMINAÇÃO E OUTROS SERVIÇOS DE GESTÃO DE RESÍDUOS",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "4110-7/00",
+    "descCnae": "INCORPORAÇÃO DE EMPREENDIMENTOS IMOBILIÁRIOS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4120-4/00",
+    "descCnae": "CONSTRUÇÃO DE EDIFÍCIOS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4211-1/01",
+    "descCnae": "CONSTRUÇÃO DE RODOVIAS E FERROVIAS",
+    "codMcc": 1771
+  },
+  {
+    "codCnae": "4211-1/02",
+    "descCnae": "PINTURA PARA SINALIZAÇÃO EM PISTAS RODOVIÁRIAS E AEROPORTOS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4212-0/00",
+    "descCnae": "CONSTRUÇÃO DE OBRAS-DE-ARTE ESPECIAIS",
+    "codMcc": 5971
+  },
+  {
+    "codCnae": "4213-8/00",
+    "descCnae": "OBRAS DE URBANIZAÇÃO - RUAS, PRAÇAS E CALÇADAS",
+    "codMcc": 1771
+  },
+  {
+    "codCnae": "4221-9/01",
+    "descCnae": "CONSTRUÇÃO DE BARRAGENS E REPRESAS PARA GERAÇÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4221-9/02",
+    "descCnae": "CONSTRUÇÃO DE ESTAÇÕES E REDES DE DISTRIBUIÇÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4221-9/03",
+    "descCnae": "MANUTENÇÃO DE REDES DE DISTRIBUIÇÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "4221-9/04",
+    "descCnae": "CONSTRUÇÃO DE ESTAÇÕES E REDES DE TELECOMUNICAÇÕES",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4221-9/05",
+    "descCnae": "MANUTENÇÃO DE ESTAÇÕES E REDES DE TELECOMUNICAÇÕES",
+    "codMcc": 1731
+  },
+  {
+    "codCnae": "4222-7/01",
+    "descCnae": "CONSTRUÇÃO DE REDES DE ABASTECIMENTO DE ÁGUA, COLETA DE ESGOTO E CONSTRUÇÕES CORRELATAS, EXCETO OBRAS DE IRRIGAÇÃO",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4222-7/02",
+    "descCnae": "OBRAS DE IRRIGAÇÃO",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4223-5/00",
+    "descCnae": "CONSTRUÇÃO DE REDES DE TRANSPORTES POR DUTOS, EXCETO PARA ÁGUA E ESGOTO",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4291-0/00",
+    "descCnae": "OBRAS PORTUÁRIAS, MARÍTIMAS E FLUVIAIS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4292-8/02",
+    "descCnae": "OBRAS DE MONTAGEM INDUSTRIAL",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4299-5/01",
+    "descCnae": "CONSTRUÇÃO DE INSTALAÇÕES ESPORTIVAS E RECREATIVAS",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "4299-5/99",
+    "descCnae": "OUTRAS OBRAS DE ENGENHARIA CIVIL NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "4311-8/01",
+    "descCnae": "DEMOLIÇÃO DE EDIFÍCIOS E OUTRAS ESTRUTURAS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "4311-8/02",
+    "descCnae": "PREPARAÇÃO DE CANTEIRO E LIMPEZA DE TERRENO",
+    "codMcc": 1771
+  },
+  {
+    "codCnae": "4312-6/00",
+    "descCnae": "PERFURAÇÕES E SONDAGENS",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4319-3/00",
+    "descCnae": "SERVIÇOS DE PREPARAÇÃO DO TERRENO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4322-3/02",
+    "descCnae": "INSTALAÇÃO E MANUTENÇÃO DE SISTEMAS CENTRAIS DE AR CONDICIONADO, DE VENTILAÇÃO E REFRIGERAÇÃO",
+    "codMcc": 1711
+  },
+  {
+    "codCnae": "4329-1/02",
+    "descCnae": "INSTALAÇÃO DE EQUIPAMENTOS PARA ORIENTAÇÃO À NAVEGAÇÃO MARÍTIMA, FLUVIAL E LACUSTRE",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "4329-1/04",
+    "descCnae": "MONTAGEM E INSTALAÇÃO DE SISTEMAS E EQUIPAMENTOS DE ILUMINAÇÃO E SINALIZAÇÃO EM VIAS PÚBLICAS, PORTOS E AEROPORTOS",
+    "codMcc": 1731
+  },
+  {
+    "codCnae": "4329-1/05",
+    "descCnae": "TRATAMENTOS TÉRMICOS, ACÚSTICOS OU DE VIBRAÇÃO",
+    "codMcc": 1740
+  },
+  {
+    "codCnae": "4399-1/04",
+    "descCnae": "SERVIÇOS DE OPERAÇÃO E FORNECIMENTO DE EQUIPAMENTOS PARA TRANSPORTE E ELEVAÇÃO DE CARGAS E PESSOAS PARA USO EM OBRAS",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "4520-0/08",
+    "descCnae": "SERVIÇOS DE CAPOTARIA",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4530-7/01",
+    "descCnae": "COMÉRCIO POR ATACADO DE PEÇAS E ACESSÓRIOS NOVOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5300
+  },
+  {
+    "codCnae": "4530-7/03",
+    "descCnae": "COMÉRCIO A VAREJO DE PEÇAS E ACESSÓRIOS NOVOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4530-7/06",
+    "descCnae": "REPRESENTANTES COMERCIAIS E AGENTES DO COMÉRCIO DE PEÇAS E ACESSÓRIOS NOVOS E USADOS PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5533
+  },
+  {
+    "codCnae": "4541-2/06",
+    "descCnae": "COMÉRCIO A VAREJO DE PEÇAS E ACESSÓRIOS NOVOS PARA MOTOCICLETAS E MOTONETAS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4541-2/07",
+    "descCnae": "COMÉRCIO A VAREJO DE PEÇAS E ACESSÓRIOS USADOS PARA MOTOCICLETAS E MOTONETAS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "4713-0/04",
+    "descCnae": "LOJAS DE DEPARTAMENTOS OU MAGAZINES, EXCETO LOJAS FRANCAS (DUTY FREE)",
+    "codMcc": 5311
+  },
+  {
+    "codCnae": "4713-0/05",
+    "descCnae": "LOJAS FRANCAS (DUTY FREE) DE AEROPORTOS, PORTOS E EM FRONTEIRAS TERRESTRES",
+    "codMcc": 5309
+  },
+  {
+    "codCnae": "4744-0/06",
+    "descCnae": "COMÉRCIO VAREJISTA DE PEDRAS PARA REVESTIMENTO",
+    "codMcc": 5211
+  },
+  {
+    "codCnae": "4940-0/00",
+    "descCnae": "TRANSPORTE DUTOVIÁRIO",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "8800-6/00",
+    "descCnae": "SERVIÇOS DE ASSISTÊNCIA SOCIAL SEM ALOJAMENTO",
+    "codMcc": 8398
+  },
+  {
+    "codCnae": "9001-9/01",
+    "descCnae": "PRODUÇÃO TEATRAL",
+    "codMcc": 7922
+  },
+  {
+    "codCnae": "9001-9/02",
+    "descCnae": "PRODUÇÃO MUSICAL",
+    "codMcc": 7929
+  },
+  {
+    "codCnae": "9001-9/03",
+    "descCnae": "PRODUÇÃO DE ESPETÁCULOS DE DANÇA",
+    "codMcc": 7922
+  },
+  {
+    "codCnae": "9001-9/04",
+    "descCnae": "PRODUÇÃO DE ESPETÁCULOS CIRCENSES, DE MARIONETES E SIMILARES",
+    "codMcc": 7922
+  },
+  {
+    "codCnae": "9001-9/05",
+    "descCnae": "PRODUÇÃO DE ESPETÁCULOS DE RODEIOS, VAQUEJADAS E SIMILARES",
+    "codMcc": 7999
+  },
+  {
+    "codCnae": "9001-9/06",
+    "descCnae": "ATIVIDADES DE SONORIZAÇÃO E DE ILUMINAÇÃO",
+    "codMcc": 7922
+  },
+  {
+    "codCnae": "9001-9/99",
+    "descCnae": "ARTES CÊNICAS, ESPETÁCULOS E ATIVIDADES COMPLEMENTARES NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7922
+  },
+  {
+    "codCnae": "9002-7/01",
+    "descCnae": "ATIVIDADES DE ARTISTAS PLÁSTICOS, JORNALISTAS INDEPENDENTES E ESCRITORES",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "9002-7/02",
+    "descCnae": "RESTAURAÇÃO DE OBRAS DE ARTE",
+    "codMcc": 5932
+  },
+  {
+    "codCnae": "9003-5/00",
+    "descCnae": "GESTÃO DE ESPAÇOS PARA ARTES CÊNICAS, ESPETÁCULOS E OUTRAS ATIVIDADES ARTÍSTICAS",
+    "codMcc": 7922
+  },
+  {
+    "codCnae": "9102-3/02",
+    "descCnae": "RESTAURAÇÃO E CONSERVAÇÃO DE LUGARES E PRÉDIOS HISTÓRICOS",
+    "codMcc": 1520
+  },
+  {
+    "codCnae": "9103-1/00",
+    "descCnae": "ATIVIDADES DE JARDINS BOTÂNICOS, ZOOLÓGICOS, PARQUES NACIONAIS, RESERVAS ECOLÓGICAS E ÁREAS DE PROTEÇÃO AMBIENTAL",
+    "codMcc": 7998
+  },
+  {
+    "codCnae": "9200-3/01",
+    "descCnae": "CASAS DE BINGO",
+    "codMcc": 7995
+  },
+  {
+    "codCnae": "9311-5/00",
+    "descCnae": "GESTÃO DE INSTALAÇÕES DE ESPORTES",
+    "codMcc": 7941
+  },
+  {
+    "codCnae": "9312-3/00",
+    "descCnae": "CLUBES SOCIAIS, ESPORTIVOS E SIMILARES",
+    "codMcc": 7997
+  },
+  {
+    "codCnae": "9313-1/00",
+    "descCnae": "ATIVIDADES DE CONDICIONAMENTO FÍSICO",
+    "codMcc": 7997
+  },
+  {
+    "codCnae": "9319-1/01",
+    "descCnae": "PRODUÇÃO E PROMOÇÃO DE EVENTOS ESPORTIVOS",
+    "codMcc": 7999
+  },
+  {
+    "codCnae": "9319-1/99",
+    "descCnae": "OUTRAS ATIVIDADES ESPORTIVAS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7999
+  },
+  {
+    "codCnae": "9321-2/00",
+    "descCnae": "PARQUES DE DIVERSÃO E PARQUES TEMÁTICOS",
+    "codMcc": 7996
+  },
+  {
+    "codCnae": "9329-8/02",
+    "descCnae": "EXPLORAÇÃO DE BOLICHES",
+    "codMcc": 7933
+  },
+  {
+    "codCnae": "9329-8/03",
+    "descCnae": "EXPLORAÇÃO DE JOGOS DE SINUCA, BILHAR E SIMILARES",
+    "codMcc": 7932
+  },
+  {
+    "codCnae": "9329-8/04",
+    "descCnae": "EXPLORAÇÃO DE JOGOS ELETRÔNICOS RECREATIVOS",
+    "codMcc": 7994
+  },
+  {
+    "codCnae": "9329-8/99",
+    "descCnae": "OUTRAS ATIVIDADES DE RECREAÇÃO E LAZER NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7999
+  },
+  {
+    "codCnae": "9411-1/00",
+    "descCnae": "ATIVIDADES DE ORGANIZAÇÕES ASSOCIATIVAS PATRONAIS E EMPRESARIAIS",
+    "codMcc": 8699
+  },
+  {
+    "codCnae": "9412-0/00",
+    "descCnae": "ATIVIDADES DE ORGANIZAÇÕES ASSOCIATIVAS PROFISSIONAIS",
+    "codMcc": 8699
+  },
+  {
+    "codCnae": "9420-1/00",
+    "descCnae": "ATIVIDADES DE ORGANIZAÇÕES SINDICAIS",
+    "codMcc": 8699
+  },
+  {
+    "codCnae": "9430-8/00",
+    "descCnae": "ATIVIDADES DE ASSOCIAÇÕES DE DEFESA DE DIREITOS SOCIAIS",
+    "codMcc": 8641
+  },
+  {
+    "codCnae": "9491-0/00",
+    "descCnae": "ATIVIDADES DE ORGANIZAÇÕES RELIGIOSAS",
+    "codMcc": 8661
+  },
+  {
+    "codCnae": "9492-8/00",
+    "descCnae": "ATIVIDADES DE ORGANIZAÇÕES POLÍTICAS",
+    "codMcc": 8651
+  },
+  {
+    "codCnae": "9493-6/00",
+    "descCnae": "ATIVIDADES DE ORGANIZAÇÕES ASSOCIATIVAS LIGADAS À CULTURA E À ARTE",
+    "codMcc": 8699
+  },
+  {
+    "codCnae": "9499-5/00",
+    "descCnae": "ATIVIDADES ASSOCIATIVAS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8699
+  },
+  {
+    "codCnae": "9511-8/00",
+    "descCnae": "REPARAÇÃO E MANUTENÇÃO DE COMPUTADORES E DE EQUIPAMENTOS PERIFÉRICOS",
+    "codMcc": 7379
+  },
+  {
+    "codCnae": "9512-6/00",
+    "descCnae": "REPARAÇÃO E MANUTENÇÃO DE EQUIPAMENTOS DE COMUNICAÇÃO",
+    "codMcc": 7622
+  },
+  {
+    "codCnae": "9521-5/00",
+    "descCnae": "REPARAÇÃO E MANUTENÇÃO DE EQUIPAMENTOS ELETROELETRÔNICOS DE USO PESSOAL E DOMÉSTICO",
+    "codMcc": 7629
+  },
+  {
+    "codCnae": "9529-1/01",
+    "descCnae": "REPARAÇÃO DE CALÇADOS, BOLSAS E ARTIGOS DE VIAGEM",
+    "codMcc": 7251
+  },
+  {
+    "codCnae": "9529-1/02",
+    "descCnae": "CHAVEIROS",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "9529-1/03",
+    "descCnae": "REPARAÇÃO DE RELÓGIOS",
+    "codMcc": 7631
+  },
+  {
+    "codCnae": "9529-1/05",
+    "descCnae": "REPARAÇÃO DE ARTIGOS DO MOBILIÁRIO",
+    "codMcc": 7641
+  },
+  {
+    "codCnae": "9529-1/06",
+    "descCnae": "REPARAÇÃO DE JÓIAS",
+    "codMcc": 7631
+  },
+  {
+    "codCnae": "9529-1/99",
+    "descCnae": "REPARAÇÃO E MANUTENÇÃO DE OUTROS OBJETOS E EQUIPAMENTOS PESSOAIS E DOMÉSTICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7699
+  },
+  {
+    "codCnae": "9601-7/01",
+    "descCnae": "LAVANDERIAS",
+    "codMcc": 7216
+  },
+  {
+    "codCnae": "9601-7/02",
+    "descCnae": "TINTURARIAS",
+    "codMcc": 7216
+  },
+  {
+    "codCnae": "9601-7/03",
+    "descCnae": "TOALHEIROS",
+    "codMcc": 7210
+  },
+  {
+    "codCnae": "9603-3/01",
+    "descCnae": "GESTÃO E MANUTENÇÃO DE CEMITÉRIOS",
+    "codMcc": 7261
+  },
+  {
+    "codCnae": "9603-3/02",
+    "descCnae": "SERVIÇOS DE CREMAÇÃO",
+    "codMcc": 7261
+  },
+  {
+    "codCnae": "9603-3/03",
+    "descCnae": "SERVIÇOS DE SEPULTAMENTO",
+    "codMcc": 7261
+  },
+  {
+    "codCnae": "9603-3/04",
+    "descCnae": "SERVIÇOS DE FUNERÁRIAS",
+    "codMcc": 7261
+  },
+  {
+    "codCnae": "9603-3/05",
+    "descCnae": "SERVIÇOS DE SOMATOCONSERVAÇÃO",
+    "codMcc": 7261
+  },
+  {
+    "codCnae": "9603-3/99",
+    "descCnae": "ATIVIDADES FUNERÁRIAS E SERVIÇOS RELACIONADOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7261
+  },
+  {
+    "codCnae": "9609-2/01",
+    "descCnae": "CLÍNICAS DE ESTÉTICA E SIMILARES",
+    "codMcc": 7298
+  },
+  {
+    "codCnae": "9609-2/02",
+    "descCnae": "AGÊNCIAS MATRIMONIAIS",
+    "codMcc": 7273
+  },
+  {
+    "codCnae": "9609-2/04",
+    "descCnae": "EXPLORAÇÃO DE MÁQUINAS DE SERVIÇOS PESSOAIS ACIONADAS POR MOEDA",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "9609-2/99",
+    "descCnae": "OUTRAS ATIVIDADES DE SERVIÇOS PESSOAIS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "9700-5/00",
+    "descCnae": "SERVIÇOS DOMÉSTICOS",
+    "codMcc": 7349
+  },
+  {
+    "codCnae": "2513-6/00",
+    "descCnae": "FABRICAÇÃO DE OBRAS DE CALDEIRARIA PESADA",
+    "codMcc": 1799
+  },
+  {
+    "codCnae": "2521-7/00",
+    "descCnae": "FABRICAÇÃO DE TANQUES, RESERVATÓRIOS METÁLICOS E CALDEIRAS PARA AQUECIMENTO CENTRAL",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2522-5/00",
+    "descCnae": "FABRICAÇÃO DE CALDEIRAS GERADORAS DE VAPOR, EXCETO PARA AQUECIMENTO CENTRAL E PARA VEÍCULOS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2531-4/01",
+    "descCnae": "PRODUÇÃO DE FORJADOS DE AÇO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2531-4/02",
+    "descCnae": "PRODUÇÃO DE FORJADOS DE METAIS NÃO-FERROSOS E SUAS LIGAS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2532-2/01",
+    "descCnae": "PRODUÇÃO DE ARTEFATOS ESTAMPADOS DE METAL",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2532-2/02",
+    "descCnae": "METALURGIA DO PÓ",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2539-0/01",
+    "descCnae": "SERVIÇOS DE USINAGEM, TORNEARIA E SOLDA",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2539-0/02",
+    "descCnae": "SERVIÇOS DE TRATAMENTO E REVESTIMENTO EM METAIS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2541-1/00",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS DE CUTELARIA",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2543-8/00",
+    "descCnae": "FABRICAÇÃO DE FERRAMENTAS",
+    "codMcc": 5072
+  },
+  {
+    "codCnae": "2550-1/01",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTO BÉLICO PESADO, EXCETO VEÍCULOS MILITARES DE COMBATE",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "2550-1/02",
+    "descCnae": "FABRICAÇÃO DE ARMAS DE FOGO, OUTRAS ARMAS E MUNIÇÕES",
+    "codMcc": 5099
+  },
+  {
+    "codCnae": "2591-8/00",
+    "descCnae": "FABRICAÇÃO DE EMBALAGENS METÁLICAS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2592-6/01",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DE TREFILADOS DE METAL PADRONIZADOS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2592-6/02",
+    "descCnae": "FABRICAÇÃO DE PRODUTOS DE TREFILADOS DE METAL, EXCETO PADRONIZADOS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2593-4/00",
+    "descCnae": "FABRICAÇÃO DE ARTIGOS DE METAL PARA USO DOMÉSTICO E PESSOAL",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2599-3/01",
+    "descCnae": "SERVIÇOS DE CONFECÇÃO DE ARMAÇÕES METÁLICAS PARA A CONSTRUÇÃO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2599-3/02",
+    "descCnae": "SERVIÇO DE CORTE E DOBRA DE METAIS",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2599-3/99",
+    "descCnae": "FABRICAÇÃO DE OUTROS PRODUTOS DE METAL NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "2610-8/00",
+    "descCnae": "FABRICAÇÃO DE COMPONENTES ELETRÔNICOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2621-3/00",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS DE INFORMÁTICA",
+    "codMcc": 5045
+  },
+  {
+    "codCnae": "2622-1/00",
+    "descCnae": "FABRICAÇÃO DE PERIFÉRICOS PARA EQUIPAMENTOS DE INFORMÁTICA",
+    "codMcc": 5045
+  },
+  {
+    "codCnae": "2631-1/00",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS TRANSMISSORES DE COMUNICAÇÃO, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2632-9/00",
+    "descCnae": "FABRICAÇÃO DE APARELHOS TELEFÔNICOS E DE OUTROS EQUIPAMENTOS DE COMUNICAÇÃO, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2640-0/00",
+    "descCnae": "FABRICAÇÃO DE APARELHOS DE RECEPÇÃO, REPRODUÇÃO, GRAVAÇÃO E AMPLIFICAÇÃO DE ÁUDIO E VÍDEO",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2651-5/00",
+    "descCnae": "FABRICAÇÃO DE APARELHOS E EQUIPAMENTOS DE MEDIDA, TESTE E CONTROLE",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2652-3/00",
+    "descCnae": "FABRICAÇÃO DE CRONÔMETROS E RELÓGIOS",
+    "codMcc": 5094
+  },
+  {
+    "codCnae": "2660-4/00",
+    "descCnae": "FABRICAÇÃO DE APARELHOS ELETROMÉDICOS E ELETROTERAPÊUTICOS E EQUIPAMENTOS DE IRRADIAÇÃO",
+    "codMcc": 5047
+  },
+  {
+    "codCnae": "2670-1/01",
+    "descCnae": "FABRICAÇÃO DE EQUIPAMENTOS E INSTRUMENTOS ÓPTICOS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5085
+  },
+  {
+    "codCnae": "2670-1/02",
+    "descCnae": "FABRICAÇÃO DE APARELHOS FOTOGRÁFICOS E CINEMATOGRÁFICOS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5044
+  },
+  {
+    "codCnae": "2680-9/00",
+    "descCnae": "FABRICAÇÃO DE MÍDIAS VIRGENS, MAGNÉTICAS E ÓPTICAS",
+    "codMcc": 5044
+  },
+  {
+    "codCnae": "2710-4/01",
+    "descCnae": "FABRICAÇÃO DE GERADORES DE CORRENTE CONTÍNUA E ALTERNADA, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2710-4/02",
+    "descCnae": "FABRICAÇÃO DE TRANSFORMADORES, INDUTORES, CONVERSORES, SINCRONIZADORES E SEMELHANTES, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2710-4/03",
+    "descCnae": "FABRICAÇÃO DE MOTORES ELÉTRICOS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2721-0/00",
+    "descCnae": "FABRICAÇÃO DE PILHAS, BATERIAS E ACUMULADORES ELÉTRICOS, EXCETO PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2722-8/01",
+    "descCnae": "FABRICAÇÃO DE BATERIAS E ACUMULADORES PARA VEÍCULOS AUTOMOTORES",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2731-7/00",
+    "descCnae": "FABRICAÇÃO DE APARELHOS E EQUIPAMENTOS PARA DISTRIBUIÇÃO E CONTROLE DE ENERGIA ELÉTRICA",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2732-5/00",
+    "descCnae": "FABRICAÇÃO DE MATERIAL ELÉTRICO PARA INSTALAÇÕES EM CIRCUITO DE CONSUMO",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2733-3/00",
+    "descCnae": "FABRICAÇÃO DE FIOS, CABOS E CONDUTORES ELÉTRICOS ISOLADOS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2740-6/01",
+    "descCnae": "FABRICAÇÃO DE LÂMPADAS",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2740-6/02",
+    "descCnae": "FABRICAÇÃO DE LUMINÁRIAS E OUTROS EQUIPAMENTOS DE ILUMINAÇÃO",
+    "codMcc": 5065
+  },
+  {
+    "codCnae": "2751-1/00",
+    "descCnae": "FABRICAÇÃO DE FOGÕES, REFRIGERADORES E MÁQUINAS DE LAVAR E SECAR PARA USO DOMÉSTICO, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5046
+  },
+  {
+    "codCnae": "0111-3/01",
+    "descCnae": "CULTIVO DE ARROZ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0111-3/02",
+    "descCnae": "CULTIVO DE MILHO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0111-3/03",
+    "descCnae": "CULTIVO DE TRIGO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0111-3/99",
+    "descCnae": "CULTIVO DE OUTROS CEREAIS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0112-1/01",
+    "descCnae": "CULTIVO DE ALGODÃO HERBÁCEO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0112-1/02",
+    "descCnae": "CULTIVO DE JUTA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0112-1/99",
+    "descCnae": "CULTIVO DE OUTRAS FIBRAS DE LAVOURA TEMPORÁRIA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0113-0/00",
+    "descCnae": "CULTIVO DE CANA-DE-AÇÚCAR",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0114-8/00",
+    "descCnae": "CULTIVO DE FUMO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0115-6/00",
+    "descCnae": "CULTIVO DE SOJA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0116-4/01",
+    "descCnae": "CULTIVO DE AMENDOIM",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0116-4/02",
+    "descCnae": "CULTIVO DE GIRASSOL",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0116-4/03",
+    "descCnae": "CULTIVO DE MAMONA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0116-4/99",
+    "descCnae": "CULTIVO DE OUTRAS OLEAGINOSAS DE LAVOURA TEMPORÁRIA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/01",
+    "descCnae": "CULTIVO DE ABACAXI",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/02",
+    "descCnae": "CULTIVO DE ALHO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/03",
+    "descCnae": "CULTIVO DE BATATA-INGLESA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/04",
+    "descCnae": "CULTIVO DE CEBOLA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/05",
+    "descCnae": "CULTIVO DE FEIJÃO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/06",
+    "descCnae": "CULTIVO DE MANDIOCA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/07",
+    "descCnae": "CULTIVO DE MELÃO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/08",
+    "descCnae": "CULTIVO DE MELANCIA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/09",
+    "descCnae": "CULTIVO DE TOMATE RASTEIRO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0119-9/99",
+    "descCnae": "CULTIVO DE OUTRAS PLANTAS DE LAVOURA TEMPORÁRIA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0121-1/01",
+    "descCnae": "HORTICULTURA, EXCETO MORANGO",
+    "codMcc": 780
+  },
+  {
+    "codCnae": "0121-1/02",
+    "descCnae": "CULTIVO DE MORANGO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0122-9/00",
+    "descCnae": "CULTIVO DE FLORES E PLANTAS ORNAMENTAIS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0131-8/00",
+    "descCnae": "CULTIVO DE LARANJA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0132-6/00",
+    "descCnae": "CULTIVO DE UVA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/01",
+    "descCnae": "CULTIVO DE AÇAÍ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/02",
+    "descCnae": "CULTIVO DE BANANA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/03",
+    "descCnae": "CULTIVO DE CAJU",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/04",
+    "descCnae": "CULTIVO DE CÍTRICOS, EXCETO LARANJA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/05",
+    "descCnae": "CULTIVO DE COCO-DA-BAÍA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/06",
+    "descCnae": "CULTIVO DE GUARANÁ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/07",
+    "descCnae": "CULTIVO DE MAÇÃ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/08",
+    "descCnae": "CULTIVO DE MAMÃO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/09",
+    "descCnae": "CULTIVO DE MARACUJÁ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/10",
+    "descCnae": "CULTIVO DE MANGA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/11",
+    "descCnae": "CULTIVO DE PÊSSEGO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0133-4/99",
+    "descCnae": "CULTIVO DE FRUTAS DE LAVOURA PERMANENTE NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0134-2/00",
+    "descCnae": "CULTIVO DE CAFÉ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0135-1/00",
+    "descCnae": "CULTIVO DE CACAU",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0139-3/01",
+    "descCnae": "CULTIVO DE CHÁ-DA-ÍNDIA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0139-3/02",
+    "descCnae": "CULTIVO DE ERVA-MATE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0139-3/03",
+    "descCnae": "CULTIVO DE PIMENTA-DO-REINO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0139-3/04",
+    "descCnae": "CULTIVO DE PLANTAS PARA CONDIMENTO, EXCETO PIMENTA-DO-REINO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0139-3/05",
+    "descCnae": "CULTIVO DE DENDÊ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0139-3/06",
+    "descCnae": "CULTIVO DE SERINGUEIRA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0139-3/99",
+    "descCnae": "CULTIVO DE OUTRAS PLANTAS DE LAVOURA PERMANENTE NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0141-5/01",
+    "descCnae": "PRODUÇÃO DE SEMENTES CERTIFICADAS, EXCETO DE FORRAGEIRAS PARA PASTO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0141-5/02",
+    "descCnae": "PRODUÇÃO DE SEMENTES CERTIFICADAS DE FORRAGEIRAS PARA FORMAÇÃO DE PASTO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0142-3/00",
+    "descCnae": "PRODUÇÃO DE MUDAS E OUTRAS FORMAS DE PROPAGAÇÃO VEGETAL, CERTIFICADAS",
+    "codMcc": 5261
+  },
+  {
+    "codCnae": "0151-2/01",
+    "descCnae": "CRIAÇÃO DE BOVINOS PARA CORTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0151-2/02",
+    "descCnae": "CRIAÇÃO DE BOVINOS PARA LEITE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0151-2/03",
+    "descCnae": "CRIAÇÃO DE BOVINOS, EXCETO PARA CORTE E LEITE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0152-1/01",
+    "descCnae": "CRIAÇÃO DE BUFALINOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0152-1/02",
+    "descCnae": "CRIAÇÃO DE EQÜINOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0152-1/03",
+    "descCnae": "CRIAÇÃO DE ASININOS E MUARES",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0153-9/01",
+    "descCnae": "CRIAÇÃO DE CAPRINOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0153-9/02",
+    "descCnae": "CRIAÇÃO DE OVINOS, INCLUSIVE PARA PRODUÇÃO DE LÃ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0154-7/00",
+    "descCnae": "CRIAÇÃO DE SUÍNOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0155-5/01",
+    "descCnae": "CRIAÇÃO DE FRANGOS PARA CORTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0155-5/02",
+    "descCnae": "PRODUÇÃO DE PINTOS DE UM DIA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0155-5/03",
+    "descCnae": "CRIAÇÃO DE OUTROS GALINÁCEOS, EXCETO PARA CORTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0155-5/04",
+    "descCnae": "CRIAÇÃO DE AVES, EXCETO GALINÁCEOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0155-5/05",
+    "descCnae": "PRODUÇÃO DE OVOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0159-8/01",
+    "descCnae": "APICULTURA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0159-8/02",
+    "descCnae": "CRIAÇÃO DE ANIMAIS DE ESTIMAÇÃO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0159-8/03",
+    "descCnae": "CRIAÇÃO DE ESCARGÔ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0159-8/04",
+    "descCnae": "CRIAÇÃO DE BICHO-DA-SEDA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0159-8/99",
+    "descCnae": "CRIAÇÃO DE OUTROS ANIMAIS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0162-8/02",
+    "descCnae": "SERVIÇO DE TOSQUIAMENTO DE OVINOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0162-8/03",
+    "descCnae": "SERVIÇO DE MANEJO DE ANIMAIS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0162-8/99",
+    "descCnae": "ATIVIDADES DE APOIO À PECUÁRIA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0163-6/00",
+    "descCnae": "ATIVIDADES DE PÓS-COLHEITA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0170-9/00",
+    "descCnae": "CAÇA E SERVIÇOS RELACIONADOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/01",
+    "descCnae": "CULTIVO DE EUCALIPTO",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/02",
+    "descCnae": "CULTIVO DE ACÁCIA-NEGRA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/03",
+    "descCnae": "CULTIVO DE PINUS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/04",
+    "descCnae": "CULTIVO DE TECA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/05",
+    "descCnae": "CULTIVO DE ESPÉCIES MADEIREIRAS, EXCETO EUCALIPTO, ACÁCIA-NEGRA, PINUS E TECA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/06",
+    "descCnae": "CULTIVO DE MUDAS EM VIVEIROS FLORESTAIS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/07",
+    "descCnae": "EXTRAÇÃO DE MADEIRA EM FLORESTAS PLANTADAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/08",
+    "descCnae": "PRODUÇÃO DE CARVÃO VEGETAL - FLORESTAS PLANTADAS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0210-1/09",
+    "descCnae": "PRODUÇÃO DE CASCA DE ACÁCIA-NEGRA - FLORESTAS PLANTADAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0210-1/99",
+    "descCnae": "PRODUÇÃO DE PRODUTOS NÃO-MADEIREIROS NÃO ESPECIFICADOS ANTERIORMENTE EM FLORESTAS PLANTADAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0220-9/01",
+    "descCnae": "EXTRAÇÃO DE MADEIRA EM FLORESTAS NATIVAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0220-9/02",
+    "descCnae": "PRODUÇÃO DE CARVÃO VEGETAL - FLORESTAS NATIVAS",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0220-9/03",
+    "descCnae": "COLETA DE CASTANHA-DO-PARÁ EM FLORESTAS NATIVAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0220-9/04",
+    "descCnae": "COLETA DE LÁTEX EM FLORESTAS NATIVAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0220-9/05",
+    "descCnae": "COLETA DE PALMITO EM FLORESTAS NATIVAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0220-9/06",
+    "descCnae": "CONSERVAÇÃO DE FLORESTAS NATIVAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0220-9/99",
+    "descCnae": "COLETA DE PRODUTOS NÃO-MADEIREIROS NÃO ESPECIFICADOS ANTERIORMENTE EM FLORESTAS NATIVAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0230-6/00",
+    "descCnae": "ATIVIDADES DE APOIO À PRODUÇÃO FLORESTAL",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0311-6/01",
+    "descCnae": "PESCA DE PEIXES EM ÁGUA SALGADA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0311-6/02",
+    "descCnae": "PESCA DE CRUSTÁCEOS E MOLUSCOS EM ÁGUA SALGADA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0311-6/03",
+    "descCnae": "COLETA DE OUTROS PRODUTOS MARINHOS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0311-6/04",
+    "descCnae": "ATIVIDADES DE APOIO À PESCA EM ÁGUA SALGADA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0312-4/01",
+    "descCnae": "PESCA DE PEIXES EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0312-4/02",
+    "descCnae": "PESCA DE CRUSTÁCEOS E MOLUSCOS EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0312-4/03",
+    "descCnae": "COLETA DE OUTROS PRODUTOS AQUÁTICOS DE ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0312-4/04",
+    "descCnae": "ATIVIDADES DE APOIO À PESCA EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0321-3/01",
+    "descCnae": "CRIAÇÃO DE PEIXES EM ÁGUA SALGADA E SALOBRA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0321-3/02",
+    "descCnae": "CRIAÇÃO DE CAMARÕES EM ÁGUA SALGADA E SALOBRA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0321-3/03",
+    "descCnae": "CRIAÇÃO DE OSTRAS E MEXILHÕES EM ÁGUA SALGADA E SALOBRA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0321-3/04",
+    "descCnae": "CRIAÇÃO DE PEIXES ORNAMENTAIS EM ÁGUA SALGADA E SALOBRA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0321-3/05",
+    "descCnae": "ATIVIDADES DE APOIO À AQÜICULTURA EM ÁGUA SALGADA E SALOBRA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0321-3/99",
+    "descCnae": "CULTIVOS E SEMICULTIVOS DA AQÜICULTURA EM ÁGUA SALGADA E SALOBRA NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/01",
+    "descCnae": "CRIAÇÃO DE PEIXES EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/02",
+    "descCnae": "CRIAÇÃO DE CAMARÕES EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/03",
+    "descCnae": "CRIAÇÃO DE OSTRAS E MEXILHÕES EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/04",
+    "descCnae": "CRIAÇÃO DE PEIXES ORNAMENTAIS EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/05",
+    "descCnae": "RANICULTURA",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/06",
+    "descCnae": "CRIAÇÃO DE JACARÉ",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/07",
+    "descCnae": "ATIVIDADES DE APOIO À AQÜICULTURA EM ÁGUA DOCE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0322-1/99",
+    "descCnae": "CULTIVOS E SEMICULTIVOS DA AQÜICULTURA EM ÁGUA DOCE NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "0500-3/01",
+    "descCnae": "EXTRAÇÃO DE CARVÃO MINERAL",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "0500-3/02",
+    "descCnae": "BENEFICIAMENTO DE CARVÃO MINERAL",
+    "codMcc": 5983
+  },
+  {
+    "codCnae": "0600-0/01",
+    "descCnae": "EXTRAÇÃO DE PETRÓLEO E GÁS NATURAL",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "0600-0/02",
+    "descCnae": "EXTRAÇÃO E BENEFICIAMENTO DE XISTO",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "0600-0/03",
+    "descCnae": "EXTRAÇÃO E BENEFICIAMENTO DE AREIAS BETUMINOSAS",
+    "codMcc": 5172
+  },
+  {
+    "codCnae": "0710-3/01",
+    "descCnae": "EXTRAÇÃO DE MINÉRIO DE FERRO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0710-3/02",
+    "descCnae": "PELOTIZAÇÃO, SINTERIZAÇÃO E OUTROS BENEFICIAMENTOS DE MINÉRIO DE FERRO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0721-9/01",
+    "descCnae": "EXTRAÇÃO DE MINÉRIO DE ALUMÍNIO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0721-9/02",
+    "descCnae": "BENEFICIAMENTO DE MINÉRIO DE ALUMÍNIO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0722-7/01",
+    "descCnae": "EXTRAÇÃO DE MINÉRIO DE ESTANHO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "0722-7/02",
+    "descCnae": "BENEFICIAMENTO DE MINÉRIO DE ESTANHO",
+    "codMcc": 5051
+  },
+  {
+    "codCnae": "6141-8/00",
+    "descCnae": "OPERADORAS DE TELEVISÃO POR ASSINATURA POR CABO",
+    "codMcc": 4899
+  },
+  {
+    "codCnae": "6142-6/00",
+    "descCnae": "OPERADORAS DE TELEVISÃO POR ASSINATURA POR MICROONDAS",
+    "codMcc": 4899
+  },
+  {
+    "codCnae": "6143-4/00",
+    "descCnae": "OPERADORAS DE TELEVISÃO POR ASSINATURA POR SATÉLITE",
+    "codMcc": 4899
+  },
+  {
+    "codCnae": "6190-6/01",
+    "descCnae": "PROVEDORES DE ACESSO ÀS REDES DE COMUNICAÇÕES",
+    "codMcc": 4816
+  },
+  {
+    "codCnae": "6190-6/02",
+    "descCnae": "PROVEDORES DE VOZ SOBRE PROTOCOLO INTERNET  VOIP",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6190-6/99",
+    "descCnae": "OUTRAS ATIVIDADES DE TELECOMUNICAÇÕES NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 4814
+  },
+  {
+    "codCnae": "6204-0/00",
+    "descCnae": "CONSULTORIA EM TECNOLOGIA DA INFORMAÇÃO",
+    "codMcc": 7372
+  },
+  {
+    "codCnae": "6209-1/00",
+    "descCnae": "SUPORTE TÉCNICO, MANUTENÇÃO E OUTROS SERVIÇOS EM TECNOLOGIA DA INFORMAÇÃO",
+    "codMcc": 7379
+  },
+  {
+    "codCnae": "6311-9/00",
+    "descCnae": "TRATAMENTO DE DADOS, PROVEDORES DE SERVIÇOS DE APLICAÇÃO E SERVIÇOS DE HOSPEDAGEM NA INTERNET",
+    "codMcc": 4816
+  },
+  {
+    "codCnae": "6319-4/00",
+    "descCnae": "PORTAIS, PROVEDORES DE CONTEÚDO E OUTROS SERVIÇOS DE INFORMAÇÃO NA INTERNET",
+    "codMcc": 4816
+  },
+  {
+    "codCnae": "6399-2/00",
+    "descCnae": "OUTRAS ATIVIDADES DE PRESTAÇÃO DE SERVIÇOS DE INFORMAÇÃO NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "6424-7/02",
+    "descCnae": "COOPERATIVAS CENTRAIS DE CRÉDITO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6424-7/03",
+    "descCnae": "COOPERATIVAS DE CRÉDITO MÚTUO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6424-7/04",
+    "descCnae": "COOPERATIVAS DE CRÉDITO RURAL",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6491-3/00",
+    "descCnae": "SOCIEDADES DE FOMENTO MERCANTIL  FACTORING",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6511-1/01",
+    "descCnae": "SEGUROS DE VIDA",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6511-1/02",
+    "descCnae": "PLANOS DE AUXÍLIOFUNERAL",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6512-0/00",
+    "descCnae": "SEGUROS NÃOVIDA",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6520-1/00",
+    "descCnae": "SEGUROSSAÚDE",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6530-8/00",
+    "descCnae": "RESSEGUROS",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6550-2/00",
+    "descCnae": "PLANOS DE SAÚDE",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6612-6/01",
+    "descCnae": "CORRETORAS DE TÍTULOS E VALORES MOBILIÁRIOS",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6612-6/02",
+    "descCnae": "DISTRIBUIDORAS DE TÍTULOS E VALORES MOBILIÁRIOS",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6612-6/03",
+    "descCnae": "CORRETORAS DE CÂMBIO",
+    "codMcc": 6051
+  },
+  {
+    "codCnae": "6612-6/04",
+    "descCnae": "CORRETORAS DE CONTRATOS DE MERCADORIAS",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6612-6/05",
+    "descCnae": "AGENTES DE INVESTIMENTOS EM APLICAÇÕES FINANCEIRAS",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6619-3/02",
+    "descCnae": "CORRESPONDENTES DE INSTITUIÇÕES FINANCEIRAS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6619-3/99",
+    "descCnae": "OUTRAS ATIVIDADES AUXILIARES DOS SERVIÇOS FINANCEIROS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6621-5/01",
+    "descCnae": "PERITOS E AVALIADORES DE SEGUROS",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6621-5/02",
+    "descCnae": "AUDITORIA E CONSULTORIA ATUARIAL",
+    "codMcc": 8931
+  },
+  {
+    "codCnae": "6622-3/00",
+    "descCnae": "CORRETORES E AGENTES DE SEGUROS, DE PLANOS DE PREVIDÊNCIA COMPLEMENTAR E DE SAÚDE",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6629-1/00",
+    "descCnae": "ATIVIDADES AUXILIARES DOS SEGUROS, DA PREVIDÊNCIA COMPLEMENTAR E DOS PLANOS DE SAÚDE NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6810-2/01",
+    "descCnae": "COMPRA E VENDA DE IMÓVEIS PRÓPRIOS",
+    "codMcc": 6513
+  },
+  {
+    "codCnae": "6810-2/02",
+    "descCnae": "ALUGUEL DE IMÓVEIS PRÓPRIOS",
+    "codMcc": 6513
+  },
+  {
+    "codCnae": "6821-8/01",
+    "descCnae": "CORRETAGEM NA COMPRA E VENDA E AVALIAÇÃO DE IMÓVEIS",
+    "codMcc": 6513
+  },
+  {
+    "codCnae": "6821-8/02",
+    "descCnae": "CORRETAGEM NO ALUGUEL DE IMÓVEIS",
+    "codMcc": 6513
+  },
+  {
+    "codCnae": "6822-6/00",
+    "descCnae": "GESTÃO E ADMINISTRAÇÃO DA PROPRIEDADE IMOBILIÁRIA",
+    "codMcc": 6513
+  },
+  {
+    "codCnae": "6911-7/01",
+    "descCnae": "SERVIÇOS ADVOCATÍCIOS",
+    "codMcc": 8111
+  },
+  {
+    "codCnae": "6911-7/02",
+    "descCnae": "ATIVIDADES AUXILIARES DA JUSTIÇA",
+    "codMcc": 8111
+  },
+  {
+    "codCnae": "6911-7/03",
+    "descCnae": "AGENTE DE PROPRIEDADE INDUSTRIAL",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "6912-5/00",
+    "descCnae": "CARTÓRIOS",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "6920-6/01",
+    "descCnae": "ATIVIDADES DE CONTABILIDADE",
+    "codMcc": 8931
+  },
+  {
+    "codCnae": "6920-6/02",
+    "descCnae": "ATIVIDADES DE CONSULTORIA E AUDITORIA CONTÁBIL E TRIBUTÁRIA",
+    "codMcc": 8931
+  },
+  {
+    "codCnae": "7020-4/00",
+    "descCnae": "ATIVIDADES DE CONSULTORIA EM GESTÃO EMPRESARIAL, EXCETO CONSULTORIA TÉCNICA ESPECÍFICA",
+    "codMcc": 7392
+  },
+  {
+    "codCnae": "7111-1/00",
+    "descCnae": "SERVIÇOS DE ARQUITETURA",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "7112-0/00",
+    "descCnae": "SERVIÇOS DE ENGENHARIA",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "7119-7/01",
+    "descCnae": "SERVIÇOS DE CARTOGRAFIA, TOPOGRAFIA E GEODÉSIA",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "7119-7/02",
+    "descCnae": "ATIVIDADES DE ESTUDOS GEOLÓGICOS",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "7119-7/03",
+    "descCnae": "SERVIÇOS DE DESENHO TÉCNICO RELACIONADOS À ARQUITETURA E ENGENHARIA",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "7119-7/04",
+    "descCnae": "SERVIÇOS DE PERÍCIA TÉCNICA RELACIONADOS À SEGURANÇA DO TRABALHO",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7119-7/99",
+    "descCnae": "ATIVIDADES TÉCNICAS RELACIONADAS À ENGENHARIA E ARQUITETURA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "7120-1/00",
+    "descCnae": "TESTES E ANÁLISES TÉCNICAS",
+    "codMcc": 8734
+  },
+  {
+    "codCnae": "7210-0/00",
+    "descCnae": "PESQUISA E DESENVOLVIMENTO EXPERIMENTAL EM CIÊNCIAS FÍSICAS E NATURAIS",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7220-7/00",
+    "descCnae": "PESQUISA E DESENVOLVIMENTO EXPERIMENTAL EM CIÊNCIAS SOCIAIS E HUMANAS",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7311-4/00",
+    "descCnae": "AGÊNCIAS DE PUBLICIDADE",
+    "codMcc": 7311
+  },
+  {
+    "codCnae": "7312-2/00",
+    "descCnae": "AGENCIAMENTO DE ESPAÇOS PARA PUBLICIDADE, EXCETO EM VEÍCULOS DE COMUNICAÇÃO",
+    "codMcc": 7311
+  },
+  {
+    "codCnae": "7319-0/01",
+    "descCnae": "CRIAÇÃO DE ESTANDES PARA FEIRAS E EXPOSIÇÕES",
+    "codMcc": 7311
+  },
+  {
+    "codCnae": "7319-0/02",
+    "descCnae": "PROMOÇÃO DE VENDAS",
+    "codMcc": 7311
+  },
+  {
+    "codCnae": "7319-0/03",
+    "descCnae": "MARKETING DIRETO",
+    "codMcc": 5969
+  },
+  {
+    "codCnae": "7319-0/04",
+    "descCnae": "CONSULTORIA EM PUBLICIDADE",
+    "codMcc": 7311
+  },
+  {
+    "codCnae": "7319-0/99",
+    "descCnae": "OUTRAS ATIVIDADES DE PUBLICIDADE NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7311
+  },
+  {
+    "codCnae": "7320-3/00",
+    "descCnae": "PESQUISAS DE MERCADO E DE OPINIÃO PÚBLICA",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7410-2/01",
+    "descCnae": "DESIGN",
+    "codMcc": 7333
+  },
+  {
+    "codCnae": "7410-2/02",
+    "descCnae": "DECORAÇÃO DE INTERIORES",
+    "codMcc": 8911
+  },
+  {
+    "codCnae": "7420-0/01",
+    "descCnae": "ATIVIDADES DE PRODUÇÃO DE FOTOGRAFIAS, EXCETO AÉREA E SUBMARINA",
+    "codMcc": 7221
+  },
+  {
+    "codCnae": "7420-0/02",
+    "descCnae": "ATIVIDADES DE PRODUÇÃO DE FOTOGRAFIAS AÉREAS E SUBMARINAS",
+    "codMcc": 7221
+  },
+  {
+    "codCnae": "7420-0/03",
+    "descCnae": "LABORATÓRIOS FOTOGRÁFICOS",
+    "codMcc": 7395
+  },
+  {
+    "codCnae": "7420-0/04",
+    "descCnae": "FILMAGEM DE FESTAS E EVENTOS",
+    "codMcc": 7221
+  },
+  {
+    "codCnae": "7420-0/05",
+    "descCnae": "SERVIÇOS DE MICROFILMAGEM",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "7490-1/01",
+    "descCnae": "SERVIÇOS DE TRADUÇÃO, INTERPRETAÇÃO E SIMILARES",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "7490-1/02",
+    "descCnae": "ESCAFANDRIA E MERGULHO",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7490-1/03",
+    "descCnae": "SERVIÇOS DE AGRONOMIA E DE CONSULTORIA ÀS ATIVIDADES AGRÍCOLAS E PECUÁRIAS",
+    "codMcc": 763
+  },
+  {
+    "codCnae": "7490-1/04",
+    "descCnae": "ATIVIDADES DE INTERMEDIAÇÃO E AGENCIAMENTO DE SERVIÇOS E NEGÓCIOS EM GERAL, EXCETO IMOBILIÁRIOS",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7490-1/05",
+    "descCnae": "AGENCIAMENTO DE PROFISSIONAIS PARA ATIVIDADES ESPORTIVAS, CULTURAIS E ARTÍSTICAS",
+    "codMcc": 7941
+  },
+  {
+    "codCnae": "7490-1/99",
+    "descCnae": "OUTRAS ATIVIDADES PROFISSIONAIS, CIENTÍFICAS E TÉCNICAS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7500-1/00",
+    "descCnae": "ATIVIDADES VETERINÁRIAS",
+    "codMcc": 742
+  },
+  {
+    "codCnae": "7711-0/00",
+    "descCnae": "LOCAÇÃO DE AUTOMÓVEIS SEM CONDUTOR",
+    "codMcc": 7512
+  },
+  {
+    "codCnae": "7719-5/01",
+    "descCnae": "LOCAÇÃO DE EMBARCAÇÕES SEM TRIPULAÇÃO, EXCETO PARA FINS RECREATIVOS",
+    "codMcc": 4457
+  },
+  {
+    "codCnae": "7719-5/02",
+    "descCnae": "LOCAÇÃO DE AERONAVES SEM TRIPULAÇÃO",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "7719-5/99",
+    "descCnae": "LOCAÇÃO DE OUTROS MEIOS DE TRANSPORTE NÃO ESPECIFICADOS ANTERIORMENTE, SEM CONDUTOR",
+    "codMcc": 7513
+  },
+  {
+    "codCnae": "7721-7/00",
+    "descCnae": "ALUGUEL DE EQUIPAMENTOS RECREATIVOS E ESPORTIVOS",
+    "codMcc": 5941
+  },
+  {
+    "codCnae": "7722-5/00",
+    "descCnae": "ALUGUEL DE FITAS DE VÍDEO, DVDS E SIMILARES",
+    "codMcc": 7841
+  },
+  {
+    "codCnae": "7723-3/00",
+    "descCnae": "ALUGUEL DE OBJETOS DO VESTUÁRIO, JÓIAS E ACESSÓRIOS",
+    "codMcc": 7296
+  },
+  {
+    "codCnae": "7729-2/01",
+    "descCnae": "ALUGUEL DE APARELHOS DE JOGOS ELETRÔNICOS",
+    "codMcc": 7994
+  },
+  {
+    "codCnae": "7729-2/02",
+    "descCnae": "ALUGUEL DE MÓVEIS, UTENSÍLIOS E APARELHOS DE USO DOMÉSTICO E PESSOAL; INSTRUMENTOS MUSICAIS",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7729-2/03",
+    "descCnae": "ALUGUEL DE MATERIAL MÉDICO",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7729-2/99",
+    "descCnae": "ALUGUEL DE OUTROS OBJETOS PESSOAIS E DOMÉSTICOS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7731-4/00",
+    "descCnae": "ALUGUEL DE MÁQUINAS E EQUIPAMENTOS AGRÍCOLAS SEM OPERADOR",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7732-2/01",
+    "descCnae": "ALUGUEL DE MÁQUINAS E EQUIPAMENTOS PARA CONSTRUÇÃO SEM OPERADOR, EXCETO ANDAIMES",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7732-2/02",
+    "descCnae": "ALUGUEL DE ANDAIMES",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7733-1/00",
+    "descCnae": "ALUGUEL DE MÁQUINAS E EQUIPAMENTOS PARA ESCRITÓRIO",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7739-0/01",
+    "descCnae": "ALUGUEL DE MÁQUINAS E EQUIPAMENTOS PARA EXTRAÇÃO DE MINÉRIOS E PETRÓLEO, SEM OPERADOR",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7739-0/02",
+    "descCnae": "ALUGUEL DE EQUIPAMENTOS CIENTÍFICOS, MÉDICOS E HOSPITALARES, SEM OPERADOR",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7739-0/03",
+    "descCnae": "ALUGUEL DE PALCOS, COBERTURAS E OUTRAS ESTRUTURAS DE USO TEMPORÁRIO, EXCETO ANDAIMES",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7739-0/99",
+    "descCnae": "ALUGUEL DE OUTRAS MÁQUINAS E EQUIPAMENTOS COMERCIAIS E INDUSTRIAIS NÃO ESPECIFICADOS ANTERIORMENTE, SEM OPERADOR",
+    "codMcc": 7394
+  },
+  {
+    "codCnae": "7740-3/00",
+    "descCnae": "GESTÃO DE ATIVOS INTANGÍVEIS NÃOFINANCEIROS",
+    "codMcc": 7392
+  },
+  {
+    "codCnae": "7810-8/00",
+    "descCnae": "SELEÇÃO E AGENCIAMENTO DE MÃODEOBRA",
+    "codMcc": 7361
+  },
+  {
+    "codCnae": "7820-5/00",
+    "descCnae": "LOCAÇÃO DE MÃODEOBRA TEMPORÁRIA",
+    "codMcc": 7361
+  },
+  {
+    "codCnae": "7830-2/00",
+    "descCnae": "FORNECIMENTO E GESTÃO DE RECURSOS HUMANOS PARA TERCEIROS",
+    "codMcc": 7361
+  },
+  {
+    "codCnae": "7911-2/00",
+    "descCnae": "AGÊNCIAS DE VIAGENS",
+    "codMcc": 4722
+  },
+  {
+    "codCnae": "7912-1/00",
+    "descCnae": "OPERADORES TURÍSTICOS",
+    "codMcc": 4722
+  },
+  {
+    "codCnae": "7990-2/00",
+    "descCnae": "SERVIÇOS DE RESERVAS E OUTROS SERVIÇOS DE TURISMO NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 4722
+  },
+  {
+    "codCnae": "4950-7/00",
+    "descCnae": "TRENS TURÍSTICOS, TELEFÉRICOS E SIMILARES",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5011-4/01",
+    "descCnae": "TRANSPORTE MARÍTIMO DE CABOTAGEM - CARGA",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5011-4/02",
+    "descCnae": "TRANSPORTE MARÍTIMO DE CABOTAGEM - PASSAGEIROS",
+    "codMcc": 4111
+  },
+  {
+    "codCnae": "5012-2/01",
+    "descCnae": "TRANSPORTE MARÍTIMO DE LONGO CURSO - CARGA",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5021-1/01",
+    "descCnae": "TRANSPORTE POR NAVEGAÇÃO INTERIOR DE CARGA, MUNICIPAL, EXCETO TRAVESSIA",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5021-1/02",
+    "descCnae": "TRANSPORTE POR NAVEGAÇÃO INTERIOR DE CARGA, INTERMUNICIPAL, INTERESTADUAL E INTERNACIONAL, EXCETO TRAVESSIA",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5030-1/01",
+    "descCnae": "NAVEGAÇÃO DE APOIO MARÍTIMO",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5030-1/02",
+    "descCnae": "NAVEGAÇÃO DE APOIO PORTUÁRIO",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5030-1/03",
+    "descCnae": "SERVIÇO DE REBOCADORES E EMPURRADORES",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "5120-0/00",
+    "descCnae": "TRANSPORTE AÉREO DE CARGA",
+    "codMcc": 4511
+  },
+  {
+    "codCnae": "5130-7/00",
+    "descCnae": "TRANSPORTE ESPACIAL",
+    "codMcc": 4789
+  },
+  {
+    "codCnae": "5211-7/01",
+    "descCnae": "ARMAZÉNS GERAIS - EMISSÃO DE WARRANT",
+    "codMcc": 4225
+  },
+  {
+    "codCnae": "5221-4/00",
+    "descCnae": "CONCESSIONÁRIAS DE RODOVIAS, PONTES, TÚNEIS E SERVIÇOS RELACIONADOS",
+    "codMcc": 4784
+  },
+  {
+    "codCnae": "5231-1/01",
+    "descCnae": "ADMINISTRAÇÃO DA INFRA-ESTRUTURA PORTUÁRIA",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "5231-1/02",
+    "descCnae": "ATIVIDADES DO OPERADOR PORTUÁRIO",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "5231-1/03",
+    "descCnae": "GESTÃO DE TERMINAIS AQUAVIÁRIOS ",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "5232-0/00",
+    "descCnae": "ATIVIDADES DE AGENCIAMENTO MARÍTIMO",
+    "codMcc": 4411
+  },
+  {
+    "codCnae": "5239-7/01",
+    "descCnae": "SERVIÇOS DE PRATICAGEM",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "5239-7/99",
+    "descCnae": "ATIVIDADES AUXILIARES DOS TRANSPORTES AQUAVIÁRIOS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "5240-1/01",
+    "descCnae": "OPERAÇÃO DOS AEROPORTOS E CAMPOS DE ATERRISSAGEM",
+    "codMcc": 4582
+  },
+  {
+    "codCnae": "5240-1/99",
+    "descCnae": "ATIVIDADES AUXILIARES DOS TRANSPORTES AÉREOS, EXCETO OPERAÇÃO DOS AEROPORTOS E CAMPOS DE ATERRISSAGEM",
+    "codMcc": 4582
+  },
+  {
+    "codCnae": "5250-8/01",
+    "descCnae": "COMISSARIA DE DESPACHOS",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "5250-8/02",
+    "descCnae": "ATIVIDADES DE DESPACHANTES ADUANEIROS",
+    "codMcc": 7399
+  },
+  {
+    "codCnae": "5250-8/03",
+    "descCnae": "AGENCIAMENTO DE CARGAS, EXCETO PARA O TRANSPORTE MARÍTIMO",
+    "codMcc": 4215
+  },
+  {
+    "codCnae": "5250-8/04",
+    "descCnae": "ORGANIZAÇÃO LOGÍSTICA DO TRANSPORTE DE CARGA",
+    "codMcc": 4215
+  },
+  {
+    "codCnae": "5250-8/05",
+    "descCnae": "OPERADOR DE TRANSPORTE MULTIMODAL - OTM",
+    "codMcc": 4215
+  },
+  {
+    "codCnae": "5310-5/01",
+    "descCnae": "ATIVIDADES DO CORREIO NACIONAL",
+    "codMcc": 9402
+  },
+  {
+    "codCnae": "5310-5/02",
+    "descCnae": "ATIVIDADES DE FRANQUEADAS E PERMISSIONÁRIAS DO CORREIO NACIONAL",
+    "codMcc": 9402
+  },
+  {
+    "codCnae": "5320-2/01",
+    "descCnae": "SERVIÇOS DE MALOTE NÃO REALIZADOS PELO CORREIO NACIONAL",
+    "codMcc": 4215
+  },
+  {
+    "codCnae": "5812-3/01",
+    "descCnae": "EDIÇÃO DE JORNAIS DIÁRIOS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5812-3/02",
+    "descCnae": "EDIÇÃO DE JORNAIS NÃO DIÁRIOS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5822-1/01",
+    "descCnae": "EDIÇÃO INTEGRADA À IMPRESSÃO DE JORNAIS DIÁRIOS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5822-1/02",
+    "descCnae": "EDIÇÃO INTEGRADA À IMPRESSÃO DE JORNAIS NÃO DIÁRIOS",
+    "codMcc": 2741
+  },
+  {
+    "codCnae": "5911-1/01",
+    "descCnae": "ESTÚDIOS CINEMATOGRÁFICOS",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "5911-1/02",
+    "descCnae": "PRODUÇÃO DE FILMES PARA PUBLICIDADE",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "5911-1/99",
+    "descCnae": "ATIVIDADES DE PRODUÇÃO CINEMATOGRÁFICA, DE VÍDEOS E DE PROGRAMAS DE TELEVISÃO NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "5912-0/01",
+    "descCnae": "SERVIÇOS DE DUBLAGEM",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "5912-0/02",
+    "descCnae": "SERVIÇOS DE MIXAGEM SONORA EM PRODUÇÃO AUDIOVISUAL",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "5912-0/99",
+    "descCnae": "ATIVIDADES DE PÓS-PRODUÇÃO CINEMATOGRÁFICA, DE VÍDEOS E DE PROGRAMAS DE TELEVISÃO NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "5913-8/00",
+    "descCnae": "DISTRIBUIÇÃO CINEMATOGRÁFICA, DE VÍDEO E DE PROGRAMAS DE TELEVISÃO",
+    "codMcc": 7829
+  },
+  {
+    "codCnae": "5920-1/00",
+    "descCnae": "ATIVIDADES DE GRAVAÇÃO DE SOM E DE EDIÇÃO DE MÚSICA",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "6010-1/00",
+    "descCnae": "ATIVIDADES DE RÁDIO",
+    "codMcc": 4899
+  },
+  {
+    "codCnae": "6021-7/00",
+    "descCnae": "ATIVIDADES DE TELEVISÃO ABERTA",
+    "codMcc": 4899
+  },
+  {
+    "codCnae": "6022-5/01",
+    "descCnae": "PROGRAMADORAS",
+    "codMcc": 4899
+  },
+  {
+    "codCnae": "6201-5/01",
+    "descCnae": "DESENVOLVIMENTO DE PROGRAMAS DE COMPUTADOR SOB ENCOMENDA",
+    "codMcc": 7372
+  },
+  {
+    "codCnae": "6201-5/02",
+    "descCnae": "WEB DESIGN",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "6202-3/00",
+    "descCnae": "DESENVOLVIMENTO E LICENCIAMENTO DE PROGRAMAS DE COMPUTADOR CUSTOMIZÁVEIS",
+    "codMcc": 7372
+  },
+  {
+    "codCnae": "6203-1/00",
+    "descCnae": "DESENVOLVIMENTO E LICENCIAMENTO DE PROGRAMAS DE COMPUTADOR NÃO-CUSTOMIZÁVEIS",
+    "codMcc": 7372
+  },
+  {
+    "codCnae": "6391-7/00",
+    "descCnae": "AGÊNCIAS DE NOTÍCIAS",
+    "codMcc": 5192
+  },
+  {
+    "codCnae": "6410-7/00",
+    "descCnae": "BANCO CENTRAL",
+    "codMcc": 9399
+  },
+  {
+    "codCnae": "6421-2/00",
+    "descCnae": "BANCOS COMERCIAIS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6422-1/00",
+    "descCnae": "BANCOS MÚLTIPLOS, COM CARTEIRA COMERCIAL",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6423-9/00",
+    "descCnae": "CAIXAS ECONÔMICAS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6424-7/01",
+    "descCnae": "BANCOS COOPERATIVOS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6431-0/00",
+    "descCnae": "BANCOS MÚLTIPLOS, SEM CARTEIRA COMERCIAL",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6432-8/00",
+    "descCnae": "BANCOS DE INVESTIMENTO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6433-6/00",
+    "descCnae": "BANCOS DE DESENVOLVIMENTO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6434-4/00",
+    "descCnae": "AGÊNCIAS DE FOMENTO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6435-2/01",
+    "descCnae": "SOCIEDADES DE CRÉDITO IMOBILIÁRIO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6435-2/02",
+    "descCnae": "ASSOCIAÇÕES DE POUPANÇA E EMPRÉSTIMO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6435-2/03",
+    "descCnae": "COMPANHIAS HIPOTECÁRIAS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6436-1/00",
+    "descCnae": "SOCIEDADES DE CRÉDITO, FINANCIAMENTO E INVESTIMENTO - FINANCEIRAS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6437-9/00",
+    "descCnae": "SOCIEDADES DE CRÉDITO AO MICROEMPREENDEDOR",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6438-7/01",
+    "descCnae": "BANCOS DE CÂMBIO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6438-7/99",
+    "descCnae": "OUTRAS INSTITUIÇÕES DE INTERMEDIAÇÃO NÃO-MONETÁRIA NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6440-9/00",
+    "descCnae": "ARRENDAMENTO MERCANTIL",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6450-6/00",
+    "descCnae": "SOCIEDADES DE CAPITALIZAÇÃO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6461-1/00",
+    "descCnae": "HOLDINGS DE INSTITUIÇÕES FINANCEIRAS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6462-0/00",
+    "descCnae": "HOLDINGS DE INSTITUIÇÕES NÃO-FINANCEIRAS",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "6463-8/00",
+    "descCnae": "OUTRAS SOCIEDADES DE PARTICIPAÇÃO, EXCETO HOLDINGS",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "6470-1/01",
+    "descCnae": "FUNDOS DE INVESTIMENTO, EXCETO PREVIDENCIÁRIOS E IMOBILIÁRIOS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6470-1/02",
+    "descCnae": "FUNDOS DE INVESTIMENTO PREVIDENCIÁRIOS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6470-1/03",
+    "descCnae": "FUNDOS DE INVESTIMENTO IMOBILIÁRIOS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6492-1/00",
+    "descCnae": "SECURITIZAÇÃO DE CRÉDITOS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6493-0/00",
+    "descCnae": "ADMINISTRAÇÃO DE CONSÓRCIOS PARA AQUISIÇÃO DE BENS E DIREITOS",
+    "codMcc": 6051
+  },
+  {
+    "codCnae": "6499-9/01",
+    "descCnae": "CLUBES DE INVESTIMENTO",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6499-9/02",
+    "descCnae": "SOCIEDADES DE INVESTIMENTO",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6499-9/03",
+    "descCnae": "FUNDO GARANTIDOR DE CRÉDITO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6499-9/04",
+    "descCnae": "CAIXAS DE FINANCIAMENTO DE CORPORAÇÕES",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6499-9/05",
+    "descCnae": "CONCESSÃO DE CRÉDITO PELAS OSCIP",
+    "codMcc": 6051
+  },
+  {
+    "codCnae": "6499-9/99",
+    "descCnae": "OUTRAS ATIVIDADES DE SERVIÇOS FINANCEIROS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6541-3/00",
+    "descCnae": "PREVIDÊNCIA COMPLEMENTAR FECHADA",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6542-1/00",
+    "descCnae": "PREVIDÊNCIA COMPLEMENTAR ABERTA",
+    "codMcc": 6300
+  },
+  {
+    "codCnae": "6611-8/01",
+    "descCnae": "BOLSA DE VALORES",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6611-8/02",
+    "descCnae": "BOLSA DE MERCADORIAS",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6611-8/03",
+    "descCnae": "BOLSA DE MERCADORIAS E FUTUROS",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6611-8/04",
+    "descCnae": "ADMINISTRAÇÃO DE MERCADOS DE BALCÃO ORGANIZADOS",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6613-4/00",
+    "descCnae": "ADMINISTRAÇÃO DE CARTÕES DE CRÉDITO",
+    "codMcc": 6051
+  },
+  {
+    "codCnae": "6619-3/01",
+    "descCnae": "SERVIÇOS DE LIQUIDAÇÃO E CUSTÓDIA",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6619-3/03",
+    "descCnae": "REPRESENTAÇÕES DE BANCOS ESTRANGEIROS",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6619-3/04",
+    "descCnae": "CAIXAS ELETRÔNICOS",
+    "codMcc": 6011
+  },
+  {
+    "codCnae": "6619-3/05",
+    "descCnae": "OPERADORAS DE CARTÕES DE DÉBITO",
+    "codMcc": 6012
+  },
+  {
+    "codCnae": "6630-4/00",
+    "descCnae": "ATIVIDADES DE ADMINISTRAÇÃO DE FUNDOS POR CONTRATO OU COMISSÃO",
+    "codMcc": 6211
+  },
+  {
+    "codCnae": "6810-2/03",
+    "descCnae": "LOTEAMENTO DE IMÓVEIS PRÓPRIOS",
+    "codMcc": 6513
+  },
+  {
+    "codCnae": "7410-2/03",
+    "descCnae": "DESIGN DE PRODUTO",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "7410-2/99",
+    "descCnae": "ATIVIDADES DE DESIGN NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "8020-0/01",
+    "descCnae": "ATIVIDADES DE MONITORAMENTO DE SISTEMAS DE SEGURANÇA ELETRÔNICO",
+    "codMcc": 7393
+  },
+  {
+    "codCnae": "8020-0/02",
+    "descCnae": "OUTRAS ATIVIDADES DE SERVIÇOS DE SEGURANÇA",
+    "codMcc": 7393
+  },
+  {
+    "codCnae": "8690-9/03",
+    "descCnae": "ATIVIDADES DE ACUPUNTURA",
+    "codMcc": 8031
+  },
+  {
+    "codCnae": "8690-9/04",
+    "descCnae": "ATIVIDADES DE PODOLOGIA",
+    "codMcc": 8049
+  },
+  {
+    "codCnae": "9101-5/00",
+    "descCnae": "ATIVIDADES DE BIBLIOTECAS E ARQUIVOS",
+    "codMcc": 7991
+  },
+  {
+    "codCnae": "9102-3/01",
+    "descCnae": "ATIVIDADES DE MUSEUS E DE EXPLORAÇÃO DE LUGARES E PRÉDIOS HISTÓRICOS E ATRAÇÕES SIMILARES",
+    "codMcc": 7991
+  },
+  {
+    "codCnae": "9200-3/02",
+    "descCnae": "EXPLORAÇÃO DE APOSTAS EM CORRIDAS DE CAVALOS",
+    "codMcc": 7995
+  },
+  {
+    "codCnae": "9200-3/99",
+    "descCnae": "EXPLORAÇÃO DE JOGOS DE AZAR E APOSTAS NÃO ESPECIFICADOS ANTERIORMENTE",
+    "codMcc": 7995
+  },
+  {
+    "codCnae": "9412-0/01",
+    "descCnae": "ATIVIDADES DE FISCALIZAÇÃO PROFISSIONAL",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "9412-0/99",
+    "descCnae": "OUTRAS ATIVIDADES ASSOCIATIVAS PROFISSIONAIS",
+    "codMcc": 8699
+  },
+  {
+    "codCnae": "9609-2/05",
+    "descCnae": "ATIVIDADES DE SAUNA E BANHOS",
+    "codMcc": 7297
+  },
+  {
+    "codCnae": "9609-2/07",
+    "descCnae": "ALOJAMENTO DE ANIMAIS DOMÉSTICOS",
+    "codMcc": 7299
+  },
+  {
+    "codCnae": "9900-8/00",
+    "descCnae": "ORGANISMOS INTERNACIONAIS E OUTRAS INSTITUIÇÕES EXTRATERRITORIAIS",
+    "codMcc": 8999
+  },
+  {
+    "codCnae": "3091-1/00",
+    "descCnae": "FABRICAÇÃO DE MOTOCICLETAS, PEÇAS E ACESSÓRIOS",
+    "codMcc": 5571
+  },
+  {
+    "codCnae": "6201-5/00",
+    "descCnae": "DESENVOLVIMENTO DE PROGRAMAS DE COMPUTADOR SOB ENCOMENDA",
+    "codMcc": 7372
+  },
+  {
+    "codCnae": "2013-4/00",
+    "descCnae": "FABRICAÇÃO DE ADUBOS E FERTILIZANTES",
+    "codMcc": 5169
+  },
+  {
+    "codCnae": "3511-5/00",
+    "descCnae": "GERAÇÃO DE ENERGIA ELÉTRICA",
+    "codMcc": 4900
+  },
+  {
+    "codCnae": "5239-7/00",
+    "descCnae": "ATIVIDADES AUXILIARES DOS TRANSPORTES AQUAVIÁRIOS NÃO ESPECIFICADAS ANTERIORMENTE",
+    "codMcc": 7399
+  }
+]
