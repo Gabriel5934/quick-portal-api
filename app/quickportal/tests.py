@@ -1,5 +1,6 @@
 
 import json
+from datetime import datetime, timezone
 from decimal import Decimal
 from io import StringIO
 from pathlib import Path
@@ -28,9 +29,170 @@ from quickportal.models import (
     Plan,
     PlanFee,
     PosModel,
+    RecurringFee,
+    RecurringFeeTarget,
     Status,
 )
 from quickportal.services.brasil_api import BrasilApiError
+
+
+class RecurringFeeApiTests(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(
+            username="fee-admin", email="fee-admin@example.com"
+        )
+        self.reseller = self.make_business("Owner", BusinessType.RESELLER)
+        self.re_reseller = self.make_business(
+            "Child reseller", BusinessType.RE_RESELLER, self.reseller
+        )
+        self.direct_store = self.make_business(
+            "Direct store", BusinessType.STORE, self.reseller
+        )
+        self.nested_store = self.make_business(
+            "Nested store", BusinessType.STORE, self.re_reseller
+        )
+        BusinessMembership.objects.create(
+            user=self.user, business=self.reseller, role=BusinessRole.ADMIN
+        )
+        self.client.force_authenticate(self.user)
+
+    @staticmethod
+    def make_business(name, business_type, parent=None):
+        number = Business.objects.count() + 1
+        return Business.objects.create(
+            type=business_type,
+            parent=parent,
+            document_type="CNPJ",
+            document=f"{number:014d}",
+            name=name,
+            email=f"recurring-{number}@example.com",
+            phone="11999999999",
+        )
+
+    def payload(self, targets=None):
+        return {
+            "name": "Platform fee",
+            "description": "Monthly access",
+            "setup_value": "50.00",
+            "pricing_mode": "GOAL",
+            "fee_value": None,
+            "goal_amount": "10000.00",
+            "value_below_goal": "120.00",
+            "value_at_or_above_goal": "80.00",
+            "recurrence_unit": "MONTH",
+            "recurrence_interval": 1,
+            "charge_rule": "BUSINESS_DAY_OF_MONTH",
+            "charge_weekday": None,
+            "charge_day": None,
+            "charge_month": None,
+            "business_day_ordinal": 5,
+            "start_date": "2026-09-01",
+            "end_date": None,
+            "active": True,
+            "targets": [self.direct_store.id] if targets is None else targets,
+        }
+
+    def test_admin_creates_owner_scoped_fee_with_server_audit_fields(self):
+        response = self.client.post(
+            reverse("recurring_fee_list_create", args=[self.reseller.id]),
+            self.payload(),
+            format="json",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        fee = RecurringFee.objects.get()
+        self.assertEqual(fee.owner, self.reseller)
+        self.assertEqual(fee.created_by, self.user)
+        self.assertEqual(list(fee.targets.all()), [self.direct_store])
+        self.assertEqual(response.data["created_by"], self.user.id)
+
+    def test_rejects_grandchildren_and_store_owners(self):
+        response = self.client.post(
+            reverse("recurring_fee_list_create", args=[self.reseller.id]),
+            self.payload([self.nested_store.id]),
+            format="json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("targets", response.data)
+
+        response = self.client.get(
+            reverse("recurring_fee_list_create", args=[self.direct_store.id])
+        )
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+
+    def test_rejects_an_empty_target_list(self):
+        response = self.client.post(
+            reverse("recurring_fee_list_create", args=[self.reseller.id]),
+            self.payload([]),
+            format="json",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("targets", response.data)
+
+    def test_collection_endpoints_return_paginated_results(self):
+        create_response = self.client.post(
+            reverse("recurring_fee_list_create", args=[self.reseller.id]),
+            self.payload(),
+            format="json",
+        )
+        self.assertEqual(create_response.status_code, status.HTTP_201_CREATED)
+
+        children_response = self.client.get(
+            reverse("business_children_list", args=[self.reseller.id])
+        )
+        fees_response = self.client.get(
+            reverse("recurring_fee_list_create", args=[self.reseller.id])
+        )
+
+        self.assertEqual(children_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(children_response.data["count"], 2)
+        self.assertEqual(len(children_response.data["results"]), 2)
+        self.assertEqual(fees_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(fees_response.data["count"], 1)
+        self.assertEqual(len(fees_response.data["results"]), 1)
+
+    def test_viewer_can_list_but_cannot_create(self):
+        BusinessMembership.objects.filter(user=self.user).update(
+            role=BusinessRole.VIEWER
+        )
+        list_url = reverse("recurring_fee_list_create", args=[self.reseller.id])
+        self.assertEqual(self.client.get(list_url).status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            self.client.post(list_url, self.payload(), format="json").status_code,
+            status.HTTP_403_FORBIDDEN,
+        )
+
+    def test_update_preserves_retained_target_setup_state(self):
+        create_response = self.client.post(
+            reverse("recurring_fee_list_create", args=[self.reseller.id]),
+            self.payload([self.direct_store.id, self.re_reseller.id]),
+            format="json",
+        )
+        fee = RecurringFee.objects.get(pk=create_response.data["id"])
+        retained_link = fee.target_links.get(target=self.direct_store)
+        charged_at = datetime(2026, 9, 2, 12, tzinfo=timezone.utc)
+        retained_link.setup_charged_at = charged_at
+        retained_link.save(update_fields=["setup_charged_at"])
+
+        response = self.client.patch(
+            reverse("recurring_fee_detail", args=[self.reseller.id, fee.id]),
+            {"targets": [self.direct_store.id], "active": False},
+            format="json",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        retained_link.refresh_from_db()
+        self.assertEqual(retained_link.setup_charged_at, charged_at)
+        self.assertFalse(
+            RecurringFeeTarget.objects.filter(
+                recurring_fee=fee, target=self.re_reseller
+            ).exists()
+        )
+        self.assertEqual(
+            [business["id"] for business in response.data["target_businesses"]],
+            [self.direct_store.id],
+        )
 
 
 class PopulateCnaesCommandTests(TestCase):

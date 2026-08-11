@@ -1,12 +1,15 @@
 import uuid
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError as DjangoValidationError
+from django.db import transaction
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from quickportal.models import (
     Acquirer, Business, BusinessDetails, BusinessMembership, BusinessType, Cnae,
-    DocumentType, Fee, Network, Plan, PlanFee, PosDevice, PosModel,
+    DocumentType, Fee, Network, Plan, PlanFee, PosDevice, PosModel, RecurringFee,
+    RecurringFeeTarget,
 )
 from quickportal.services.brasil_api import (
     BrasilApiError,
@@ -300,6 +303,118 @@ class BusinessReadSerializer(serializers.ModelSerializer):
             "id", "type", "parent", "document_type", "document", "name",
             "trade_name", "cnae", "email", "phone", "landline", "status",
         ]
+
+
+class RecurringFeeBusinessSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Business
+        fields = ["id", "type", "name", "trade_name", "document"]
+
+
+class RecurringFeeSerializer(serializers.ModelSerializer):
+    targets = serializers.PrimaryKeyRelatedField(
+        queryset=Business.objects.all(), many=True, write_only=True
+    )
+    target_businesses = RecurringFeeBusinessSerializer(
+        source="targets", many=True, read_only=True
+    )
+    owner = RecurringFeeBusinessSerializer(read_only=True)
+    created_by = serializers.PrimaryKeyRelatedField(read_only=True)
+
+    class Meta:
+        model = RecurringFee
+        fields = [
+            "id",
+            "owner",
+            "name",
+            "description",
+            "setup_value",
+            "pricing_mode",
+            "fee_value",
+            "goal_amount",
+            "value_below_goal",
+            "value_at_or_above_goal",
+            "recurrence_unit",
+            "recurrence_interval",
+            "charge_rule",
+            "charge_weekday",
+            "charge_day",
+            "charge_month",
+            "business_day_ordinal",
+            "start_date",
+            "end_date",
+            "active",
+            "targets",
+            "target_businesses",
+            "created_at",
+            "created_by",
+        ]
+        read_only_fields = ["id", "owner", "created_at", "created_by"]
+
+    def validate_targets(self, targets):
+        owner = self.context["owner"]
+        target_ids = [target.pk for target in targets]
+        if not targets:
+            raise serializers.ValidationError("Select at least one target business.")
+        if len(target_ids) != len(set(target_ids)):
+            raise serializers.ValidationError("Target businesses must be unique.")
+        invalid = [target.pk for target in targets if target.parent_id != owner.pk]
+        if invalid:
+            raise serializers.ValidationError(
+                "Targets must be direct children of the owner business."
+            )
+        return targets
+
+    def validate(self, attrs):
+        attrs = super().validate(attrs)
+        model_values = {
+            field.name: getattr(self.instance, field.name)
+            for field in RecurringFee._meta.fields
+            if self.instance is not None and field.name != "id"
+        }
+        model_values.update({key: value for key, value in attrs.items() if key != "targets"})
+        model_values.setdefault("owner", self.context["owner"])
+        model_values.setdefault("created_by", self.context["request"].user)
+        candidate = RecurringFee(**model_values)
+        try:
+            candidate.clean()
+        except DjangoValidationError as error:
+            raise serializers.ValidationError(error.message_dict) from error
+        return attrs
+
+    @transaction.atomic
+    def create(self, validated_data):
+        targets = validated_data.pop("targets")
+        recurring_fee = RecurringFee(
+            owner=self.context["owner"],
+            created_by=self.context["request"].user,
+            **validated_data,
+        )
+        recurring_fee.full_clean()
+        recurring_fee.save()
+        for target in targets:
+            link = RecurringFeeTarget(recurring_fee=recurring_fee, target=target)
+            link.full_clean()
+            link.save()
+        return recurring_fee
+
+    @transaction.atomic
+    def update(self, instance, validated_data):
+        targets = validated_data.pop("targets", None)
+        for field, value in validated_data.items():
+            setattr(instance, field, value)
+        instance.full_clean()
+        instance.save()
+        if targets is not None:
+            target_ids = {target.pk for target in targets}
+            instance.target_links.exclude(target_id__in=target_ids).delete()
+            for target in targets:
+                RecurringFeeTarget.objects.get_or_create(
+                    recurring_fee=instance,
+                    target=target,
+                )
+            instance._prefetched_objects_cache = {}
+        return instance
 
 
 class BusinessMembershipReadSerializer(serializers.ModelSerializer):

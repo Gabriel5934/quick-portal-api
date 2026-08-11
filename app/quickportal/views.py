@@ -21,6 +21,7 @@ from quickportal.models import (
     Plan,
     PosDevice,
     PosModel,
+    RecurringFee,
     Status,
 )
 from quickportal.serializers import (
@@ -38,6 +39,7 @@ from quickportal.serializers import (
     PlanWriteSerializer,
     PosDeviceSerializer,
     PosModelSerializer,
+    RecurringFeeSerializer,
     UserCreateSerializer,
 )
 from quickportal.services.brasil_api import BrasilApiError
@@ -76,6 +78,13 @@ WRITE_ROLES = {BusinessRole.ADMIN, BusinessRole.MANAGER}
 def _require_business_role(user, business, allowed_roles):
     if not has_business_role(user, business, allowed_roles):
         raise PermissionDenied()
+
+
+def _get_recurring_fee_owner(user, owner_id):
+    owner = get_accessible_business_or_404(user, owner_id)
+    if owner.type not in {BusinessType.RESELLER, BusinessType.RE_RESELLER}:
+        raise PermissionDenied("Recurring fees are only available to reseller businesses.")
+    return owner
 
 
 class UserRegistrationView(APIView):
@@ -405,6 +414,102 @@ class BusinessDetailView(APIView):
         _require_business_role(
             request.user, accessible_parent, {BusinessRole.ADMIN}
         )
+
+
+class BusinessChildrenListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, owner_id):
+        """Return the accessible direct children of a recurring-fee owner."""
+        owner = _get_recurring_fee_owner(request.user, owner_id)
+        children = accessible_businesses(request.user).filter(parent=owner).order_by("name")
+        paginator = BusinessPagination()
+        page = paginator.paginate_queryset(children, request)
+        return paginator.get_paginated_response(
+            BusinessReadSerializer(page, many=True).data
+        )
+
+
+class RecurringFeeListCreateView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, owner_id):
+        owner = _get_recurring_fee_owner(request.user, owner_id)
+        fees = (
+            RecurringFee.objects.filter(owner=owner)
+            .select_related("owner", "created_by")
+            .prefetch_related("targets")
+        )
+        paginator = BusinessPagination()
+        page = paginator.paginate_queryset(fees, request)
+        return paginator.get_paginated_response(
+            RecurringFeeSerializer(
+                page, many=True, context={"request": request, "owner": owner}
+            ).data
+        )
+
+    def post(self, request, owner_id):
+        owner = _get_recurring_fee_owner(request.user, owner_id)
+        _require_business_role(request.user, owner, WRITE_ROLES)
+        serializer = RecurringFeeSerializer(
+            data=request.data, context={"request": request, "owner": owner}
+        )
+        serializer.is_valid(raise_exception=True)
+        recurring_fee = serializer.save()
+        return Response(
+            RecurringFeeSerializer(
+                recurring_fee, context={"request": request, "owner": owner}
+            ).data,
+            status=status.HTTP_201_CREATED,
+        )
+
+
+class RecurringFeeDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def _get_object(owner, pk):
+        try:
+            return (
+                RecurringFee.objects.select_related("owner", "created_by")
+                .prefetch_related("targets")
+                .get(owner=owner, pk=pk)
+            )
+        except RecurringFee.DoesNotExist as exc:
+            raise NotFound() from exc
+
+    def get(self, request, owner_id, pk):
+        owner = _get_recurring_fee_owner(request.user, owner_id)
+        recurring_fee = self._get_object(owner, pk)
+        return Response(
+            RecurringFeeSerializer(
+                recurring_fee, context={"request": request, "owner": owner}
+            ).data
+        )
+
+    def patch(self, request, owner_id, pk):
+        owner = _get_recurring_fee_owner(request.user, owner_id)
+        _require_business_role(request.user, owner, WRITE_ROLES)
+        recurring_fee = self._get_object(owner, pk)
+        serializer = RecurringFeeSerializer(
+            recurring_fee,
+            data=request.data,
+            partial=True,
+            context={"request": request, "owner": owner},
+        )
+        serializer.is_valid(raise_exception=True)
+        recurring_fee = serializer.save()
+        return Response(
+            RecurringFeeSerializer(
+                recurring_fee, context={"request": request, "owner": owner}
+            ).data
+        )
+
+    def delete(self, request, owner_id, pk):
+        owner = _get_recurring_fee_owner(request.user, owner_id)
+        _require_business_role(request.user, owner, {BusinessRole.ADMIN})
+        self._get_object(owner, pk).delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class BusinessMembershipListCreateView(APIView):

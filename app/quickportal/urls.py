@@ -3,6 +3,7 @@ from django.urls import path
 from quickportal.views import (
     AcquirerListView,
     BusinessDetailView,
+    BusinessChildrenListView,
     BusinessDetailsDetailView,
     BusinessDetailsListCreateView,
     BusinessListCreateView,
@@ -18,6 +19,8 @@ from quickportal.views import (
     PlanDetailView,
     PlanListCreateView,
     PosModelListView,
+    RecurringFeeDetailView,
+    RecurringFeeListCreateView,
     PosDeviceDetailView,
     PosDeviceListCreateView,
     UserRegistrationView,
@@ -46,6 +49,21 @@ urlpatterns = [
     path("api/plans/<int:pk>/", PlanDetailView.as_view(), name="plan_detail"),
     path("api/businesses/", BusinessListCreateView.as_view(), name="business_list_create"),
     path("api/businesses/<int:pk>/", BusinessDetailView.as_view(), name="business_detail"),
+    path(
+        "api/businesses/<int:owner_id>/children/",
+        BusinessChildrenListView.as_view(),
+        name="business_children_list",
+    ),
+    path(
+        "api/businesses/<int:owner_id>/recurring-fees/",
+        RecurringFeeListCreateView.as_view(),
+        name="recurring_fee_list_create",
+    ),
+    path(
+        "api/businesses/<int:owner_id>/recurring-fees/<int:pk>/",
+        RecurringFeeDetailView.as_view(),
+        name="recurring_fee_detail",
+    ),
     path(
         "api/businesses/<int:business_id>/memberships/",
         BusinessMembershipListCreateView.as_view(),
